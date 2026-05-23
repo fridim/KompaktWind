@@ -1,9 +1,8 @@
 # KompaktWind
 
-KompaktWind is a focused weather forecast app for the Mudita Kompakt e-ink phone,
-targeting outdoor sports (sailing, surfing, paragliding). It uses the
-Mudita Mindful Design (MMD) library for an e-ink-optimized UI and a pluggable
-weather-provider layer with Open-Meteo as the default free data source.
+KompaktWind is a focused weather forecast app for outdoor sports: wingfoil,
+kitesurf, windsurf, sailing, … targeting the Mudita Kompakt e-ink. Open-Meteo as
+the default free data source.
 
 ## Screenshots
 
