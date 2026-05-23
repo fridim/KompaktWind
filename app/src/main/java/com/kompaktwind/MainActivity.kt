@@ -5,11 +5,23 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.EnterTransition
 import androidx.compose.animation.ExitTransition
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Refresh
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -39,8 +51,6 @@ import com.kompaktwind.ui.settings.SettingsScreen
 import com.kompaktwind.ui.spots.SpotsScreen
 import com.mudita.mmd.ThemeMMD
 import com.mudita.mmd.components.divider.HorizontalDividerMMD
-import com.mudita.mmd.components.nav_bar.NavigationBarItemMMD
-import com.mudita.mmd.components.nav_bar.NavigationBarMMD
 import com.mudita.mmd.components.text.TextMMD
 import com.mudita.mmd.components.top_app_bar.TopAppBarMMD
 import java.util.concurrent.TimeUnit
@@ -56,6 +66,7 @@ class MainActivity : ComponentActivity() {
                 val navController = rememberNavController()
                 val backEntry by navController.currentBackStackEntryAsState()
                 val currentDestination = backEntry?.destination
+                val spots by viewModel.spots.collectAsState()
                 val canNavigateBack = navController.previousBackStackEntry != null
                 val isForecast = currentDestination?.route?.startsWith("forecast/") == true
 
@@ -63,8 +74,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     topBar = {
                         Column {
+                            val isSpots = currentDestination?.route == Screen.Spots.route
                             TopAppBarMMD(
-                                title = { TextMMD(text = titleFor(currentDestination?.route, viewModel)) },
+                                title = { TextMMD(text = titleFor(currentDestination?.route, backEntry?.arguments?.getString("spotId"), spots)) },
                                 navigationIcon = {
                                     if (canNavigateBack) {
                                         IconButton(onClick = { navController.navigateUp() }) {
@@ -73,6 +85,18 @@ class MainActivity : ComponentActivity() {
                                     }
                                 },
                                 actions = {
+                                    if (isSpots) {
+                                        IconButton(onClick = { navController.navigate(Screen.AddSpot.route) }) {
+                                            Box(
+                                                modifier = Modifier
+                                                    .size(36.dp)
+                                                    .background(Color.Black, shape = androidx.compose.foundation.shape.RoundedCornerShape(8.dp)),
+                                                contentAlignment = Alignment.Center
+                                            ) {
+                                                Icon(Icons.Outlined.Add, contentDescription = "Add spot", tint = Color.White, modifier = Modifier.size(24.dp))
+                                            }
+                                        }
+                                    }
                                     if (isForecast) {
                                         ForecastActions(viewModel)
                                     }
@@ -84,20 +108,34 @@ class MainActivity : ComponentActivity() {
                     bottomBar = {
                         val onTopLevel = currentDestination?.route in bottomNavItems.map { it.route }
                         if (onTopLevel) {
-                            NavigationBarMMD {
-                                bottomNavItems.forEach { screen ->
-                                    val selected = currentDestination?.hierarchy?.any { it.route == screen.route } == true
-                                    NavigationBarItemMMD(
-                                        icon = { Icon(rememberVectorPainter(screen.icon), contentDescription = screen.label) },
-                                        label = { TextMMD(screen.label) },
-                                        selected = selected,
-                                        onClick = {
-                                            navController.navigate(screen.route) {
-                                                popUpTo(navController.graph.findStartDestination().id)
-                                                launchSingleTop = true
+                            Column {
+                                HorizontalDividerMMD()
+                                Row(
+                                    modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp),
+                                    horizontalArrangement = Arrangement.SpaceEvenly,
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    bottomNavItems.forEach { screen ->
+                                        val selected = currentDestination?.hierarchy?.any { it.route == screen.route } == true
+                                        Column(
+                                            horizontalAlignment = Alignment.CenterHorizontally,
+                                            modifier = Modifier
+                                                .weight(1f)
+                                                .clickable {
+                                                    navController.navigate(screen.route) {
+                                                        popUpTo(navController.graph.findStartDestination().id)
+                                                        launchSingleTop = true
+                                                    }
+                                                }
+                                                .padding(vertical = 4.dp)
+                                        ) {
+                                            Icon(rememberVectorPainter(screen.icon), contentDescription = screen.label, modifier = Modifier.size(28.dp))
+                                            TextMMD(screen.label, fontSize = 14.sp, fontWeight = if (selected) FontWeight.Bold else FontWeight.Normal)
+                                            if (selected) {
+                                                Box(modifier = Modifier.padding(top = 4.dp).fillMaxWidth(0.6f).height(3.dp).background(Color.Black))
                                             }
                                         }
-                                    )
+                                    }
                                 }
                             }
                         }
@@ -165,12 +203,11 @@ private fun ForecastActions(viewModel: KompaktWindViewModel) {
 }
 
 @Composable
-private fun titleFor(route: String?, viewModel: KompaktWindViewModel): String = when {
+private fun titleFor(route: String?, spotId: String?, spots: List<com.kompaktwind.data.Spot>): String = when {
     route == Screen.Spots.route -> "Spots"
     route == Screen.AddSpot.route -> "Add spot"
-    route?.startsWith("forecast/") == true -> {
-        val id = route.substringAfter("forecast/")
-        viewModel.spots.value.firstOrNull { it.id == id }?.name ?: "Forecast"
+    route == Screen.Forecast.route -> {
+        spotId?.let { id -> spots.firstOrNull { it.id == id }?.name } ?: "Forecast"
     }
     route == Screen.Settings.route -> "Settings"
     else -> "KompaktWind"

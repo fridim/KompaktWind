@@ -1,5 +1,6 @@
 package com.kompaktwind.ui.addspot
 
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -16,12 +17,13 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.kompaktwind.ui.KompaktWindViewModel
-import com.mudita.mmd.components.buttons.ButtonMMD
+import com.mudita.mmd.components.buttons.OutlinedButtonMMD
 import com.mudita.mmd.components.checkbox.CheckboxMMD
 import com.mudita.mmd.components.divider.HorizontalDividerMMD
 import com.mudita.mmd.components.lazy.LazyColumnMMD
@@ -38,11 +40,21 @@ fun AddSpotScreen(
 ) {
     var tabIndex by remember { mutableIntStateOf(0) }
     Column(modifier = Modifier.fillMaxSize()) {
-        PrimaryTabRowMMD(selectedTabIndex = tabIndex) {
-            TabMMD(selected = tabIndex == 0, onClick = { tabIndex = 0 }) { TextMMD("Search") }
-            TabMMD(selected = tabIndex == 1, onClick = { tabIndex = 1 }) { TextMMD("Coordinates") }
+        PrimaryTabRowMMD(selectedTabIndex = tabIndex, divider = {}) {
+            listOf("Search", "Coordinates").forEachIndexed { i, label ->
+                TabMMD(
+                    selected = tabIndex == i,
+                    onClick = { tabIndex = i },
+                    text = {
+                        TextMMD(
+                            text = label,
+                            fontSize = 20.sp,
+                            fontWeight = if (tabIndex == i) FontWeight.Bold else FontWeight.Normal
+                        )
+                    }
+                )
+            }
         }
-        HorizontalDividerMMD()
         when (tabIndex) {
             0 -> SearchTab(viewModel = viewModel, onSaved = onSaved)
             else -> CoordinatesTab(viewModel = viewModel, onSaved = onSaved)
@@ -77,24 +89,14 @@ private fun SearchTab(viewModel: KompaktWindViewModel, onSaved: () -> Unit) {
                     val subtitle = listOfNotNull(result.admin1, result.country).joinToString(", ")
                     if (subtitle.isNotEmpty()) TextMMD(text = subtitle, fontSize = 14.sp)
                     Row {
-                        ButtonMMD(onClick = {
-                            viewModel.addSpot(
-                                name = result.name,
-                                lat = result.latitude,
-                                lon = result.longitude,
-                                isCoastal = false
-                            )
+                        OutlinedButtonMMD(onClick = {
+                            viewModel.addSpot(name = result.name, lat = result.latitude, lon = result.longitude, isCoastal = false)
                             viewModel.clearSearch()
                             onSaved()
                         }) { TextMMD("Save (inland)") }
                         Spacer(Modifier.width(8.dp))
-                        ButtonMMD(onClick = {
-                            viewModel.addSpot(
-                                name = result.name,
-                                lat = result.latitude,
-                                lon = result.longitude,
-                                isCoastal = true
-                            )
+                        OutlinedButtonMMD(onClick = {
+                            viewModel.addSpot(name = result.name, lat = result.latitude, lon = result.longitude, isCoastal = true)
                             viewModel.clearSearch()
                             onSaved()
                         }) { TextMMD("Save (coastal)") }
@@ -125,12 +127,14 @@ private fun CoordinatesTab(viewModel: KompaktWindViewModel, onSaved: () -> Unit)
             TextMMD("Coastal spot (show waves + water temp)")
         }
         Spacer(Modifier.height(16.dp))
-        ButtonMMD(
-            enabled = name.isNotBlank() && lat.toDoubleOrNull() != null && lon.toDoubleOrNull() != null,
-            onClick = {
-                viewModel.addSpot(name.trim(), lat.toDouble(), lon.toDouble(), coastal)
-                onSaved()
-            }
-        ) { TextMMD("Save spot") }
+        Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
+            OutlinedButtonMMD(
+                enabled = name.isNotBlank() && lat.toDoubleOrNull() != null && lon.toDoubleOrNull() != null,
+                onClick = {
+                    viewModel.addSpot(name.trim(), lat.toDouble(), lon.toDouble(), coastal)
+                    onSaved()
+                }
+            ) { TextMMD("Save spot", fontWeight = FontWeight.Bold, fontSize = 18.sp) }
+        }
     }
 }

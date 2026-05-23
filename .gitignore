@@ -20,3 +20,6 @@ captures/
 
 # Reports
 app/schemas/
+
+# Keystore files
+*.jks

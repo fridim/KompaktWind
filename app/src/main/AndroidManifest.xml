@@ -7,7 +7,7 @@
     <application
         android:name=".KompaktWindApplication"
         android:label="@string/app_name"
-        android:icon="@android:drawable/ic_dialog_map"
+        android:icon="@mipmap/ic_launcher"
         android:theme="@style/Theme.KompaktWind"
         android:allowBackup="true">
 

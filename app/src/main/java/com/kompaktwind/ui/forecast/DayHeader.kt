@@ -13,10 +13,13 @@ import com.mudita.mmd.components.text.TextMMD
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
+import java.util.TimeZone
 
 @Composable
-fun DayHeader(epochMs: Long) {
-    val df = SimpleDateFormat("EEE d MMM", Locale.getDefault())
+fun DayHeader(epochMs: Long, timezone: String) {
+    val df = SimpleDateFormat("EEE d MMM", Locale.getDefault()).apply {
+        timeZone = TimeZone.getTimeZone(timezone)
+    }
     TextMMD(
         text = df.format(Date(epochMs)).uppercase(Locale.getDefault()),
         fontWeight = FontWeight.Bold,

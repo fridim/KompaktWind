@@ -15,6 +15,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.kompaktwind.data.MarineDisplay
@@ -94,7 +95,7 @@ private fun SettingRow(label: String, control: @Composable () -> Unit) {
 private fun DropdownPicker(current: String, options: List<String>, onSelect: (String) -> Unit) {
     var expanded by remember { mutableStateOf(false) }
     Box {
-        ButtonMMD(onClick = { expanded = true }) { TextMMD(current) }
+        ButtonMMD(onClick = { expanded = true }) { TextMMD(current, fontWeight = FontWeight.Bold) }
         DropdownMenuMMD(expanded = expanded, onDismissRequest = { expanded = false }) {
             options.forEach { opt ->
                 DropdownMenuItemMMD(text = { TextMMD(opt) }, onClick = {

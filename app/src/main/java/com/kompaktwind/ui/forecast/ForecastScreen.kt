@@ -105,9 +105,10 @@ private fun ForecastTable(
                 modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp)
             )
         }
+        val tz = state.forecast.timezone
         LazyColumnMMD(modifier = Modifier.weight(1f)) {
             grouped.forEach { (_, dayHours) ->
-                item { DayHeader(epochMs = dayHours.first().timeEpochMs) }
+                item { DayHeader(epochMs = dayHours.first().timeEpochMs, timezone = tz) }
                 item { ColumnHeader(windUnit = windUnit, showMarineCols = showMarine) }
                 item { HorizontalDividerMMD() }
                 items(items = dayHours, key = { it.timeEpochMs }) { hour ->
@@ -115,7 +116,8 @@ private fun ForecastTable(
                         hour = hour,
                         windUnit = windUnit,
                         tempUnit = tempUnit,
-                        showMarineCols = showMarine
+                        showMarineCols = showMarine,
+                        timezone = tz
                     )
                 }
             }
