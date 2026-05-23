@@ -40,9 +40,9 @@ fun HourRow(
     val t = hour.tempC?.let { UnitFormatters.tempFromC(it, tempUnit) }
     val tStr = t?.let { "%.0f°".format(it) } ?: "—"
 
-    val pStr = hour.precipMm?.let { if (it == 0.0) "0" else "%.1f".format(it) } ?: "—"
+    val pStr = hour.precipMm?.let { "%.1f".format(it).removeSuffix(".0") } ?: "—"
     val waveStr = if (showMarineCols && hour.waveHeightM != null) {
-        val h = if (hour.waveHeightM == 0.0) "0" else "%.1f".format(hour.waveHeightM)
+        val h = "%.1f".format(hour.waveHeightM).removeSuffix(".0")
         val period = hour.wavePeriodS?.let { "/${"%.0f".format(it)}" } ?: ""
         "$h$period"
     } else " "
