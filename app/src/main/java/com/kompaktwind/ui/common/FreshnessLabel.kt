@@ -1,12 +1,13 @@
 package com.kompaktwind.ui.common
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.sp
 import com.mudita.mmd.components.text.TextMMD
 import java.util.concurrent.TimeUnit
 
 @Composable
-fun FreshnessLabel(fetchedAt: Long, now: Long = System.currentTimeMillis()) {
+fun FreshnessLabel(fetchedAt: Long, modifier: Modifier = Modifier, now: Long = System.currentTimeMillis()) {
     val ageMs = (now - fetchedAt).coerceAtLeast(0)
     val text = when {
         ageMs < TimeUnit.MINUTES.toMillis(1) -> "updated just now"
@@ -14,5 +15,5 @@ fun FreshnessLabel(fetchedAt: Long, now: Long = System.currentTimeMillis()) {
         ageMs < TimeUnit.DAYS.toMillis(1) -> "updated ${TimeUnit.MILLISECONDS.toHours(ageMs)} h ago"
         else -> "updated ${TimeUnit.MILLISECONDS.toDays(ageMs)} d ago"
     }
-    TextMMD(text = text, fontSize = 14.sp)
+    TextMMD(text = text, fontSize = 12.sp, modifier = modifier)
 }

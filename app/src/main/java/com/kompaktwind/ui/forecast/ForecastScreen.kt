@@ -1,12 +1,12 @@
 package com.kompaktwind.ui.forecast
 
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Refresh
@@ -28,6 +28,7 @@ import com.kompaktwind.ui.KompaktWindViewModel
 import com.kompaktwind.ui.common.FreshnessLabel
 import com.mudita.mmd.components.buttons.ButtonMMD
 import com.mudita.mmd.components.divider.HorizontalDividerMMD
+import com.mudita.mmd.components.lazy.LazyColumnMMD
 import com.mudita.mmd.components.progress_indicator.CircularProgressIndicatorMMD
 import com.mudita.mmd.components.text.TextMMD
 import java.util.Calendar
@@ -89,7 +90,6 @@ private fun shouldShowMarine(setting: MarineDisplay, isCoastal: Boolean): Boolea
     MarineDisplay.NEVER -> false
 }
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun ForecastTable(
     state: ForecastUiState.Data,
@@ -105,29 +105,24 @@ private fun ForecastTable(
     val grouped = hours.groupBy { dayKey(it.timeEpochMs, state.forecast.timezone) }
 
     Column(modifier = Modifier.fillMaxSize()) {
-        Box(modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 4.dp)) {
-            IconButton(onClick = onRefresh, modifier = Modifier.align(Alignment.CenterEnd)) {
-                Icon(Icons.Outlined.Refresh, contentDescription = "Refresh")
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            FreshnessLabel(fetchedAt = state.fetchedAt, modifier = Modifier.weight(1f))
+            if (state.isStale) {
+                TextMMD(text = "offline", fontSize = 12.sp)
             }
-            FreshnessLabel(fetchedAt = state.fetchedAt)
-        }
-        if (state.isStale) {
-            TextMMD(
-                text = "Offline — showing cached data",
-                fontSize = 14.sp,
-                modifier = Modifier.padding(horizontal = 12.dp)
-            )
+            IconButton(onClick = onRefresh, modifier = Modifier.size(32.dp)) {
+                Icon(Icons.Outlined.Refresh, contentDescription = "Refresh", modifier = Modifier.size(20.dp))
+            }
         }
         HorizontalDividerMMD()
-        LazyColumn(modifier = Modifier.weight(1f)) {
+        LazyColumnMMD(modifier = Modifier.weight(1f)) {
             grouped.forEach { (_, dayHours) ->
-                stickyHeader {
-                    Column {
-                        DayHeader(epochMs = dayHours.first().timeEpochMs)
-                        ColumnHeader(windUnit = windUnit, showMarineCols = showMarine)
-                        HorizontalDividerMMD()
-                    }
-                }
+                item { DayHeader(epochMs = dayHours.first().timeEpochMs) }
+                item { ColumnHeader(windUnit = windUnit, showMarineCols = showMarine) }
+                item { HorizontalDividerMMD() }
                 items(items = dayHours, key = { it.timeEpochMs }) { hour ->
                     HourRow(
                         hour = hour,
@@ -138,8 +133,7 @@ private fun ForecastTable(
                 }
             }
         }
-        HorizontalDividerMMD()
-        TextMMD(text = providerAttribution, fontSize = 12.sp, modifier = Modifier.padding(8.dp))
+        TextMMD(text = providerAttribution, fontSize = 16.sp, modifier = Modifier.padding(8.dp))
     }
 }
 

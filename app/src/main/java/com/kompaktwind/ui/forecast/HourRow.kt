@@ -17,7 +17,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-private val ROW_FONT = 18.sp
+private val ROW_FONT = 22.sp
 
 @Composable
 fun HourRow(
@@ -26,7 +26,7 @@ fun HourRow(
     tempUnit: TempUnit,
     showMarineCols: Boolean
 ) {
-    val hh = SimpleDateFormat("HH:mm", Locale.getDefault()).format(Date(hour.timeEpochMs))
+    val hh = SimpleDateFormat("HH", Locale.getDefault()).format(Date(hour.timeEpochMs))
     val w = hour.windSpeedMs?.let { UnitFormatters.windFromMs(it, windUnit) }
     val g = hour.windGustMs?.let { UnitFormatters.windFromMs(it, windUnit) }
     val arrow = hour.windDirDeg?.let { UnitFormatters.arrowGlyph(it) } ?: " "
@@ -72,14 +72,14 @@ fun ColumnHeader(windUnit: WindUnit, showMarineCols: Boolean) {
             .fillMaxWidth()
             .padding(horizontal = 12.dp, vertical = 4.dp)
     ) {
-        TextMMD(text = "Hour", fontSize = 14.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1.2f))
-        TextMMD(text = "Dir", fontSize = 14.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1.2f))
-        TextMMD(text = wLabel, fontSize = 14.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1.5f))
-        TextMMD(text = "°", fontSize = 14.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
-        TextMMD(text = "mm", fontSize = 14.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
+        TextMMD(text = "Hour", fontSize = 16.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1.2f))
+        TextMMD(text = "Dir", fontSize = 16.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1.2f))
+        TextMMD(text = wLabel, fontSize = 16.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1.5f))
+        TextMMD(text = "°", fontSize = 16.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
+        TextMMD(text = "mm", fontSize = 16.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
         if (showMarineCols) {
-            TextMMD(text = "Wave", fontSize = 14.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1.3f))
-            TextMMD(text = "Sea", fontSize = 14.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
+            TextMMD(text = "Wave", fontSize = 16.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1.3f))
+            TextMMD(text = "Sea", fontSize = 16.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
         }
     }
 }
