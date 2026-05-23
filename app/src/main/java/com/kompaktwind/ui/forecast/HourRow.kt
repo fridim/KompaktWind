@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.kompaktwind.data.HourPoint
@@ -16,6 +17,8 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
+private val ROW_FONT = 18.sp
+
 @Composable
 fun HourRow(
     hour: HourPoint,
@@ -26,18 +29,18 @@ fun HourRow(
     val hh = SimpleDateFormat("HH:mm", Locale.getDefault()).format(Date(hour.timeEpochMs))
     val w = hour.windSpeedMs?.let { UnitFormatters.windFromMs(it, windUnit) }
     val g = hour.windGustMs?.let { UnitFormatters.windFromMs(it, windUnit) }
-    val wUnit = UnitFormatters.windUnitLabel(windUnit)
     val arrow = hour.windDirDeg?.let { UnitFormatters.arrowGlyph(it) } ?: " "
     val card = hour.windDirDeg?.let { UnitFormatters.cardinal(it) } ?: "—"
-    val wind = "$arrow $card ${w?.let { "%.0f".format(it) } ?: "—"}${if (g != null) "/${"%.0f".format(g)}" else ""}$wUnit"
+    val windSpeed = w?.let { "%.0f".format(it) } ?: "—"
+    val gustPart = if (g != null) "/${"%.0f".format(g)}" else ""
 
     val t = hour.tempC?.let { UnitFormatters.tempFromC(it, tempUnit) }
-    val tStr = t?.let { "%.0f".format(it) + UnitFormatters.tempUnitLabel(tempUnit) } ?: "—"
+    val tStr = t?.let { "%.0f°".format(it) } ?: "—"
 
-    val pStr = hour.precipMm?.let { "%.1fmm".format(it) } ?: "—"
+    val pStr = hour.precipMm?.let { "%.1f".format(it) } ?: "—"
     val waveStr = if (showMarineCols && hour.waveHeightM != null) {
-        val h = "%.1fm".format(hour.waveHeightM)
-        val period = hour.wavePeriodS?.let { "/${"%.0f".format(it)}s" } ?: ""
+        val h = "%.1f".format(hour.waveHeightM)
+        val period = hour.wavePeriodS?.let { "/${"%.0f".format(it)}" } ?: ""
         "$h$period"
     } else " "
     val waterStr = if (showMarineCols && hour.waterTempC != null) {
@@ -49,11 +52,34 @@ fun HourRow(
             .fillMaxWidth()
             .padding(horizontal = 12.dp, vertical = 6.dp)
     ) {
-        TextMMD(text = hh, fontSize = 14.sp, modifier = Modifier.weight(1.2f))
-        TextMMD(text = wind, fontSize = 14.sp, modifier = Modifier.weight(3.5f))
-        TextMMD(text = tStr, fontSize = 14.sp, modifier = Modifier.weight(1.2f))
-        TextMMD(text = pStr, fontSize = 14.sp, modifier = Modifier.weight(1.3f))
-        TextMMD(text = waveStr, fontSize = 14.sp, modifier = Modifier.weight(1.5f))
-        TextMMD(text = waterStr, fontSize = 14.sp, modifier = Modifier.weight(1.0f))
+        TextMMD(text = hh, fontSize = ROW_FONT, modifier = Modifier.weight(1.2f))
+        TextMMD(text = "$arrow$card", fontSize = ROW_FONT, modifier = Modifier.weight(1.2f))
+        TextMMD(text = "$windSpeed$gustPart", fontSize = ROW_FONT, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1.5f))
+        TextMMD(text = tStr, fontSize = ROW_FONT, modifier = Modifier.weight(1f))
+        TextMMD(text = pStr, fontSize = ROW_FONT, modifier = Modifier.weight(1f))
+        if (showMarineCols) {
+            TextMMD(text = waveStr, fontSize = ROW_FONT, modifier = Modifier.weight(1.3f))
+            TextMMD(text = waterStr, fontSize = ROW_FONT, modifier = Modifier.weight(1f))
+        }
+    }
+}
+
+@Composable
+fun ColumnHeader(windUnit: WindUnit, showMarineCols: Boolean) {
+    val wLabel = UnitFormatters.windUnitLabel(windUnit)
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 12.dp, vertical = 4.dp)
+    ) {
+        TextMMD(text = "Hour", fontSize = 14.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1.2f))
+        TextMMD(text = "Dir", fontSize = 14.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1.2f))
+        TextMMD(text = wLabel, fontSize = 14.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1.5f))
+        TextMMD(text = "°", fontSize = 14.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
+        TextMMD(text = "mm", fontSize = 14.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
+        if (showMarineCols) {
+            TextMMD(text = "Wave", fontSize = 14.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1.3f))
+            TextMMD(text = "Sea", fontSize = 14.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
+        }
     }
 }

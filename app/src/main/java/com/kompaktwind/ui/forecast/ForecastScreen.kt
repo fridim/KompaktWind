@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Refresh
@@ -27,7 +28,6 @@ import com.kompaktwind.ui.KompaktWindViewModel
 import com.kompaktwind.ui.common.FreshnessLabel
 import com.mudita.mmd.components.buttons.ButtonMMD
 import com.mudita.mmd.components.divider.HorizontalDividerMMD
-import com.mudita.mmd.components.lazy.LazyColumnMMD
 import com.mudita.mmd.components.progress_indicator.CircularProgressIndicatorMMD
 import com.mudita.mmd.components.text.TextMMD
 import java.util.Calendar
@@ -99,7 +99,9 @@ private fun ForecastTable(
     providerAttribution: String,
     onRefresh: () -> Unit
 ) {
-    val hours = state.forecast.hours
+    val nowMs = System.currentTimeMillis()
+    val currentHourMs = nowMs - (nowMs % 3_600_000)
+    val hours = state.forecast.hours.filter { it.timeEpochMs >= currentHourMs }
     val grouped = hours.groupBy { dayKey(it.timeEpochMs, state.forecast.timezone) }
 
     Column(modifier = Modifier.fillMaxSize()) {
@@ -117,9 +119,15 @@ private fun ForecastTable(
             )
         }
         HorizontalDividerMMD()
-        LazyColumnMMD(modifier = Modifier.weight(1f)) {
+        LazyColumn(modifier = Modifier.weight(1f)) {
             grouped.forEach { (_, dayHours) ->
-                stickyHeader { DayHeader(epochMs = dayHours.first().timeEpochMs) }
+                stickyHeader {
+                    Column {
+                        DayHeader(epochMs = dayHours.first().timeEpochMs)
+                        ColumnHeader(windUnit = windUnit, showMarineCols = showMarine)
+                        HorizontalDividerMMD()
+                    }
+                }
                 items(items = dayHours, key = { it.timeEpochMs }) { hour ->
                     HourRow(
                         hour = hour,
