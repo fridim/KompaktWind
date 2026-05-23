@@ -22,7 +22,7 @@ import com.kompaktwind.data.TempUnit
 import com.kompaktwind.data.WindUnit
 import com.kompaktwind.ui.KompaktWindViewModel
 import com.mudita.mmd.components.buttons.ButtonMMD
-import com.mudita.mmd.components.divider.HorizontalDividerMMD
+import com.kompaktwind.ui.common.DashedDivider
 import com.mudita.mmd.components.menus.DropdownMenuItemMMD
 import com.mudita.mmd.components.menus.DropdownMenuMMD
 import com.mudita.mmd.components.text.TextMMD
@@ -40,7 +40,7 @@ fun SettingsScreen(viewModel: KompaktWindViewModel) {
                 onSelect = { viewModel.setWindUnit(WindUnit.valueOf(it)) }
             )
         }
-        HorizontalDividerMMD()
+        DashedDivider()
 
         SettingRow("Temperature units") {
             DropdownPicker(
@@ -49,7 +49,7 @@ fun SettingsScreen(viewModel: KompaktWindViewModel) {
                 onSelect = { viewModel.setTempUnit(TempUnit.valueOf(it)) }
             )
         }
-        HorizontalDividerMMD()
+        DashedDivider()
 
         SettingRow("Wave/water shown") {
             DropdownPicker(
@@ -58,7 +58,7 @@ fun SettingsScreen(viewModel: KompaktWindViewModel) {
                 onSelect = { viewModel.setMarineDisplay(MarineDisplay.valueOf(it)) }
             )
         }
-        HorizontalDividerMMD()
+        DashedDivider()
 
         SettingRow("Cache TTL (minutes)") {
             DropdownPicker(
@@ -67,12 +67,12 @@ fun SettingsScreen(viewModel: KompaktWindViewModel) {
                 onSelect = { viewModel.setCacheTtl(it.toInt()) }
             )
         }
-        HorizontalDividerMMD()
+        DashedDivider()
 
         SettingRow("Data provider") {
             TextMMD(text = s.providerId)
         }
-        HorizontalDividerMMD()
+        DashedDivider()
 
         TextMMD(
             text = "Data: Open-Meteo (open-meteo.com)",
