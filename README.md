@@ -18,6 +18,8 @@ the default free data source.
 <img width="480" height="800" alt="Screenshot_20260523-233645" src="https://github.com/user-attachments/assets/396421d1-74d0-465a-950a-6da3f5cd2e1a" />
       </td>
 </tr>
+    <tr>
+    <td><img width="480" height="800" alt="Screenshot_20260523-204846" src="https://github.com/user-attachments/assets/5545ba93-9060-440d-8dae-b09188d7507a" /></td></tr>
 </table>
 
 
