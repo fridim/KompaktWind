@@ -5,6 +5,23 @@ targeting outdoor sports (sailing, surfing, paragliding). It uses the
 Mudita Mindful Design (MMD) library for an e-ink-optimized UI and a pluggable
 weather-provider layer with Open-Meteo as the default free data source.
 
+## Screenshots
+
+<table>
+<tr>
+    <td>
+        <img width="480" height="800" alt="Screenshot_20260523-234100" src="https://github.com/user-attachments/assets/851fa52c-c1df-496c-b283-475fc094a0d9" />
+      </td>
+      <td>
+        <img width="480" height="800" alt="Screenshot_20260523-233637" src="https://github.com/user-attachments/assets/de86c128-0d32-4014-ba96-16ac4fb58788" />
+      </td>
+      <td>
+<img width="480" height="800" alt="Screenshot_20260523-233645" src="https://github.com/user-attachments/assets/396421d1-74d0-465a-950a-6da3f5cd2e1a" />
+      </td>
+</tr>
+</table>
+
+
 ## Features
 
 - Saved spots (search by place name or enter coordinates manually)
