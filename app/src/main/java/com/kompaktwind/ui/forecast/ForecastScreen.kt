@@ -2,16 +2,10 @@ package com.kompaktwind.ui.forecast
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.Refresh
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -25,7 +19,6 @@ import com.kompaktwind.data.MarineDisplay
 import com.kompaktwind.data.TempUnit
 import com.kompaktwind.data.WindUnit
 import com.kompaktwind.ui.KompaktWindViewModel
-import com.kompaktwind.ui.common.FreshnessLabel
 import com.mudita.mmd.components.buttons.ButtonMMD
 import com.mudita.mmd.components.divider.HorizontalDividerMMD
 import com.mudita.mmd.components.lazy.LazyColumnMMD
@@ -97,7 +90,7 @@ private fun ForecastTable(
     tempUnit: TempUnit,
     showMarine: Boolean,
     providerAttribution: String,
-    onRefresh: () -> Unit
+    @Suppress("UNUSED_PARAMETER") onRefresh: () -> Unit
 ) {
     val nowMs = System.currentTimeMillis()
     val currentHourMs = nowMs - (nowMs % 3_600_000)
@@ -105,19 +98,13 @@ private fun ForecastTable(
     val grouped = hours.groupBy { dayKey(it.timeEpochMs, state.forecast.timezone) }
 
     Column(modifier = Modifier.fillMaxSize()) {
-        Row(
-            modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            FreshnessLabel(fetchedAt = state.fetchedAt, modifier = Modifier.weight(1f))
-            if (state.isStale) {
-                TextMMD(text = "offline", fontSize = 12.sp)
-            }
-            IconButton(onClick = onRefresh, modifier = Modifier.size(32.dp)) {
-                Icon(Icons.Outlined.Refresh, contentDescription = "Refresh", modifier = Modifier.size(20.dp))
-            }
+        if (state.isStale) {
+            TextMMD(
+                text = "Offline — showing cached data",
+                fontSize = 14.sp,
+                modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp)
+            )
         }
-        HorizontalDividerMMD()
         LazyColumnMMD(modifier = Modifier.weight(1f)) {
             grouped.forEach { (_, dayHours) ->
                 item { DayHeader(epochMs = dayHours.first().timeEpochMs) }

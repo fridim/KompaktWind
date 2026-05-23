@@ -10,14 +10,17 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.outlined.Refresh
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
@@ -25,6 +28,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.kompaktwind.data.ForecastUiState
 import com.kompaktwind.ui.KompaktWindViewModel
 import com.kompaktwind.ui.KompaktWindViewModelFactory
 import com.kompaktwind.ui.Screen
@@ -39,6 +43,7 @@ import com.mudita.mmd.components.nav_bar.NavigationBarItemMMD
 import com.mudita.mmd.components.nav_bar.NavigationBarMMD
 import com.mudita.mmd.components.text.TextMMD
 import com.mudita.mmd.components.top_app_bar.TopAppBarMMD
+import java.util.concurrent.TimeUnit
 
 class MainActivity : ComponentActivity() {
     @OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
@@ -52,6 +57,7 @@ class MainActivity : ComponentActivity() {
                 val backEntry by navController.currentBackStackEntryAsState()
                 val currentDestination = backEntry?.destination
                 val canNavigateBack = navController.previousBackStackEntry != null
+                val isForecast = currentDestination?.route?.startsWith("forecast/") == true
 
                 Scaffold(
                     modifier = Modifier.fillMaxSize(),
@@ -66,9 +72,13 @@ class MainActivity : ComponentActivity() {
                                         }
                                     }
                                 },
-                                actions = {}
+                                actions = {
+                                    if (isForecast) {
+                                        ForecastActions(viewModel)
+                                    }
+                                }
                             )
-                            HorizontalDividerMMD(thickness = 3.dp)
+                            HorizontalDividerMMD()
                         }
                     },
                     bottomBar = {
@@ -126,6 +136,31 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+}
+
+@Composable
+private fun ForecastActions(viewModel: KompaktWindViewModel) {
+    val forecast by viewModel.forecast.collectAsState()
+    val spots by viewModel.spots.collectAsState()
+
+    val fetchedAt = (forecast as? ForecastUiState.Data)?.fetchedAt
+    if (fetchedAt != null) {
+        val ageMs = (System.currentTimeMillis() - fetchedAt).coerceAtLeast(0)
+        val label = when {
+            ageMs < TimeUnit.MINUTES.toMillis(1) -> "now"
+            ageMs < TimeUnit.HOURS.toMillis(1) -> "${TimeUnit.MILLISECONDS.toMinutes(ageMs)}m"
+            else -> "${TimeUnit.MILLISECONDS.toHours(ageMs)}h"
+        }
+        TextMMD(text = label, fontSize = 14.sp)
+    }
+
+    IconButton(onClick = {
+        val data = forecast as? ForecastUiState.Data ?: return@IconButton
+        val spot = spots.firstOrNull { it.id == data.forecast.spotId } ?: return@IconButton
+        viewModel.loadForecast(spot, forceRefresh = true)
+    }) {
+        Icon(Icons.Outlined.Refresh, contentDescription = "Refresh")
     }
 }
 
