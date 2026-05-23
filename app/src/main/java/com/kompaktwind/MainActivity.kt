@@ -90,10 +90,10 @@ class MainActivity : ComponentActivity() {
                                             Box(
                                                 modifier = Modifier
                                                     .size(36.dp)
-                                                    .background(Color.Black, shape = androidx.compose.foundation.shape.RoundedCornerShape(8.dp)),
+                                                    .background(Color.Black, shape = androidx.compose.foundation.shape.RoundedCornerShape(12.dp)),
                                                 contentAlignment = Alignment.Center
                                             ) {
-                                                Icon(Icons.Outlined.Add, contentDescription = "Add spot", tint = Color.White, modifier = Modifier.size(24.dp))
+                                                Icon(Icons.Outlined.Add, contentDescription = "Add spot", tint = Color.White, modifier = Modifier.size(22.dp))
                                             }
                                         }
                                     }
