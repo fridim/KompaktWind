@@ -1,0 +1,15 @@
+{
+  "results": [
+    {
+      "id": 1, "name": "Calais", "latitude": 50.95, "longitude": 1.85,
+      "country": "France", "country_code": "FR", "admin1": "Hauts-de-France",
+      "feature_code": "PPLA3"
+    },
+    {
+      "id": 2, "name": "Calais", "latitude": 44.66, "longitude": -67.28,
+      "country": "United States", "country_code": "US", "admin1": "Maine",
+      "feature_code": "PPL"
+    }
+  ],
+  "generationtime_ms": 0.7
+}
