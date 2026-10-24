@@ -1,0 +1,57 @@
+[
+  {
+    "id": "osm-node-4299104622",
+    "name": "Kitesurf Spot La Palme",
+    "shortName": "La Palme",
+    "altNames": [],
+    "lat": 42.9708981,
+    "lon": 3.018115,
+    "country": null,
+    "region": null,
+    "description": "",
+    "windDirections": [],
+    "avoidWindDirections": [],
+    "activities": [
+      "kitesurfing"
+    ],
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/4299104622",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/4299104622"
+      }
+    ],
+    "tile": "42_3",
+    "updated": "2026-10-24"
+  },
+  {
+    "id": "osm-way-1382821398",
+    "name": "",
+    "shortName": "",
+    "altNames": [],
+    "lat": 42.7792,
+    "lon": 3.037006,
+    "country": null,
+    "region": null,
+    "description": "",
+    "windDirections": [],
+    "avoidWindDirections": [],
+    "activities": [
+      "kitesurfing"
+    ],
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1382821398",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1382821398"
+      }
+    ],
+    "tile": "42_3",
+    "updated": "2026-10-24",
+    "hintName": "Plage de l'embouchure",
+    "hintKind": "natural=beach",
+    "hintOsm": ""
+  }
+]

@@ -1,6 +1,12 @@
 package com.kompaktwind.ui.common
 
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.withStyle
 import com.kompaktwind.data.TempUnit
+import com.kompaktwind.data.DistanceUnit
 import com.kompaktwind.data.WindUnit
 
 object UnitFormatters {
@@ -43,5 +49,28 @@ object UnitFormatters {
         val norm = ((degFrom + 180) % 360 + 360) % 360
         val idx = ((norm + 22) / 45) % 8
         return listOf("↑", "↗", "→", "↘", "↓", "↙", "←", "↖")[idx]
+    }
+
+    fun distanceFromKm(km: Double, unit: DistanceUnit): Double = when (unit) {
+        DistanceUnit.KM -> km
+        DistanceUnit.MI -> km * 0.621371
+    }
+
+    fun distanceUnitLabel(unit: DistanceUnit): String = when (unit) {
+        DistanceUnit.KM -> "km"
+        DistanceUnit.MI -> "mi"
+    }
+
+    fun distanceLabel(km: Double, unit: DistanceUnit): String =
+        "%.1f %s".format(distanceFromKm(km, unit), distanceUnitLabel(unit))
+
+    fun windValueText(value: Double?): AnnotatedString {
+        if (value == null) return AnnotatedString("—")
+        val digits = "%.0f".format(value)
+        if (digits.length >= 2) return AnnotatedString(digits)
+        return buildAnnotatedString {
+            withStyle(SpanStyle(color = Color.Transparent)) { append('0') }
+            append(digits)
+        }
     }
 }

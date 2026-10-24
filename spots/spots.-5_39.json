@@ -1,0 +1,29 @@
+[
+  {
+    "id": "osm-node-3704904424",
+    "name": "pepea kite surfing",
+    "lat": -4.0320979,
+    "lon": 39.7194934,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/3704904424",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "-5_39",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/3704904424"
+      },
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/503264368"
+      }
+    ],
+    "altNames": [],
+    "shortName": "pepea kite surfing"
+  }
+]

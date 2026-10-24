@@ -1,0 +1,28 @@
+[
+  {
+    "id": "osm-way-190098223",
+    "name": "Παραλία Παλαιόπολη",
+    "lat": 36.2244436,
+    "lon": 23.0649056,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/190098223",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "36_23",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/190098223"
+      }
+    ],
+    "altNames": [
+      "Piatsa Beach",
+      "Paleopoli Beach"
+    ],
+    "shortName": "Παραλία Παλαιόπολη"
+  }
+]

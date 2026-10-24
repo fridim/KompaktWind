@@ -1,0 +1,48 @@
+[
+  {
+    "id": "osm-node-9400514160",
+    "name": "Paradise Kitesurf",
+    "lat": 27.3054668,
+    "lon": 33.731058,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/9400514160",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "27_33",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/9400514160"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Paradise Kitesurf"
+  },
+  {
+    "id": "osm-node-14073443834",
+    "name": "Secret Spot",
+    "lat": 27.6707244,
+    "lon": 33.6320113,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/14073443834",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "27_33",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/14073443834"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Secret Spot"
+  }
+]

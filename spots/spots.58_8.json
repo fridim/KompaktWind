@@ -1,0 +1,48 @@
+[
+  {
+    "id": "osm-node-5808673766",
+    "name": "Bjellandstrand",
+    "lat": 58.456366,
+    "lon": 8.884485,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5808673766",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "58_8",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5808673766"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Bjellandstrand"
+  },
+  {
+    "id": "osm-node-7123877353",
+    "name": "Hamresanden",
+    "lat": 58.1905575,
+    "lon": 8.0704638,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7123877353",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "58_8",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7123877353"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Hamresanden"
+  }
+]

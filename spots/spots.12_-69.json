@@ -1,0 +1,48 @@
+[
+  {
+    "id": "osm-way-243919362",
+    "name": "Atlantis Beach",
+    "lat": 12.0442161,
+    "lon": -68.2664187,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/243919362",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "12_-69",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/243919362"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Atlantis Beach"
+  },
+  {
+    "id": "osm-node-11026531203",
+    "name": "Kiteboarding Bonaire",
+    "lat": 12.0444486,
+    "lon": -68.2663762,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/11026531203",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "12_-69",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/11026531203"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Kiteboarding"
+  }
+]

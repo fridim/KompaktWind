@@ -1,0 +1,27 @@
+[
+  {
+    "id": "osm-way-663476017",
+    "name": "Pebble Beach",
+    "lat": -27.082676,
+    "lon": 153.1385884,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/663476017",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "-28_153",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/663476017"
+      }
+    ],
+    "altNames": [
+      "Sandstone Point"
+    ],
+    "shortName": "Pebble Beach"
+  }
+]

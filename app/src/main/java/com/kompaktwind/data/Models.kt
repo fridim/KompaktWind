@@ -6,7 +6,10 @@ data class Spot(
     val lat: Double,
     val lon: Double,
     val isCoastal: Boolean,
-    val createdAt: Long
+    val createdAt: Long,
+    val providerId: String = ProviderIds.OPEN_METEO,
+    val catalogId: String? = null,
+    val shortName: String? = null
 )
 
 data class Forecast(
@@ -33,3 +36,4 @@ data class HourPoint(
 enum class WindUnit { MS, KMH, KN, MPH }
 enum class TempUnit { C, F }
 enum class MarineDisplay { AUTO, ALWAYS, NEVER }
+enum class WindColorMode { MONO, COLOR }

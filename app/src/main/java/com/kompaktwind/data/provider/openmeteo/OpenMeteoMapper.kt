@@ -3,6 +3,7 @@ package com.kompaktwind.data.provider.openmeteo
 import com.kompaktwind.data.Forecast
 import com.kompaktwind.data.HourPoint
 import java.time.LocalDateTime
+import java.time.ZoneId
 import java.time.ZoneOffset
 
 object OpenMeteoMapper {
@@ -12,7 +13,8 @@ object OpenMeteoMapper {
         marine: OpenMeteoMarineDto?,
         fetchedAt: Long
     ): Forecast {
-        val tzOffset = ZoneOffset.ofTotalSeconds(forecast.utcOffsetSeconds)
+        val zone = runCatching { ZoneId.of(forecast.timezone) }
+            .getOrElse { ZoneOffset.ofTotalSeconds(forecast.utcOffsetSeconds) }
         val marineByTime: Map<String, Triple<Double?, Double?, Double?>> = marine?.let { m ->
             m.hourly.time.mapIndexed { i, t ->
                 t to Triple(
@@ -24,7 +26,7 @@ object OpenMeteoMapper {
         } ?: emptyMap()
 
         val hours = forecast.hourly.time.mapIndexed { i, isoLocal ->
-            val instant = LocalDateTime.parse(isoLocal).toInstant(tzOffset)
+            val instant = LocalDateTime.parse(isoLocal).atZone(zone).toInstant()
             val triple = marineByTime[isoLocal]
             HourPoint(
                 timeEpochMs = instant.toEpochMilli(),

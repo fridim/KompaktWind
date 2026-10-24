@@ -1,0 +1,25 @@
+[
+  {
+    "id": "osm-way-905877929",
+    "name": "Kitesurfspot Ostufer",
+    "lat": 49.1321928,
+    "lon": 10.7323533,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/905877929",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "49_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/905877929"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Kitesurfspot"
+  }
+]

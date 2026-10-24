@@ -1,0 +1,25 @@
+[
+  {
+    "id": "osm-way-340755108",
+    "name": "Kite Area",
+    "lat": 44.9804309,
+    "lon": -1.1005334,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/340755108",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "44_-2",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/340755108"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Area"
+  }
+]

@@ -1,0 +1,25 @@
+[
+  {
+    "id": "osm-way-890690613",
+    "name": "Smeťák",
+    "lat": 50.0290014,
+    "lon": 14.5839969,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/890690613",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "50_14",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/890690613"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Smeťák"
+  }
+]

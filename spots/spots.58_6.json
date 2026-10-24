@@ -1,0 +1,48 @@
+[
+  {
+    "id": "osm-node-7773683572",
+    "name": "Haviksanden",
+    "lat": 58.0666518,
+    "lon": 6.7343294,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7773683572",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "58_6",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7773683572"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Haviksanden"
+  },
+  {
+    "id": "osm-node-6779118041",
+    "name": "Kviljosanden",
+    "lat": 58.072861,
+    "lon": 6.6740226,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6779118041",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "58_6",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6779118041"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Kviljosanden"
+  }
+]

@@ -11,7 +11,12 @@ class KompaktWindViewModelFactory(private val container: AppContainer) : ViewMod
             spotDao = container.db.spotDao(),
             forecastRepository = container.forecastRepository,
             geocoding = container.geocoding,
-            settings = container.settings
+            settings = container.settings,
+            language = container.language,
+            liveStations = container.liveStations,
+            metar = container.metar,
+            catalogRepository = container.catalog,
+            contentResolver = container.contentResolver
         ) as T
     }
 }

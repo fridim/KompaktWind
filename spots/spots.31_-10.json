@@ -1,0 +1,25 @@
+[
+  {
+    "id": "osm-way-243397848",
+    "name": "Plage d'Essaouira",
+    "lat": 31.4992036,
+    "lon": -9.7675765,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/243397848",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "31_-10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/243397848"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Plage d'Essaouira"
+  }
+]

@@ -1,0 +1,579 @@
+[
+  {
+    "id": "osm-node-5793955258",
+    "name": "Danmarkstranda",
+    "lat": 59.3055539,
+    "lon": 10.6896671,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5793955258",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5793955258"
+      }
+    ],
+    "altNames": [
+      "Nesetstranda"
+    ],
+    "shortName": "Danmarkstranda"
+  },
+  {
+    "id": "osm-node-5839918893",
+    "name": "Engholmstranda/Langstranda",
+    "lat": 59.3150008,
+    "lon": 10.6814563,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5839918893",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5839918893"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Engholmstranda"
+  },
+  {
+    "id": "osm-node-5793955264",
+    "name": "Feskjær",
+    "lat": 59.337649,
+    "lon": 10.4858547,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5793955264",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5793955264"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Feskjær"
+  },
+  {
+    "id": "osm-node-5793955267",
+    "name": "Framnes",
+    "lat": 59.4218288,
+    "lon": 10.6351057,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5793955267",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5793955267"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Framnes"
+  },
+  {
+    "id": "osm-node-5940156164",
+    "name": "Fuglevik",
+    "lat": 59.389357,
+    "lon": 10.6513019,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5940156164",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5940156164"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Fuglevik"
+  },
+  {
+    "id": "osm-node-5793955262",
+    "name": "Gillhusodden",
+    "lat": 59.747223,
+    "lon": 10.267636,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5793955262",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5793955262"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Gillhusodden"
+  },
+  {
+    "id": "osm-node-5793955261",
+    "name": "Hvasser syd",
+    "lat": 59.0648419,
+    "lon": 10.4441059,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5793955261",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5793955261"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Hvasser syd"
+  },
+  {
+    "id": "osm-node-5793955265",
+    "name": "Hvittensand",
+    "lat": 59.0358625,
+    "lon": 10.0537477,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5793955265",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5793955265"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Hvittensand"
+  },
+  {
+    "id": "osm-node-7846967890",
+    "name": "Karljohansvern",
+    "lat": 59.4355549,
+    "lon": 10.4938128,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7846967890",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7846967890"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Karljohansvern"
+  },
+  {
+    "id": "osm-node-5808673767",
+    "name": "Langeby",
+    "lat": 59.077878,
+    "lon": 10.261767,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5808673767",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5808673767"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Langeby"
+  },
+  {
+    "id": "osm-node-7869138330",
+    "name": "Lilleskagen",
+    "lat": 59.0918426,
+    "lon": 10.4482824,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7869138330",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7869138330"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Lilleskagen"
+  },
+  {
+    "id": "osm-node-7973030467",
+    "name": "Ramton",
+    "lat": 59.7431584,
+    "lon": 10.5113518,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7973030467",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7973030467"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Ramton"
+  },
+  {
+    "id": "osm-node-5793955268",
+    "name": "Refsnes",
+    "lat": 59.4486507,
+    "lon": 10.6158166,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5793955268",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5793955268"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Refsnes"
+  },
+  {
+    "id": "osm-node-5808673771",
+    "name": "Ringshaug",
+    "lat": 59.277751,
+    "lon": 10.496234,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5808673771",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5808673771"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Ringshaug"
+  },
+  {
+    "id": "osm-node-5873182526",
+    "name": "Rørestrand",
+    "lat": 59.3963,
+    "lon": 10.4812,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5873182526",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5873182526"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Rørestrand"
+  },
+  {
+    "id": "osm-node-5940156163",
+    "name": "Sildebaugen",
+    "lat": 59.3317886,
+    "lon": 10.7173829,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5940156163",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5940156163"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Sildebaugen"
+  },
+  {
+    "id": "osm-node-7973030466",
+    "name": "Sjøstrand",
+    "lat": 59.7961817,
+    "lon": 10.4974687,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7973030466",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7973030466"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Sjøstrand"
+  },
+  {
+    "id": "osm-node-5983663540",
+    "name": "Skallevold",
+    "lat": 59.2908715,
+    "lon": 10.5000173,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5983663540",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5983663540"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Skallevold"
+  },
+  {
+    "id": "osm-node-5839918892",
+    "name": "Storsand",
+    "lat": 59.6412482,
+    "lon": 10.6057159,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5839918892",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5839918892"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Storsand"
+  },
+  {
+    "id": "osm-node-7939978547",
+    "name": "Storøyodden",
+    "lat": 59.8881586,
+    "lon": 10.5928172,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7939978547",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7939978547"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Storøyodden"
+  },
+  {
+    "id": "osm-node-5839918891",
+    "name": "Torkilstranda",
+    "lat": 59.6481608,
+    "lon": 10.6340844,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5839918891",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5839918891"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Torkilstranda"
+  },
+  {
+    "id": "osm-node-7846967891",
+    "name": "Trubervika",
+    "lat": 59.075307,
+    "lon": 10.3049826,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7846967891",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7846967891"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Trubervika"
+  },
+  {
+    "id": "osm-node-7786856583",
+    "name": "Trulsestranda",
+    "lat": 59.6030147,
+    "lon": 10.4119729,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7786856583",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7786856583"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Trulsestranda"
+  },
+  {
+    "id": "osm-node-5793955270",
+    "name": "Verket",
+    "lat": 59.6097784,
+    "lon": 10.4141186,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5793955270",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5793955270"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Verket"
+  },
+  {
+    "id": "osm-node-7973052541",
+    "name": "Vollen",
+    "lat": 59.8068089,
+    "lon": 10.4949179,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7973052541",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7973052541"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Vollen"
+  }
+]

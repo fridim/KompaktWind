@@ -1,6 +1,8 @@
 package com.kompaktwind.ui.common
 
+import androidx.compose.ui.graphics.Color
 import com.google.common.truth.Truth.assertThat
+import com.kompaktwind.data.DistanceUnit
 import com.kompaktwind.data.TempUnit
 import com.kompaktwind.data.WindUnit
 import org.junit.Test
@@ -34,5 +36,20 @@ class UnitFormattersTest {
     @Test fun `unit suffix matches enum`() {
         assertThat(UnitFormatters.windUnitLabel(WindUnit.MS)).isEqualTo("m/s")
         assertThat(UnitFormatters.windUnitLabel(WindUnit.KN)).isEqualTo("kn")
+    }
+
+    @Test fun `wind value is padded with an invisible digit`() {
+        val single = UnitFormatters.windValueText(9.0)
+        assertThat(single.text).isEqualTo("09")
+        assertThat(single.spanStyles.single().item.color).isEqualTo(Color.Transparent)
+        assertThat(UnitFormatters.windValueText(20.0).text).isEqualTo("20")
+        assertThat(UnitFormatters.windValueText(100.0).text).isEqualTo("100")
+        assertThat(UnitFormatters.windValueText(null).text).isEqualTo("—")
+    }
+
+    @Test fun `distance converts to miles`() {
+        assertThat(UnitFormatters.distanceFromKm(10.0, DistanceUnit.MI)).isWithin(0.001).of(6.21371)
+        assertThat(UnitFormatters.distanceUnitLabel(DistanceUnit.KM)).isEqualTo("km")
+        assertThat(UnitFormatters.distanceUnitLabel(DistanceUnit.MI)).isEqualTo("mi")
     }
 }

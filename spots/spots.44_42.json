@@ -1,0 +1,25 @@
+[
+  {
+    "id": "osm-relation-15651240",
+    "name": "Кайтстанция «Унесённые ветром»",
+    "lat": 44.6034927,
+    "lon": 42.2504126,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/relation/15651240",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "44_42",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/relation/15651240"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Кайтстанция"
+  }
+]

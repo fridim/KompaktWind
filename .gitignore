@@ -1,5 +1,7 @@
 # Gradle
 .gradle/
+.toolchain/
+.kotlin/
 build/
 !gradle-wrapper.jar
 local.properties
@@ -23,3 +25,7 @@ app/schemas/
 
 # Keystore files
 *.jks
+
+# Python
+__pycache__/
+*.pyc

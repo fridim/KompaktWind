@@ -1,0 +1,25 @@
+[
+  {
+    "id": "osm-way-222678478",
+    "name": "Fonte da Telha",
+    "lat": 38.57198,
+    "lon": -9.1967595,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/222678478",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "38_-10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/222678478"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Fonte da Telha"
+  }
+]

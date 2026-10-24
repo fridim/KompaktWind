@@ -1,0 +1,48 @@
+[
+  {
+    "id": "osm-node-11047825855",
+    "name": "Kitesurfing Spot",
+    "lat": 54.0394361,
+    "lon": 11.580926,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/11047825855",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "54_11",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/11047825855"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Spot"
+  },
+  {
+    "id": "osm-way-24943928",
+    "name": "Orther Bucht",
+    "lat": 54.4359109,
+    "lon": 11.0698187,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/24943928",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "54_11",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/24943928"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Orther Bucht"
+  }
+]

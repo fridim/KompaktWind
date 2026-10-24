@@ -1,0 +1,140 @@
+[
+  {
+    "id": "osm-node-5793955259",
+    "name": "Jomfruland",
+    "lat": 58.882297,
+    "lon": 9.613338,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5793955259",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "58_9",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5793955259"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Jomfruland"
+  },
+  {
+    "id": "osm-node-6374566379",
+    "name": "Kjærstranda",
+    "lat": 58.9786226,
+    "lon": 9.9652862,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6374566379",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "58_9",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6374566379"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Kjærstranda"
+  },
+  {
+    "id": "osm-node-5793955260",
+    "name": "Kubukta",
+    "lat": 58.85625,
+    "lon": 9.572053,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5793955260",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "58_9",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5793955260"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Kubukta"
+  },
+  {
+    "id": "osm-node-5808673768",
+    "name": "Omlidstranda",
+    "lat": 58.9885075,
+    "lon": 9.8413898,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5808673768",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "58_9",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5808673768"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Omlidstranda"
+  },
+  {
+    "id": "osm-node-5808673769",
+    "name": "Omrestranda",
+    "lat": 58.975056,
+    "lon": 9.866045,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5808673769",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "58_9",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5808673769"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Omrestranda"
+  },
+  {
+    "id": "osm-node-7926407164",
+    "name": "Rota",
+    "lat": 58.6489367,
+    "lon": 9.1395722,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7926407164",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "58_9",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7926407164"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Rota"
+  }
+]

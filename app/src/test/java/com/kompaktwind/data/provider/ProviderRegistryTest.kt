@@ -23,4 +23,15 @@ class ProviderRegistryTest {
         val registry = ProviderRegistry(listOf(a))
         assertThat(registry.get("nope")).isNull()
     }
+
+    @Test fun `registry rejects duplicate provider ids`() {
+        val error = runCatching {
+            ProviderRegistry(listOf(
+                FakeWeatherProvider(id = "same"),
+                FakeWeatherProvider(id = "same")
+            ))
+        }.exceptionOrNull()
+
+        assertThat(error).isInstanceOf(IllegalArgumentException::class.java)
+    }
 }

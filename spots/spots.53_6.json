@@ -1,0 +1,25 @@
+[
+  {
+    "id": "osm-way-139584427",
+    "name": "Hoek van de Bant",
+    "lat": 53.4143403,
+    "lon": 6.1673944,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/139584427",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "53_6",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/139584427"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Hoek van de Bant"
+  }
+]

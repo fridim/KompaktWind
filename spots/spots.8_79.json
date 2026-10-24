@@ -1,0 +1,94 @@
+[
+  {
+    "id": "osm-way-1181982742",
+    "name": "Kalpitiya Lagoon Kitesurfing Area",
+    "lat": 8.240192,
+    "lon": 79.7413337,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1181982742",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "8_79",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1181982742"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Kalpitiya Lagoon"
+  },
+  {
+    "id": "osm-way-1181982744",
+    "name": "Kitesurfing Area",
+    "lat": 8.2275457,
+    "lon": 79.7216571,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1181982744",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "8_79",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1181982744"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Area"
+  },
+  {
+    "id": "osm-way-1181982745",
+    "name": "Kitesurfing Area",
+    "lat": 8.2194942,
+    "lon": 79.7120467,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1181982745",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "8_79",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1181982745"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Area"
+  },
+  {
+    "id": "osm-way-1181982746",
+    "name": "Kitesurfing Area",
+    "lat": 8.2220878,
+    "lon": 79.7101959,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1181982746",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "8_79",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1181982746"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Area"
+  }
+]

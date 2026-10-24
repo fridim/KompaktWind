@@ -1,0 +1,115 @@
+[
+  {
+    "id": "osm-way-1571321477",
+    "name": "",
+    "shortName": "",
+    "altNames": [],
+    "lat": 43.541549,
+    "lon": 3.973088,
+    "country": null,
+    "region": null,
+    "description": "",
+    "windDirections": [],
+    "avoidWindDirections": [],
+    "activities": [
+      "windsurfing"
+    ],
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1571321477",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1571321477"
+      }
+    ],
+    "tile": "43_3",
+    "updated": "2026-10-24",
+    "hintName": "Carnon",
+    "hintKind": "place=suburb",
+    "hintOsm": ""
+  },
+  {
+    "id": "osm-way-777288236",
+    "name": "",
+    "shortName": "",
+    "altNames": [],
+    "lat": 43.444296,
+    "lon": 3.687064,
+    "country": null,
+    "region": null,
+    "description": "",
+    "windDirections": [],
+    "avoidWindDirections": [],
+    "activities": [
+      "windsurfing"
+    ],
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/777288236",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/777288236"
+      }
+    ],
+    "tile": "43_3",
+    "updated": "2026-10-24",
+    "hintName": "Cente Nautique Manuréva",
+    "hintKind": "leisure=sports_centre",
+    "hintOsm": "way/777195323"
+  },
+  {
+    "id": "osm-way-1571340635",
+    "name": "",
+    "shortName": "",
+    "altNames": [],
+    "lat": 43.419577,
+    "lon": 3.669664,
+    "country": null,
+    "region": null,
+    "description": "",
+    "windDirections": [],
+    "avoidWindDirections": [],
+    "activities": [
+      "windsurfing"
+    ],
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1571340635",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1571340635"
+      }
+    ],
+    "tile": "43_3",
+    "updated": "2026-10-24",
+    "hintName": "Le Barrou",
+    "hintKind": "place=locality",
+    "hintOsm": ""
+  },
+  {
+    "id": "osm-way-1571323239",
+    "name": "Saint-Eugène",
+    "shortName": "Saint-Eugène",
+    "altNames": [],
+    "lat": 43.4512055,
+    "lon": 3.809512,
+    "country": null,
+    "region": null,
+    "description": "",
+    "windDirections": [],
+    "avoidWindDirections": [],
+    "activities": [
+      "kitesurfing"
+    ],
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1571323239",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1571323239"
+      }
+    ],
+    "tile": "43_3",
+    "updated": "2026-10-24"
+  }
+]

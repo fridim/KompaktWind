@@ -1,0 +1,73 @@
+[
+  {
+    "id": "osm-way-822498438",
+    "name": "Grevelingendam",
+    "lat": 51.6742706,
+    "lon": 4.1401382,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/822498438",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "51_4",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/822498438"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Grevelingendam"
+  },
+  {
+    "id": "osm-way-822498440",
+    "name": "Oesterdam",
+    "lat": 51.4691514,
+    "lon": 4.2144,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/822498440",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "51_4",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/822498440"
+      }
+    ],
+    "altNames": [
+      "Speelmansplaten"
+    ],
+    "shortName": "Oesterdam"
+  },
+  {
+    "id": "osm-way-822498439",
+    "name": "Strijenham",
+    "lat": 51.522492,
+    "lon": 4.1587145,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/822498439",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "51_4",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/822498439"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Strijenham"
+  }
+]

@@ -1,0 +1,94 @@
+[
+  {
+    "id": "osm-node-4299090272",
+    "name": "Kitesurf Spot Hindeloopen",
+    "lat": 52.9362065,
+    "lon": 5.4023878,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/4299090272",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "52_5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/4299090272"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Hindeloopen"
+  },
+  {
+    "id": "osm-node-4299090273",
+    "name": "Kitesurf Spot Mirnser Klif",
+    "lat": 52.8503703,
+    "lon": 5.482256,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/4299090273",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "52_5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/4299090273"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Mirnser Klif"
+  },
+  {
+    "id": "osm-node-4508462925",
+    "name": "Schellinkhout",
+    "lat": 52.6327463,
+    "lon": 5.1208992,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/4508462925",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "52_5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/4508462925"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Schellinkhout"
+  },
+  {
+    "id": "osm-way-75757564",
+    "name": "Surfvijver",
+    "lat": 52.0172618,
+    "lon": 5.5666274,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/75757564",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "52_5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/75757564"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Surfvijver"
+  }
+]

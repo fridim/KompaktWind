@@ -1,0 +1,94 @@
+[
+  {
+    "id": "osm-node-6374566381",
+    "name": "Randaberg",
+    "lat": 59.0196414,
+    "lon": 5.5917835,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6374566381",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6374566381"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Randaberg"
+  },
+  {
+    "id": "osm-node-5793955257",
+    "name": "Sande",
+    "lat": 59.020083,
+    "lon": 5.591719,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5793955257",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5793955257"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Sande"
+  },
+  {
+    "id": "osm-way-975991567",
+    "name": "Stavasanden",
+    "lat": 59.2322173,
+    "lon": 5.1840619,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/975991567",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/975991567"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Stavasanden"
+  },
+  {
+    "id": "osm-node-6351517789",
+    "name": "Åkrasanden",
+    "lat": 59.2474308,
+    "lon": 5.1934862,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6351517789",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6351517789"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Åkrasanden"
+  }
+]

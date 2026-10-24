@@ -1,0 +1,25 @@
+[
+  {
+    "id": "osm-node-5559949603",
+    "name": "Rotonda de Punta Lara Kite Spot",
+    "lat": -34.8199851,
+    "lon": -57.9664853,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5559949603",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "-35_-58",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5559949603"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Rotonda de Punta"
+  }
+]

@@ -1,0 +1,25 @@
+[
+  {
+    "id": "osm-node-8528362192",
+    "name": "Nordhavnstippen",
+    "lat": 55.7231488,
+    "lon": 12.6098469,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/8528362192",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "55_12",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/8528362192"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Nordhavnstippen"
+  }
+]

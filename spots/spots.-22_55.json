@@ -1,0 +1,25 @@
+[
+  {
+    "id": "osm-node-5239357494",
+    "name": "Spot de kitesurfing de Saint-Pierre",
+    "lat": -21.3429277,
+    "lon": 55.4659714,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5239357494",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "-22_55",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5239357494"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Saint-Pierre"
+  }
+]

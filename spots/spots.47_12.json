@@ -1,0 +1,25 @@
+[
+  {
+    "id": "osm-node-2019998067",
+    "name": "Kitezone",
+    "lat": 47.8474565,
+    "lon": 12.4746031,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/2019998067",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "47_12",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/2019998067"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Kitezone"
+  }
+]

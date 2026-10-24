@@ -1,0 +1,25 @@
+[
+  {
+    "id": "osm-node-9791690026",
+    "name": "Windsurf launch",
+    "lat": 37.5884808,
+    "lon": -122.329825,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/9791690026",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "37_-123",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/9791690026"
+      }
+    ],
+    "altNames": [],
+    "shortName": "launch"
+  }
+]

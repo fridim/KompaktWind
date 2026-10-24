@@ -1,0 +1,48 @@
+[
+  {
+    "id": "osm-node-7051869444",
+    "name": "Kite Surfing",
+    "lat": 38.3391796,
+    "lon": 21.8494018,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7051869444",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "38_21",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7051869444"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Surfing"
+  },
+  {
+    "id": "osm-node-7834258527",
+    "name": "Kitesurf spot",
+    "lat": 38.3843353,
+    "lon": 21.8459939,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7834258527",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "38_21",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7834258527"
+      }
+    ],
+    "altNames": [],
+    "shortName": "spot"
+  }
+]

@@ -1,0 +1,48 @@
+[
+  {
+    "id": "osm-node-6374566380",
+    "name": "Flatset",
+    "lat": 68.5772011,
+    "lon": 14.7838425,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6374566380",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "68_14",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6374566380"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Flatset"
+  },
+  {
+    "id": "osm-node-6158111698",
+    "name": "Skrova",
+    "lat": 68.1707095,
+    "lon": 14.7010803,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6158111698",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "68_14",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6158111698"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Skrova"
+  }
+]

@@ -1,0 +1,165 @@
+[
+  {
+    "id": "osm-node-6158116203",
+    "name": "Blimssanden",
+    "lat": 62.5649308,
+    "lon": 6.0484671,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6158116203",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "62_6",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6158116203"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Blimssanden"
+  },
+  {
+    "id": "osm-node-6777922409",
+    "name": "Blindheimsvikå",
+    "lat": 62.5536136,
+    "lon": 6.0899877,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6777922409",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "62_6",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6777922409"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Blindheimsvikå"
+  },
+  {
+    "id": "osm-node-5793955263",
+    "name": "Brusanden",
+    "lat": 62.510812,
+    "lon": 6.064367,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5793955263",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "62_6",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5793955263"
+      }
+    ],
+    "altNames": [
+      "Giskebrua"
+    ],
+    "shortName": "Brusanden"
+  },
+  {
+    "id": "osm-node-6777922412",
+    "name": "Kvalneset",
+    "lat": 62.509832,
+    "lon": 6.0269666,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6777922412",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "62_6",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6777922412"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Kvalneset"
+  },
+  {
+    "id": "osm-node-6777922411",
+    "name": "Moloen",
+    "lat": 62.51159,
+    "lon": 6.0397446,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6777922411",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "62_6",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6777922411"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Moloen"
+  },
+  {
+    "id": "osm-node-6777922410",
+    "name": "Olmaneset",
+    "lat": 62.5345292,
+    "lon": 6.1306178,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6777922410",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "62_6",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6777922410"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Olmaneset"
+  },
+  {
+    "id": "osm-node-5808673765",
+    "name": "Roaldsanden",
+    "lat": 62.5741484,
+    "lon": 6.1186549,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5808673765",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "62_6",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5808673765"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Roaldsanden"
+  }
+]

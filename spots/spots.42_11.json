@@ -1,0 +1,25 @@
+[
+  {
+    "id": "osm-way-225732899",
+    "name": "Kite surf beach",
+    "lat": 42.5629457,
+    "lon": 11.1544999,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/225732899",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "42_11",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/225732899"
+      }
+    ],
+    "altNames": [],
+    "shortName": "surf beach"
+  }
+]

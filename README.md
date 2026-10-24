@@ -1,35 +1,43 @@
 # KompaktWind
 
 KompaktWind is a focused weather forecast app for outdoor sports: wingfoil,
-kitesurf, windsurf, sailing, … targeting the Mudita Kompakt e-ink. Open-Meteo as
-the default free data source.
+kitesurf, windsurf, sailing, … targeting the Mudita Kompakt e-ink. Open-Meteo is
+the default free data source, with an optional AROME FR switch.
 
 ## Screenshots
 
 <table>
 <tr>
-    <td>
-        <img width="480" height="800" alt="Screenshot_20260523-234100" src="https://github.com/user-attachments/assets/851fa52c-c1df-496c-b283-475fc094a0d9" />
-      </td>
-      <td>
-        <img width="480" height="800" alt="Screenshot_20260523-233637" src="https://github.com/user-attachments/assets/de86c128-0d32-4014-ba96-16ac4fb58788" />
-      </td>
-      <td>
-<img width="480" height="800" alt="Screenshot_20260523-233645" src="https://github.com/user-attachments/assets/396421d1-74d0-465a-950a-6da3f5cd2e1a" />
-      </td>
+    <td><img width="480" height="800" alt="Saved spots" src="screenshots/01-spots.png" /></td>
+    <td><img width="480" height="800" alt="Spot forecast with wind and gust" src="screenshots/03-forecast.png" /></td>
+    <td><img width="480" height="800" alt="Forecast presets" src="screenshots/04-forecast-picker.png" /></td>
 </tr>
-    <tr>
-    <td><img width="480" height="800" alt="Screenshot_20260523-204846" src="https://github.com/user-attachments/assets/5545ba93-9060-440d-8dae-b09188d7507a" /></td></tr>
+<tr>
+    <td><img width="480" height="800" alt="Spots with predicted wind" src="screenshots/05-spots-forecast.png" /></td>
+    <td><img width="480" height="800" alt="Live stations" src="screenshots/06-live.png" /></td>
+    <td><img width="480" height="800" alt="Settings" src="screenshots/08-settings.png" /></td>
+</tr>
 </table>
+
+Regenerate them on a connected device with `./scripts/capture-screenshots.sh`;
+see [`screenshots/README.md`](screenshots/README.md).
 
 
 ## Features
 
-- Saved spots (search by place name or enter coordinates manually)
+- Saved spots (search, coordinates, or pick on an OpenStreetMap map)
+- Choose from the available Open-Meteo models per spot via the top-right source
+  button; each spot remembers its own selection
+- Live wind stations: nearest OpenWindMap community stations and airport METAR
+  (NOAA AWC, IEM fallback), with distance, live wind/gust, and 24 h history
+- Discover spots from a sharded community catalog, no manual coordinate entry
+- Distance units (km or mi)
 - 7-day hourly forecast in a single dense table with sticky day headers
 - Wind speed + gust, direction, air temperature, precipitation
 - For coastal spots: wave height/period and water temperature
 - Offline-friendly: cached forecasts shown with a clear age stamp
+- Optional dark screen: all white on black, for fun
+- 10 languages, using the system language by default or forced in Settings
 - Configurable units (m/s, km/h, kn, mph; °C, °F)
 
 ## Build
@@ -41,8 +49,47 @@ adb install app/build/outputs/apk/debug/app-debug.apk
 
 Min SDK 28 (Android 9). Target SDK 35.
 
+## Data sources
+
+The top-right source button opens a full-screen list for the spot. Each row
+shows the agency, origin country, resolution, and horizon. The list is filtered
+to models that cover the spot and ordered by relevance.
+
+| Model | Model ID | Agency | Origin | Resolution | Horizon |
+|---|---|---|---|---|---|
+| Best | `best_match` | Open-Meteo | Global | auto | up to 7 d |
+| AROME 1.5 | `meteofrance_arome_france_hd` | Météo-France | France | 1.5 km | ~2 d |
+| AROME 2.5 | `meteofrance_arome_france0025` | Météo-France | France | 2.5 km | ~2 d |
+| KNMI | `knmi_harmonie_arome_europe` | KNMI | Netherlands | 2 km | ~2.5 d |
+| DMI | `dmi_harmonie_arome_europe` | DMI | Denmark | 2 km | ~2.3 d |
+| UKV | `ukmo_uk_deterministic_2km` | Met Office | United Kingdom | 2 km | ~2 d |
+| ICON-D2 | `dwd_icon_d2` | DWD | Germany | 2.2 km | ~2 d |
+| ICON-EU | `dwd_icon_eu` | DWD | Germany | 7 km | ~5 d |
+| ARPEGE EU | `meteofrance_arpege_europe` | Météo-France | France | 11 km | ~4 d |
+| CH2 | `meteoswiss_icon_ch2` | MeteoSwiss | Switzerland | 2 km | ~5 d |
+| CH1 | `meteoswiss_icon_ch1` | MeteoSwiss | Switzerland | 1 km | ~1.2 d |
+| ECMWF | `ecmwf_ifs` | ECMWF | Europe | 9 km | up to 7 d |
+| GFS | `ncep_gfs_global` | NOAA | USA | 13 km | up to 7 d |
+| GEM | `gem_global` | ECCC | Canada | ~15 km | up to 7 d |
+| UKMO | `ukmo_global_deterministic_10km` | Met Office | United Kingdom | 10 km | up to 7 d |
+| ARPEGE W | `meteofrance_arpege_world025` | Météo-France | France | 25 km | ~4 d |
+| ICON | `dwd_icon` | DWD | Germany | 11 km | ~5 d |
+
+Each spot stores its own source. Global models are always listed; regional
+models appear only when the spot is inside their domain. A saved choice falls
+back to Best if the spot is outside that model's coverage.
+
+## Languages
+
+English, French, German, Spanish, Italian, Portuguese, Dutch, Polish, Czech,
+and Swedish. The app follows the system language on first use; Settings can
+force a language. Adding another locale is a matter of adding a
+`values-xx/strings.xml` file and one entry in `LanguageManager`.
+
 ## Architecture
 
+- Multiple weather providers behind `ProviderRegistry` (Open-Meteo Best Match,
+  AROME FR via Open-Meteo)
 - Single-module Android app
 - Kotlin + Jetpack Compose + Mudita Mindful Design (MMD) 1.0.0
 - MVVM + StateFlow
@@ -51,8 +98,31 @@ Min SDK 28 (Android 9). Target SDK 35.
 
 ## Attribution
 
-Weather data: [Open-Meteo](https://open-meteo.com), free non-commercial license.
-Place-name search uses Open-Meteo's geocoding API.
+Weather data: [Open-Meteo](https://open-meteo.com) (default) or
+Météo-France AROME via Open-Meteo. Open-Meteo's free tier is non-commercial.
+Place-name search uses Open-Meteo's geocoding API. The map picker is
+offline: coastlines and land polygons come from Natural Earth (public domain)
+and, at high zoom in Europe, from
+[GSHHG](https://github.com/GenericMappingTools/gshhg-gmt) (LGPL-3.0) by
+Wessel & Smith.
+
+Live wind data comes from the PiouPiou/OpenWindMap community network and
+airport METAR reports (NOAA Aviation Weather Center, with IEM as fallback).
+OpenWindMap: wind data © OpenWindMap contributors. Live responses are cached
+for 5 minutes and history for 10 minutes; manual refresh bypasses the cache.
+No API key is required.
+
+The spot catalog is under `spots/`: `manifest.json`, `spots.index.json`, plus
+sharded `spots.<floor(lat)>_<floor(lon)>.json` files. A Gradle task copies them
+into the app assets, so Discover works offline. The catalog is updated only
+with app releases; there is no network refresh yet. Catalog facts come from
+OpenStreetMap (166 OSM wind-sport elements after
+excluding shops, schools and clubs). Merged spots keep alternate names and are searchable by them.
+Descriptions and wind directions are only included where we have permission
+to reuse them. OpenStreetMap-derived data is © OpenStreetMap contributors,
+ODbL 1.0; the catalog database is distributed under ODbL 1.0.
+The OFB/N2Glisse datasets are not included yet: their data.gouv.fr records
+currently expose no downloadable resources and no specified licence.
 
 ## License
 

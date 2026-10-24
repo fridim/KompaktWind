@@ -1,0 +1,25 @@
+[
+  {
+    "id": "osm-way-1167171902",
+    "name": "İçmeler",
+    "lat": 38.3114523,
+    "lon": 26.6907047,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1167171902",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "38_26",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1167171902"
+      }
+    ],
+    "altNames": [],
+    "shortName": "İçmeler"
+  }
+]

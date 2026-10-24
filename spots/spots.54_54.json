@@ -1,0 +1,94 @@
+[
+  {
+    "id": "osm-way-1554698110",
+    "name": "кайтспот \"Белые камни\"",
+    "lat": 54.2920716,
+    "lon": 54.6226341,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1554698110",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "54_54",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1554698110"
+      }
+    ],
+    "altNames": [],
+    "shortName": "кайтспот \"Белые"
+  },
+  {
+    "id": "osm-way-1554698115",
+    "name": "кайтспот \"Глория\"",
+    "lat": 54.3147623,
+    "lon": 54.6164979,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1554698115",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "54_54",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1554698115"
+      }
+    ],
+    "altNames": [],
+    "shortName": "кайтспот \"Глория\""
+  },
+  {
+    "id": "osm-way-1554698112",
+    "name": "кайтспот \"Мыс\"",
+    "lat": 54.3090517,
+    "lon": 54.6106083,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1554698112",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "54_54",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1554698112"
+      }
+    ],
+    "altNames": [],
+    "shortName": "кайтспот \"Мыс\""
+  },
+  {
+    "id": "osm-way-1554698111",
+    "name": "кайтспот \"Янги-Турмуш\"",
+    "lat": 54.2963213,
+    "lon": 54.593637,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1554698111",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "54_54",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1554698111"
+      }
+    ],
+    "altNames": [],
+    "shortName": "кайтспот"
+  }
+]

@@ -1,0 +1,25 @@
+[
+  {
+    "id": "osm-node-3946481974",
+    "name": "Kloster Surfspot",
+    "lat": 56.1058433,
+    "lon": 8.1698628,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/3946481974",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "56_8",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/3946481974"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Kloster Surfspot"
+  }
+]

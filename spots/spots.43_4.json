@@ -1,0 +1,84 @@
+[
+  {
+    "id": "osm-way-1571324819",
+    "name": "PK",
+    "shortName": "PK",
+    "altNames": [],
+    "lat": 43.516526,
+    "lon": 4.1230151,
+    "country": null,
+    "region": null,
+    "description": "",
+    "windDirections": [],
+    "avoidWindDirections": [],
+    "activities": [
+      "kitesurfing",
+      "windsurfing"
+    ],
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1571324819",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1571324819"
+      }
+    ],
+    "tile": "43_4",
+    "updated": "2026-10-24"
+  },
+  {
+    "id": "osm-way-1072067254",
+    "name": "Zone de Kite Surf",
+    "shortName": "Zone de Kite Surf",
+    "altNames": [],
+    "lat": 43.5531191,
+    "lon": 4.0232731,
+    "country": null,
+    "region": null,
+    "description": "",
+    "windDirections": [],
+    "avoidWindDirections": [],
+    "activities": [
+      "kitesurfing"
+    ],
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1072067254",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1072067254"
+      }
+    ],
+    "tile": "43_4",
+    "updated": "2026-10-24"
+  },
+  {
+    "id": "osm-way-483660367",
+    "name": "",
+    "shortName": "",
+    "altNames": [],
+    "lat": 43.566041,
+    "lon": 4.121351,
+    "country": null,
+    "region": null,
+    "description": "",
+    "windDirections": [],
+    "avoidWindDirections": [],
+    "activities": [
+      "windsurfing"
+    ],
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/483660367",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/483660367"
+      }
+    ],
+    "tile": "43_4",
+    "updated": "2026-10-24",
+    "hintName": "Étang du Ponant",
+    "hintKind": "natural=water",
+    "hintOsm": "relation/5291094"
+  }
+]

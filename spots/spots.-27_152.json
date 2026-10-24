@@ -1,0 +1,48 @@
+[
+  {
+    "id": "osm-way-202757344",
+    "name": "Dunn's Beach",
+    "lat": -26.290515,
+    "lon": 152.9904198,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/202757344",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "-27_152",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/202757344"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Dunn's Beach"
+  },
+  {
+    "id": "osm-way-202757345",
+    "name": "Norm's Beach",
+    "lat": -26.2875822,
+    "lon": 152.9932746,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/202757345",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "-27_152",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/202757345"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Norm's Beach"
+  }
+]

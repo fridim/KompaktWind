@@ -1,0 +1,25 @@
+[
+  {
+    "id": "osm-way-77221296",
+    "name": "Praia de Santa Maria",
+    "lat": 16.5914233,
+    "lon": -22.9146555,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/77221296",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "16_-23",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/77221296"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Praia de Santa"
+  }
+]

@@ -1,0 +1,48 @@
+[
+  {
+    "id": "osm-relation-10217761",
+    "name": "Ringsegårds strand",
+    "lat": 56.8639818,
+    "lon": 12.5352273,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/relation/10217761",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "56_12",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/relation/10217761"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Ringsegårds strand"
+  },
+  {
+    "id": "osm-relation-8529089",
+    "name": "Skrea Strand",
+    "lat": 56.8828034,
+    "lon": 12.5022058,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/relation/8529089",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "56_12",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/relation/8529089"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Skrea Strand"
+  }
+]

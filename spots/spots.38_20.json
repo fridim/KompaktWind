@@ -1,0 +1,27 @@
+[
+  {
+    "id": "osm-way-141326957",
+    "name": "Βασιλική",
+    "lat": 38.6301914,
+    "lon": 20.6009045,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/141326957",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "38_20",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/141326957"
+      }
+    ],
+    "altNames": [
+      "Vassiliki"
+    ],
+    "shortName": "Βασιλική"
+  }
+]

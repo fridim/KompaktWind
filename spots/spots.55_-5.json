@@ -1,0 +1,48 @@
+[
+  {
+    "id": "osm-way-544398656",
+    "name": "Barassie",
+    "lat": 55.5613619,
+    "lon": -4.6584166,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/544398656",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "55_-5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/544398656"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Barassie"
+  },
+  {
+    "id": "osm-way-355177380",
+    "name": "Troon",
+    "lat": 55.536136,
+    "lon": -4.6581262,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/355177380",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "55_-5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/355177380"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Troon"
+  }
+]

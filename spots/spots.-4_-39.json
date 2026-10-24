@@ -1,0 +1,25 @@
+[
+  {
+    "id": "osm-relation-9248967",
+    "name": "Praia do Cumbuco",
+    "lat": -3.6132437,
+    "lon": -38.7443885,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/relation/9248967",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "-4_-39",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/relation/9248967"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Praia do Cumbuco"
+  }
+]

@@ -1,0 +1,48 @@
+[
+  {
+    "id": "osm-node-454209465",
+    "name": "Porto Liscia",
+    "lat": 41.1969808,
+    "lon": 9.3072726,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/454209465",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "41_9",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/454209465"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Porto Liscia"
+  },
+  {
+    "id": "osm-node-454332528",
+    "name": "Porto Puddu",
+    "lat": 41.1932413,
+    "lon": 9.3253983,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/454332528",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "41_9",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/454332528"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Porto Puddu"
+  }
+]

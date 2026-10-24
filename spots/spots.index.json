@@ -1,0 +1,3360 @@
+[
+  {
+    "id": "osm-node-5559949614",
+    "name": "ADENAM",
+    "lat": -35.0307961,
+    "lon": -57.5021095,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5559949614",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "-36_-58",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5559949614"
+      }
+    ],
+    "shortName": "ADENAM"
+  },
+  {
+    "id": "osm-way-243919362",
+    "name": "Atlantis Beach",
+    "lat": 12.0442161,
+    "lon": -68.2664187,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/243919362",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "12_-69",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/243919362"
+      }
+    ],
+    "shortName": "Atlantis Beach"
+  },
+  {
+    "id": "osm-way-491657989",
+    "name": "Baarland",
+    "lat": 51.391968,
+    "lon": 3.897793,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/491657989",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "51_3",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/491657989"
+      }
+    ],
+    "shortName": "Baarland"
+  },
+  {
+    "id": "osm-way-544398656",
+    "name": "Barassie",
+    "lat": 55.5613619,
+    "lon": -4.6584166,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/544398656",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "55_-5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/544398656"
+      }
+    ],
+    "shortName": "Barassie"
+  },
+  {
+    "id": "osm-node-5808673766",
+    "name": "Bjellandstrand",
+    "lat": 58.456366,
+    "lon": 8.884485,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5808673766",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "58_8",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5808673766"
+      }
+    ],
+    "shortName": "Bjellandstrand"
+  },
+  {
+    "id": "osm-node-6158116203",
+    "name": "Blimssanden",
+    "lat": 62.5649308,
+    "lon": 6.0484671,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6158116203",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "62_6",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6158116203"
+      }
+    ],
+    "shortName": "Blimssanden"
+  },
+  {
+    "id": "osm-node-6777922409",
+    "name": "Blindheimsvikå",
+    "lat": 62.5536136,
+    "lon": 6.0899877,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6777922409",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "62_6",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6777922409"
+      }
+    ],
+    "shortName": "Blindheimsvikå"
+  },
+  {
+    "id": "osm-node-6779119177",
+    "name": "Borestranda",
+    "lat": 58.8134195,
+    "lon": 5.5454778,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6779119177",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "58_5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6779119177"
+      }
+    ],
+    "shortName": "Borestranda"
+  },
+  {
+    "id": "osm-way-491657990",
+    "name": "Breskens oost",
+    "lat": 51.4018246,
+    "lon": 3.5602069,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/491657990",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "51_3",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/491657990"
+      }
+    ],
+    "shortName": "Breskens oost"
+  },
+  {
+    "id": "osm-node-5793955263",
+    "name": "Brusanden",
+    "lat": 62.510812,
+    "lon": 6.064367,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5793955263",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "62_6",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5793955263"
+      }
+    ],
+    "altNames": [
+      "Giskebrua"
+    ],
+    "shortName": "Brusanden"
+  },
+  {
+    "id": "osm-way-491657992",
+    "name": "Cadzand-Bad Vlamingpolder",
+    "lat": 51.3873449,
+    "lon": 3.4100322,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/491657992",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "51_3",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/491657992"
+      }
+    ],
+    "shortName": "Cadzand-Bad"
+  },
+  {
+    "id": "osm-way-548694875",
+    "name": "Cadzand-bad west",
+    "lat": 51.372416,
+    "lon": 3.366409,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/548694875",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "51_3",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/548694875"
+      }
+    ],
+    "shortName": "Cadzand-bad west"
+  },
+  {
+    "id": "osm-way-1571321477",
+    "lat": 43.541549,
+    "lon": 3.973088,
+    "activities": [
+      "windsurfing"
+    ],
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1571321477",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1571321477"
+      }
+    ],
+    "tile": "43_3",
+    "updated": "2026-10-24",
+    "hintName": "Carnon",
+    "hintKind": "place=suburb",
+    "name": ""
+  },
+  {
+    "id": "osm-way-777288236",
+    "lat": 43.444296,
+    "lon": 3.687064,
+    "activities": [
+      "windsurfing"
+    ],
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/777288236",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/777288236"
+      }
+    ],
+    "tile": "43_3",
+    "updated": "2026-10-24",
+    "hintName": "Cente Nautique Manuréva",
+    "hintKind": "leisure=sports_centre",
+    "hintOsm": "way/777195323",
+    "name": ""
+  },
+  {
+    "id": "osm-node-5793955258",
+    "name": "Danmarkstranda",
+    "lat": 59.3055539,
+    "lon": 10.6896671,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5793955258",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5793955258"
+      }
+    ],
+    "altNames": [
+      "Nesetstranda"
+    ],
+    "shortName": "Danmarkstranda"
+  },
+  {
+    "id": "osm-way-202757344",
+    "name": "Dunn's Beach",
+    "lat": -26.290515,
+    "lon": 152.9904198,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/202757344",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "-27_152",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/202757344"
+      }
+    ],
+    "shortName": "Dunn's Beach"
+  },
+  {
+    "id": "osm-node-7744365474",
+    "name": "Ekkerøy",
+    "lat": 70.07687,
+    "lon": 30.0978613,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7744365474",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "70_30",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7744365474"
+      }
+    ],
+    "shortName": "Ekkerøy"
+  },
+  {
+    "id": "osm-node-5839918893",
+    "name": "Engholmstranda/Langstranda",
+    "lat": 59.3150008,
+    "lon": 10.6814563,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5839918893",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5839918893"
+      }
+    ],
+    "shortName": "Engholmstranda"
+  },
+  {
+    "id": "osm-node-5793955264",
+    "name": "Feskjær",
+    "lat": 59.337649,
+    "lon": 10.4858547,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5793955264",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5793955264"
+      }
+    ],
+    "shortName": "Feskjær"
+  },
+  {
+    "id": "osm-node-10177734373",
+    "name": "Fiskumvannet",
+    "lat": 59.6987698,
+    "lon": 9.8411858,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/10177734373",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_9",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/10177734373"
+      }
+    ],
+    "shortName": "Fiskumvannet"
+  },
+  {
+    "id": "osm-node-6374566380",
+    "name": "Flatset",
+    "lat": 68.5772011,
+    "lon": 14.7838425,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6374566380",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "68_14",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6374566380"
+      }
+    ],
+    "shortName": "Flatset"
+  },
+  {
+    "id": "osm-way-222678478",
+    "name": "Fonte da Telha",
+    "lat": 38.57198,
+    "lon": -9.1967595,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/222678478",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "38_-10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/222678478"
+      }
+    ],
+    "shortName": "Fonte da Telha"
+  },
+  {
+    "id": "osm-node-5793955267",
+    "name": "Framnes",
+    "lat": 59.4218288,
+    "lon": 10.6351057,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5793955267",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5793955267"
+      }
+    ],
+    "shortName": "Framnes"
+  },
+  {
+    "id": "osm-node-6351517800",
+    "name": "Frosta-Tautra",
+    "lat": 63.5836951,
+    "lon": 10.6147782,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6351517800",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "63_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6351517800"
+      }
+    ],
+    "shortName": "Frosta-Tautra"
+  },
+  {
+    "id": "osm-node-5940156164",
+    "name": "Fuglevik",
+    "lat": 59.389357,
+    "lon": 10.6513019,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5940156164",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5940156164"
+      }
+    ],
+    "shortName": "Fuglevik"
+  },
+  {
+    "id": "osm-node-5793955262",
+    "name": "Gillhusodden",
+    "lat": 59.747223,
+    "lon": 10.267636,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5793955262",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5793955262"
+      }
+    ],
+    "shortName": "Gillhusodden"
+  },
+  {
+    "id": "osm-node-7961025285",
+    "name": "Gjerdsvika",
+    "lat": 62.2538604,
+    "lon": 5.575819,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7961025285",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "62_5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7961025285"
+      }
+    ],
+    "altNames": [
+      "Sandangersanden"
+    ],
+    "shortName": "Gjerdsvika"
+  },
+  {
+    "id": "osm-way-477614644",
+    "name": "Golden Beach",
+    "lat": -26.8148939,
+    "lon": 153.1223012,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/477614644",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "-27_153",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/477614644"
+      }
+    ],
+    "shortName": "Golden Beach"
+  },
+  {
+    "id": "osm-way-822498438",
+    "name": "Grevelingendam",
+    "lat": 51.6742706,
+    "lon": 4.1401382,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/822498438",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "51_4",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/822498438"
+      }
+    ],
+    "shortName": "Grevelingendam"
+  },
+  {
+    "id": "osm-node-7895008089",
+    "name": "Grøtfjord",
+    "lat": 69.7781137,
+    "lon": 18.5384631,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7895008089",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "69_18",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7895008089"
+      }
+    ],
+    "shortName": "Grøtfjord"
+  },
+  {
+    "id": "osm-node-7123877353",
+    "name": "Hamresanden",
+    "lat": 58.1905575,
+    "lon": 8.0704638,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7123877353",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "58_8",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7123877353"
+      }
+    ],
+    "shortName": "Hamresanden"
+  },
+  {
+    "id": "osm-node-7773683572",
+    "name": "Haviksanden",
+    "lat": 58.0666518,
+    "lon": 6.7343294,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7773683572",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "58_6",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7773683572"
+      }
+    ],
+    "shortName": "Haviksanden"
+  },
+  {
+    "id": "osm-way-139584427",
+    "name": "Hoek van de Bant",
+    "lat": 53.4143403,
+    "lon": 6.1673944,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/139584427",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "53_6",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/139584427"
+      }
+    ],
+    "shortName": "Hoek van de Bant"
+  },
+  {
+    "id": "osm-node-5793955261",
+    "name": "Hvasser syd",
+    "lat": 59.0648419,
+    "lon": 10.4441059,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5793955261",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5793955261"
+      }
+    ],
+    "shortName": "Hvasser syd"
+  },
+  {
+    "id": "osm-node-5793955265",
+    "name": "Hvittensand",
+    "lat": 59.0358625,
+    "lon": 10.0537477,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5793955265",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5793955265"
+      }
+    ],
+    "shortName": "Hvittensand"
+  },
+  {
+    "id": "osm-node-7123847712",
+    "name": "Høllen",
+    "lat": 58.0741971,
+    "lon": 7.8189396,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7123847712",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "58_7",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7123847712"
+      }
+    ],
+    "shortName": "Høllen"
+  },
+  {
+    "id": "osm-node-4508458788",
+    "name": "IJmuiden",
+    "lat": 52.4576685,
+    "lon": 4.5547375,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/4508458788",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "52_4",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/4508458788"
+      }
+    ],
+    "shortName": "IJmuiden"
+  },
+  {
+    "id": "osm-way-1167171902",
+    "name": "İçmeler",
+    "lat": 38.3114523,
+    "lon": 26.6907047,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1167171902",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "38_26",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1167171902"
+      }
+    ],
+    "shortName": "İçmeler"
+  },
+  {
+    "id": "osm-node-5793955259",
+    "name": "Jomfruland",
+    "lat": 58.882297,
+    "lon": 9.613338,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5793955259",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "58_9",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5793955259"
+      }
+    ],
+    "shortName": "Jomfruland"
+  },
+  {
+    "id": "osm-node-9105104775",
+    "name": "Jordan'Surf & Kitezoo",
+    "lat": 46.1254542,
+    "lon": 9.3457226,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/9105104775",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "46_9",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/9105104775"
+      }
+    ],
+    "shortName": "Jordan'Surf"
+  },
+  {
+    "id": "osm-way-702126930",
+    "name": "Kaloot",
+    "lat": 51.4349634,
+    "lon": 3.7044565,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/702126930",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "51_3",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/702126930"
+      }
+    ],
+    "shortName": "Kaloot"
+  },
+  {
+    "id": "osm-way-1181982742",
+    "name": "Kalpitiya Lagoon Kitesurfing Area",
+    "lat": 8.240192,
+    "lon": 79.7413337,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1181982742",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "8_79",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1181982742"
+      }
+    ],
+    "shortName": "Kalpitiya Lagoon"
+  },
+  {
+    "id": "osm-node-7846967890",
+    "name": "Karljohansvern",
+    "lat": 59.4355549,
+    "lon": 10.4938128,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7846967890",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7846967890"
+      }
+    ],
+    "shortName": "Karljohansvern"
+  },
+  {
+    "id": "osm-way-340755108",
+    "name": "Kite Area",
+    "lat": 44.9804309,
+    "lon": -1.1005334,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/340755108",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "44_-2",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/340755108"
+      }
+    ],
+    "shortName": "Area"
+  },
+  {
+    "id": "osm-node-2657475591",
+    "name": "Kite Lagoon Le Morne",
+    "lat": -20.4630491,
+    "lon": 57.3200007,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/2657475591",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "-21_57",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/2657475591"
+      }
+    ],
+    "shortName": "Lagoon Le Morne"
+  },
+  {
+    "id": "osm-node-3713592379",
+    "name": "Kite Spot Kourou",
+    "lat": 5.1785345,
+    "lon": -52.6487756,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/3713592379",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "5_-53",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/3713592379"
+      }
+    ],
+    "shortName": "Spot Kourou"
+  },
+  {
+    "id": "osm-way-225732899",
+    "name": "Kite surf beach",
+    "lat": 42.5629457,
+    "lon": 11.1544999,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/225732899",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "42_11",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/225732899"
+      }
+    ],
+    "shortName": "surf beach"
+  },
+  {
+    "id": "osm-node-7051869444",
+    "name": "Kite Surfing",
+    "lat": 38.3391796,
+    "lon": 21.8494018,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7051869444",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "38_21",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7051869444"
+      }
+    ],
+    "shortName": "Surfing"
+  },
+  {
+    "id": "osm-node-11026531203",
+    "name": "Kiteboarding Bonaire",
+    "lat": 12.0444486,
+    "lon": -68.2663762,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/11026531203",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "12_-69",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/11026531203"
+      }
+    ],
+    "shortName": "Kiteboarding"
+  },
+  {
+    "id": "osm-node-2615171825",
+    "name": "Kitesurf",
+    "lat": -30.322146,
+    "lon": -50.9060349,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/2615171825",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "-31_-51",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/2615171825"
+      }
+    ],
+    "shortName": "Kitesurf"
+  },
+  {
+    "id": "osm-node-9792902644",
+    "name": "Kitesurf launch",
+    "lat": 45.7172928,
+    "lon": -121.5109741,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/9792902644",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "45_-122",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/9792902644"
+      }
+    ],
+    "shortName": "launch"
+  },
+  {
+    "id": "osm-node-9789426140",
+    "name": "Kitesurf launch",
+    "lat": 48.7727677,
+    "lon": -122.532922,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/9789426140",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "48_-123",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/9789426140"
+      }
+    ],
+    "shortName": "launch"
+  },
+  {
+    "id": "osm-node-7834258527",
+    "name": "Kitesurf spot",
+    "lat": 38.3843353,
+    "lon": 21.8459939,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7834258527",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "38_21",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7834258527"
+      }
+    ],
+    "shortName": "spot"
+  },
+  {
+    "id": "osm-node-4299090272",
+    "name": "Kitesurf Spot Hindeloopen",
+    "lat": 52.9362065,
+    "lon": 5.4023878,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/4299090272",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "52_5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/4299090272"
+      }
+    ],
+    "shortName": "Hindeloopen"
+  },
+  {
+    "id": "osm-node-4299104622",
+    "name": "Kitesurf Spot La Palme",
+    "shortName": "La Palme",
+    "lat": 42.9708981,
+    "lon": 3.018115,
+    "activities": [
+      "kitesurfing"
+    ],
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/4299104622",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/4299104622"
+      }
+    ],
+    "tile": "42_3",
+    "updated": "2026-10-24"
+  },
+  {
+    "id": "osm-node-4299090273",
+    "name": "Kitesurf Spot Mirnser Klif",
+    "lat": 52.8503703,
+    "lon": 5.482256,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/4299090273",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "52_5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/4299090273"
+      }
+    ],
+    "shortName": "Mirnser Klif"
+  },
+  {
+    "id": "osm-way-1181982744",
+    "name": "Kitesurfing Area",
+    "lat": 8.2275457,
+    "lon": 79.7216571,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1181982744",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "8_79",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1181982744"
+      }
+    ],
+    "shortName": "Area"
+  },
+  {
+    "id": "osm-way-1181982745",
+    "name": "Kitesurfing Area",
+    "lat": 8.2194942,
+    "lon": 79.7120467,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1181982745",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "8_79",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1181982745"
+      }
+    ],
+    "shortName": "Area"
+  },
+  {
+    "id": "osm-way-1181982746",
+    "name": "Kitesurfing Area",
+    "lat": 8.2220878,
+    "lon": 79.7101959,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1181982746",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "8_79",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1181982746"
+      }
+    ],
+    "shortName": "Area"
+  },
+  {
+    "id": "osm-node-6677200338",
+    "name": "Kitesurfing Kos",
+    "lat": 36.8862091,
+    "lon": 27.1619381,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6677200338",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "36_27",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6677200338"
+      }
+    ],
+    "shortName": "Kitesurfing Kos"
+  },
+  {
+    "id": "osm-node-11047825855",
+    "name": "Kitesurfing Spot",
+    "lat": 54.0394361,
+    "lon": 11.580926,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/11047825855",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "54_11",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/11047825855"
+      }
+    ],
+    "shortName": "Spot"
+  },
+  {
+    "id": "osm-way-905877929",
+    "name": "Kitesurfspot Ostufer",
+    "lat": 49.1321928,
+    "lon": 10.7323533,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/905877929",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "49_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/905877929"
+      }
+    ],
+    "shortName": "Kitesurfspot"
+  },
+  {
+    "id": "osm-node-2019998067",
+    "name": "Kitezone",
+    "lat": 47.8474565,
+    "lon": 12.4746031,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/2019998067",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "47_12",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/2019998067"
+      }
+    ],
+    "shortName": "Kitezone"
+  },
+  {
+    "id": "osm-node-6374566379",
+    "name": "Kjærstranda",
+    "lat": 58.9786226,
+    "lon": 9.9652862,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6374566379",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "58_9",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6374566379"
+      }
+    ],
+    "shortName": "Kjærstranda"
+  },
+  {
+    "id": "osm-node-3946481974",
+    "name": "Kloster Surfspot",
+    "lat": 56.1058433,
+    "lon": 8.1698628,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/3946481974",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "56_8",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/3946481974"
+      }
+    ],
+    "shortName": "Kloster Surfspot"
+  },
+  {
+    "id": "osm-node-5793955260",
+    "name": "Kubukta",
+    "lat": 58.85625,
+    "lon": 9.572053,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5793955260",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "58_9",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5793955260"
+      }
+    ],
+    "shortName": "Kubukta"
+  },
+  {
+    "id": "osm-node-6777922412",
+    "name": "Kvalneset",
+    "lat": 62.509832,
+    "lon": 6.0269666,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6777922412",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "62_6",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6777922412"
+      }
+    ],
+    "shortName": "Kvalneset"
+  },
+  {
+    "id": "osm-node-7123847711",
+    "name": "Kvavik",
+    "lat": 58.1385064,
+    "lon": 7.0310354,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7123847711",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "58_7",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7123847711"
+      }
+    ],
+    "shortName": "Kvavik"
+  },
+  {
+    "id": "osm-node-6779118041",
+    "name": "Kviljosanden",
+    "lat": 58.072861,
+    "lon": 6.6740226,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6779118041",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "58_6",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6779118041"
+      }
+    ],
+    "shortName": "Kviljosanden"
+  },
+  {
+    "id": "osm-node-5808673767",
+    "name": "Langeby",
+    "lat": 59.077878,
+    "lon": 10.261767,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5808673767",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5808673767"
+      }
+    ],
+    "shortName": "Langeby"
+  },
+  {
+    "id": "osm-node-6351517794",
+    "name": "Langnes",
+    "lat": 69.6643954,
+    "lon": 18.9071273,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6351517794",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "69_18",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6351517794"
+      }
+    ],
+    "shortName": "Langnes"
+  },
+  {
+    "id": "osm-way-1571340635",
+    "lat": 43.419577,
+    "lon": 3.669664,
+    "activities": [
+      "windsurfing"
+    ],
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1571340635",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1571340635"
+      }
+    ],
+    "tile": "43_3",
+    "updated": "2026-10-24",
+    "hintName": "Le Barrou",
+    "hintKind": "place=locality",
+    "name": ""
+  },
+  {
+    "id": "osm-node-7869138330",
+    "name": "Lilleskagen",
+    "lat": 59.0918426,
+    "lon": 10.4482824,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7869138330",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7869138330"
+      }
+    ],
+    "shortName": "Lilleskagen"
+  },
+  {
+    "id": "osm-node-6777922411",
+    "name": "Moloen",
+    "lat": 62.51159,
+    "lon": 6.0397446,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6777922411",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "62_6",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6777922411"
+      }
+    ],
+    "shortName": "Moloen"
+  },
+  {
+    "id": "osm-node-6170126511",
+    "name": "Møsvatn",
+    "lat": 59.834309,
+    "lon": 8.1030713,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6170126511",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_8",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6170126511"
+      }
+    ],
+    "shortName": "Møsvatn"
+  },
+  {
+    "id": "osm-node-2918007153",
+    "name": "NautiCat",
+    "lat": 49.423889,
+    "lon": 6.2390133,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/2918007153",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "49_6",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/2918007153"
+      }
+    ],
+    "shortName": "NautiCat"
+  },
+  {
+    "id": "osm-node-8528362192",
+    "name": "Nordhavnstippen",
+    "lat": 55.7231488,
+    "lon": 12.6098469,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/8528362192",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "55_12",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/8528362192"
+      }
+    ],
+    "shortName": "Nordhavnstippen"
+  },
+  {
+    "id": "osm-way-202757345",
+    "name": "Norm's Beach",
+    "lat": -26.2875822,
+    "lon": 152.9932746,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/202757345",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "-27_152",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/202757345"
+      }
+    ],
+    "shortName": "Norm's Beach"
+  },
+  {
+    "id": "osm-node-6179478313",
+    "name": "Notodden",
+    "lat": 59.5549488,
+    "lon": 9.2593074,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6179478313",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_9",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6179478313"
+      }
+    ],
+    "shortName": "Notodden"
+  },
+  {
+    "id": "osm-way-822498440",
+    "name": "Oesterdam",
+    "lat": 51.4691514,
+    "lon": 4.2144,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/822498440",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "51_4",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/822498440"
+      }
+    ],
+    "altNames": [
+      "Speelmansplaten"
+    ],
+    "shortName": "Oesterdam"
+  },
+  {
+    "id": "osm-node-6777922410",
+    "name": "Olmaneset",
+    "lat": 62.5345292,
+    "lon": 6.1306178,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6777922410",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "62_6",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6777922410"
+      }
+    ],
+    "shortName": "Olmaneset"
+  },
+  {
+    "id": "osm-node-5808673768",
+    "name": "Omlidstranda",
+    "lat": 58.9885075,
+    "lon": 9.8413898,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5808673768",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "58_9",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5808673768"
+      }
+    ],
+    "shortName": "Omlidstranda"
+  },
+  {
+    "id": "osm-node-5808673769",
+    "name": "Omrestranda",
+    "lat": 58.975056,
+    "lon": 9.866045,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5808673769",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "58_9",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5808673769"
+      }
+    ],
+    "shortName": "Omrestranda"
+  },
+  {
+    "id": "osm-way-24943928",
+    "name": "Orther Bucht",
+    "lat": 54.4359109,
+    "lon": 11.0698187,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/24943928",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "54_11",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/24943928"
+      }
+    ],
+    "shortName": "Orther Bucht"
+  },
+  {
+    "id": "osm-node-7961025286",
+    "name": "Osnessanden",
+    "lat": 62.3443709,
+    "lon": 5.8261871,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7961025286",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "62_5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7961025286"
+      }
+    ],
+    "shortName": "Osnessanden"
+  },
+  {
+    "id": "osm-node-9400514160",
+    "name": "Paradise Kitesurf",
+    "lat": 27.3054668,
+    "lon": 33.731058,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/9400514160",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "27_33",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/9400514160"
+      }
+    ],
+    "shortName": "Paradise Kitesurf"
+  },
+  {
+    "id": "osm-way-491657962",
+    "name": "Paulinapolder",
+    "lat": 51.3506075,
+    "lon": 3.7393775,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/491657962",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "51_3",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/491657962"
+      }
+    ],
+    "shortName": "Paulinapolder"
+  },
+  {
+    "id": "osm-way-663476017",
+    "name": "Pebble Beach",
+    "lat": -27.082676,
+    "lon": 153.1385884,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/663476017",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "-28_153",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/663476017"
+      }
+    ],
+    "altNames": [
+      "Sandstone Point"
+    ],
+    "shortName": "Pebble Beach"
+  },
+  {
+    "id": "osm-node-3704904424",
+    "name": "pepea kite surfing",
+    "lat": -4.0320979,
+    "lon": 39.7194934,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/3704904424",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "-5_39",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/3704904424"
+      },
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/503264368"
+      }
+    ],
+    "shortName": "pepea kite surfing"
+  },
+  {
+    "id": "osm-way-1571324819",
+    "name": "PK",
+    "shortName": "PK",
+    "lat": 43.516526,
+    "lon": 4.1230151,
+    "activities": [
+      "kitesurfing",
+      "windsurfing"
+    ],
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1571324819",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1571324819"
+      }
+    ],
+    "tile": "43_4",
+    "updated": "2026-10-24"
+  },
+  {
+    "id": "osm-way-243397848",
+    "name": "Plage d'Essaouira",
+    "lat": 31.4992036,
+    "lon": -9.7675765,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/243397848",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "31_-10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/243397848"
+      }
+    ],
+    "shortName": "Plage d'Essaouira"
+  },
+  {
+    "id": "osm-way-1382821398",
+    "lat": 42.7792,
+    "lon": 3.037006,
+    "activities": [
+      "kitesurfing"
+    ],
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1382821398",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1382821398"
+      }
+    ],
+    "tile": "42_3",
+    "updated": "2026-10-24",
+    "hintName": "Plage de l'embouchure",
+    "hintKind": "natural=beach",
+    "name": ""
+  },
+  {
+    "id": "osm-way-186110526",
+    "name": "Playa de Valdevaqueros",
+    "lat": 36.0630918,
+    "lon": -5.6838149,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/186110526",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "36_-6",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/186110526"
+      }
+    ],
+    "shortName": "Playa"
+  },
+  {
+    "id": "osm-way-154902421",
+    "name": "Playa Puerto Velero",
+    "lat": 10.9502345,
+    "lon": -75.0323925,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/154902421",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "10_-76",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/154902421"
+      }
+    ],
+    "shortName": "Playa Puerto"
+  },
+  {
+    "id": "osm-node-454209465",
+    "name": "Porto Liscia",
+    "lat": 41.1969808,
+    "lon": 9.3072726,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/454209465",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "41_9",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/454209465"
+      }
+    ],
+    "shortName": "Porto Liscia"
+  },
+  {
+    "id": "osm-node-454332528",
+    "name": "Porto Puddu",
+    "lat": 41.1932413,
+    "lon": 9.3253983,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/454332528",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "41_9",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/454332528"
+      }
+    ],
+    "shortName": "Porto Puddu"
+  },
+  {
+    "id": "osm-way-255820398",
+    "name": "Praia da Varzinha",
+    "lat": -30.3222888,
+    "lon": -50.9095682,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/255820398",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "-31_-51",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/255820398"
+      }
+    ],
+    "shortName": "Praia da Varzinha"
+  },
+  {
+    "id": "osm-way-77221296",
+    "name": "Praia de Santa Maria",
+    "lat": 16.5914233,
+    "lon": -22.9146555,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/77221296",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "16_-23",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/77221296"
+      }
+    ],
+    "shortName": "Praia de Santa"
+  },
+  {
+    "id": "osm-way-248430612",
+    "name": "Praia de São Pedro",
+    "lat": 16.8257884,
+    "lon": -25.0668662,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/248430612",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "16_-26",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/248430612"
+      }
+    ],
+    "shortName": "Praia de São Pedro"
+  },
+  {
+    "id": "osm-relation-9248967",
+    "name": "Praia do Cumbuco",
+    "lat": -3.6132437,
+    "lon": -38.7443885,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/relation/9248967",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "-4_-39",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/relation/9248967"
+      }
+    ],
+    "shortName": "Praia do Cumbuco"
+  },
+  {
+    "id": "osm-node-5559949872",
+    "name": "Punta Rasa kitesurf spot",
+    "lat": -36.2958631,
+    "lon": -56.7761878,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5559949872",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "-37_-57",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5559949872"
+      }
+    ],
+    "shortName": "Punta Rasa"
+  },
+  {
+    "id": "osm-way-702126929",
+    "name": "Put van Terneuzen",
+    "lat": 51.3372364,
+    "lon": 3.8462752,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/702126929",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "51_3",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/702126929"
+      }
+    ],
+    "shortName": "Put van Terneuzen"
+  },
+  {
+    "id": "osm-node-7973030467",
+    "name": "Ramton",
+    "lat": 59.7431584,
+    "lon": 10.5113518,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7973030467",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7973030467"
+      }
+    ],
+    "shortName": "Ramton"
+  },
+  {
+    "id": "osm-node-6374566381",
+    "name": "Randaberg",
+    "lat": 59.0196414,
+    "lon": 5.5917835,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6374566381",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6374566381"
+      }
+    ],
+    "shortName": "Randaberg"
+  },
+  {
+    "id": "osm-node-5793955268",
+    "name": "Refsnes",
+    "lat": 59.4486507,
+    "lon": 10.6158166,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5793955268",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5793955268"
+      }
+    ],
+    "shortName": "Refsnes"
+  },
+  {
+    "id": "osm-node-7961015084",
+    "name": "Remøyholmen",
+    "lat": 62.3627659,
+    "lon": 5.6746637,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7961015084",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "62_5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7961015084"
+      }
+    ],
+    "shortName": "Remøyholmen"
+  },
+  {
+    "id": "osm-relation-10217761",
+    "name": "Ringsegårds strand",
+    "lat": 56.8639818,
+    "lon": 12.5352273,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/relation/10217761",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "56_12",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/relation/10217761"
+      }
+    ],
+    "shortName": "Ringsegårds strand"
+  },
+  {
+    "id": "osm-node-5808673771",
+    "name": "Ringshaug",
+    "lat": 59.277751,
+    "lon": 10.496234,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5808673771",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5808673771"
+      }
+    ],
+    "shortName": "Ringshaug"
+  },
+  {
+    "id": "osm-node-5808673765",
+    "name": "Roaldsanden",
+    "lat": 62.5741484,
+    "lon": 6.1186549,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5808673765",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "62_6",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5808673765"
+      }
+    ],
+    "shortName": "Roaldsanden"
+  },
+  {
+    "id": "osm-way-822498441",
+    "name": "Roompot",
+    "lat": 51.5946477,
+    "lon": 3.7299605,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/822498441",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "51_3",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/822498441"
+      }
+    ],
+    "shortName": "Roompot"
+  },
+  {
+    "id": "osm-node-7926407164",
+    "name": "Rota",
+    "lat": 58.6489367,
+    "lon": 9.1395722,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7926407164",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "58_9",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7926407164"
+      }
+    ],
+    "shortName": "Rota"
+  },
+  {
+    "id": "osm-node-5559949603",
+    "name": "Rotonda de Punta Lara Kite Spot",
+    "lat": -34.8199851,
+    "lon": -57.9664853,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5559949603",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "-35_-58",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5559949603"
+      }
+    ],
+    "shortName": "Rotonda de Punta"
+  },
+  {
+    "id": "osm-node-5873182526",
+    "name": "Rørestrand",
+    "lat": 59.3963,
+    "lon": 10.4812,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5873182526",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5873182526"
+      }
+    ],
+    "shortName": "Rørestrand"
+  },
+  {
+    "id": "osm-node-5793955256",
+    "name": "Røsholmstranda",
+    "lat": 60.1216015,
+    "lon": 10.1895377,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5793955256",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "60_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5793955256"
+      }
+    ],
+    "shortName": "Røsholmstranda"
+  },
+  {
+    "id": "osm-way-1571323239",
+    "name": "Saint-Eugène",
+    "shortName": "Saint-Eugène",
+    "lat": 43.4512055,
+    "lon": 3.809512,
+    "activities": [
+      "kitesurfing"
+    ],
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1571323239",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1571323239"
+      }
+    ],
+    "tile": "43_3",
+    "updated": "2026-10-24"
+  },
+  {
+    "id": "osm-node-5793955257",
+    "name": "Sande",
+    "lat": 59.020083,
+    "lon": 5.591719,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5793955257",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5793955257"
+      }
+    ],
+    "shortName": "Sande"
+  },
+  {
+    "id": "osm-node-6777922413",
+    "name": "Sandvika",
+    "lat": 62.4865466,
+    "lon": 5.9666061,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6777922413",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "62_5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6777922413"
+      }
+    ],
+    "shortName": "Sandvika"
+  },
+  {
+    "id": "osm-node-4298696516",
+    "name": "SCB Windsurfing",
+    "lat": 45.7894349,
+    "lon": 10.0545833,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/4298696516",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "45_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/4298696516"
+      }
+    ],
+    "shortName": "SCB Windsurfing"
+  },
+  {
+    "id": "osm-node-4508462925",
+    "name": "Schellinkhout",
+    "lat": 52.6327463,
+    "lon": 5.1208992,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/4508462925",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "52_5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/4508462925"
+      }
+    ],
+    "shortName": "Schellinkhout"
+  },
+  {
+    "id": "osm-node-14073443834",
+    "name": "Secret Spot",
+    "lat": 27.6707244,
+    "lon": 33.6320113,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/14073443834",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "27_33",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/14073443834"
+      }
+    ],
+    "shortName": "Secret Spot"
+  },
+  {
+    "id": "osm-way-375885925",
+    "name": "Shoal Bay Windsurfing",
+    "lat": -36.8112106,
+    "lon": 174.7686413,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/375885925",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "-37_174",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/375885925"
+      }
+    ],
+    "shortName": "Shoal Bay"
+  },
+  {
+    "id": "osm-node-5940156163",
+    "name": "Sildebaugen",
+    "lat": 59.3317886,
+    "lon": 10.7173829,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5940156163",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5940156163"
+      }
+    ],
+    "shortName": "Sildebaugen"
+  },
+  {
+    "id": "osm-node-7973030466",
+    "name": "Sjøstrand",
+    "lat": 59.7961817,
+    "lon": 10.4974687,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7973030466",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7973030466"
+      }
+    ],
+    "shortName": "Sjøstrand"
+  },
+  {
+    "id": "osm-node-5983663540",
+    "name": "Skallevold",
+    "lat": 59.2908715,
+    "lon": 10.5000173,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5983663540",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5983663540"
+      }
+    ],
+    "shortName": "Skallevold"
+  },
+  {
+    "id": "osm-relation-8529089",
+    "name": "Skrea Strand",
+    "lat": 56.8828034,
+    "lon": 12.5022058,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/relation/8529089",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "56_12",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/relation/8529089"
+      }
+    ],
+    "shortName": "Skrea Strand"
+  },
+  {
+    "id": "osm-node-6158111698",
+    "name": "Skrova",
+    "lat": 68.1707095,
+    "lon": 14.7010803,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6158111698",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "68_14",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6158111698"
+      }
+    ],
+    "shortName": "Skrova"
+  },
+  {
+    "id": "osm-way-890690613",
+    "name": "Smeťák",
+    "lat": 50.0290014,
+    "lon": 14.5839969,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/890690613",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "50_14",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/890690613"
+      }
+    ],
+    "shortName": "Smeťák"
+  },
+  {
+    "id": "osm-node-5239357494",
+    "name": "Spot de kitesurfing de Saint-Pierre",
+    "lat": -21.3429277,
+    "lon": 55.4659714,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5239357494",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "-22_55",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5239357494"
+      }
+    ],
+    "shortName": "Saint-Pierre"
+  },
+  {
+    "id": "osm-node-10241815448",
+    "name": "Spot Mama Prada",
+    "lat": 40.7450188,
+    "lon": -8.6780933,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/10241815448",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "40_-9",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/10241815448"
+      }
+    ],
+    "shortName": "Spot Mama Prada"
+  },
+  {
+    "id": "osm-way-975991567",
+    "name": "Stavasanden",
+    "lat": 59.2322173,
+    "lon": 5.1840619,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/975991567",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/975991567"
+      }
+    ],
+    "shortName": "Stavasanden"
+  },
+  {
+    "id": "osm-node-5839918892",
+    "name": "Storsand",
+    "lat": 59.6412482,
+    "lon": 10.6057159,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5839918892",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5839918892"
+      }
+    ],
+    "shortName": "Storsand"
+  },
+  {
+    "id": "osm-node-6351517791",
+    "name": "Storsand",
+    "lat": 63.4334514,
+    "lon": 10.7242656,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6351517791",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "63_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6351517791"
+      }
+    ],
+    "shortName": "Storsand"
+  },
+  {
+    "id": "osm-node-7939978547",
+    "name": "Storøyodden",
+    "lat": 59.8881586,
+    "lon": 10.5928172,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7939978547",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7939978547"
+      }
+    ],
+    "shortName": "Storøyodden"
+  },
+  {
+    "id": "osm-way-822498439",
+    "name": "Strijenham",
+    "lat": 51.522492,
+    "lon": 4.1587145,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/822498439",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "51_4",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/822498439"
+      }
+    ],
+    "shortName": "Strijenham"
+  },
+  {
+    "id": "osm-way-75757564",
+    "name": "Surfvijver",
+    "lat": 52.0172618,
+    "lon": 5.5666274,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/75757564",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "52_5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/75757564"
+      }
+    ],
+    "shortName": "Surfvijver"
+  },
+  {
+    "id": "osm-node-5808673770",
+    "name": "Svellet",
+    "lat": 59.9243383,
+    "lon": 11.1317678,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5808673770",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_11",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5808673770"
+      }
+    ],
+    "shortName": "Svellet"
+  },
+  {
+    "id": "osm-node-7707429513",
+    "name": "Sønstevatn",
+    "lat": 60.2081092,
+    "lon": 8.5589075,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7707429513",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "60_8",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7707429513"
+      }
+    ],
+    "shortName": "Sønstevatn"
+  },
+  {
+    "id": "osm-node-6351517796",
+    "name": "Takvatnet",
+    "lat": 69.1127901,
+    "lon": 19.0658064,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6351517796",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "69_19",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6351517796"
+      }
+    ],
+    "shortName": "Takvatnet"
+  },
+  {
+    "id": "osm-node-5839918891",
+    "name": "Torkilstranda",
+    "lat": 59.6481608,
+    "lon": 10.6340844,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5839918891",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5839918891"
+      }
+    ],
+    "shortName": "Torkilstranda"
+  },
+  {
+    "id": "osm-way-355177380",
+    "name": "Troon",
+    "lat": 55.536136,
+    "lon": -4.6581262,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/355177380",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "55_-5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/355177380"
+      }
+    ],
+    "shortName": "Troon"
+  },
+  {
+    "id": "osm-node-7846967891",
+    "name": "Trubervika",
+    "lat": 59.075307,
+    "lon": 10.3049826,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7846967891",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7846967891"
+      }
+    ],
+    "shortName": "Trubervika"
+  },
+  {
+    "id": "osm-node-7786856583",
+    "name": "Trulsestranda",
+    "lat": 59.6030147,
+    "lon": 10.4119729,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7786856583",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7786856583"
+      }
+    ],
+    "shortName": "Trulsestranda"
+  },
+  {
+    "id": "osm-node-6351517793",
+    "name": "Velvang Camping",
+    "lat": 63.4743616,
+    "lon": 10.8066523,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6351517793",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "63_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6351517793"
+      }
+    ],
+    "shortName": "Velvang Camping"
+  },
+  {
+    "id": "osm-node-5793955270",
+    "name": "Verket",
+    "lat": 59.6097784,
+    "lon": 10.4141186,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5793955270",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5793955270"
+      }
+    ],
+    "shortName": "Verket"
+  },
+  {
+    "id": "osm-node-6351517792",
+    "name": "Vinnesanda",
+    "lat": 63.4917781,
+    "lon": 10.7767081,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6351517792",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "63_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6351517792"
+      }
+    ],
+    "shortName": "Vinnesanda"
+  },
+  {
+    "id": "osm-node-7973052541",
+    "name": "Vollen",
+    "lat": 59.8068089,
+    "lon": 10.4949179,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7973052541",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7973052541"
+      }
+    ],
+    "shortName": "Vollen"
+  },
+  {
+    "id": "osm-node-4508453364",
+    "name": "Wijk aan Zee Bunker",
+    "lat": 52.4831488,
+    "lon": 4.5777761,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/4508453364",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "52_4",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/4508453364"
+      }
+    ],
+    "shortName": "Wijk aan Zee"
+  },
+  {
+    "id": "osm-node-4508456414",
+    "name": "Wijk aan zee: Pier",
+    "lat": 52.4701579,
+    "lon": 4.5669325,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/4508456414",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "52_4",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/4508456414"
+      }
+    ],
+    "shortName": "Wijk aan zee: Pier"
+  },
+  {
+    "id": "osm-node-9791690026",
+    "name": "Windsurf launch",
+    "lat": 37.5884808,
+    "lon": -122.329825,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/9791690026",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "37_-123",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/9791690026"
+      }
+    ],
+    "shortName": "launch"
+  },
+  {
+    "id": "osm-node-2804972206",
+    "name": "Windsurf launch",
+    "lat": 45.7158861,
+    "lon": -121.516976,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/2804972206",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "45_-122",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/2804972206"
+      }
+    ],
+    "shortName": "launch"
+  },
+  {
+    "id": "osm-node-5257252795",
+    "name": "Windsurf launch",
+    "lat": 45.7168209,
+    "lon": -121.526436,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5257252795",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "45_-122",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5257252795"
+      },
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/9812655823"
+      }
+    ],
+    "shortName": "launch"
+  },
+  {
+    "id": "osm-node-9812655827",
+    "name": "Windsurf launch",
+    "lat": 45.716663,
+    "lon": -121.5253674,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/9812655827",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "45_-122",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/9812655827"
+      }
+    ],
+    "shortName": "launch"
+  },
+  {
+    "id": "osm-node-9812655831",
+    "name": "Windsurf launch",
+    "lat": 45.7160214,
+    "lon": -121.5269487,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/9812655831",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "45_-122",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/9812655831"
+      }
+    ],
+    "shortName": "launch"
+  },
+  {
+    "id": "osm-way-1072067254",
+    "name": "Zone de Kite Surf",
+    "shortName": "Zone de Kite Surf",
+    "lat": 43.5531191,
+    "lon": 4.0232731,
+    "activities": [
+      "kitesurfing"
+    ],
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1072067254",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1072067254"
+      }
+    ],
+    "tile": "43_4",
+    "updated": "2026-10-24"
+  },
+  {
+    "id": "osm-node-6351517789",
+    "name": "Åkrasanden",
+    "lat": 59.2474308,
+    "lon": 5.1934862,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6351517789",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6351517789"
+      }
+    ],
+    "shortName": "Åkrasanden"
+  },
+  {
+    "id": "osm-way-483660367",
+    "lat": 43.566041,
+    "lon": 4.121351,
+    "activities": [
+      "windsurfing"
+    ],
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/483660367",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/483660367"
+      }
+    ],
+    "tile": "43_4",
+    "updated": "2026-10-24",
+    "hintName": "Étang du Ponant",
+    "hintKind": "natural=water",
+    "hintOsm": "relation/5291094",
+    "name": ""
+  },
+  {
+    "id": "osm-node-5793955266",
+    "name": "Ørekroken",
+    "lat": 59.0324981,
+    "lon": 11.0092631,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5793955266",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "59_11",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5793955266"
+      }
+    ],
+    "shortName": "Ørekroken"
+  },
+  {
+    "id": "osm-node-6158105982",
+    "name": "Øysand",
+    "lat": 63.3299088,
+    "lon": 10.214281,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6158105982",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "63_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6158105982"
+      }
+    ],
+    "shortName": "Øysand"
+  },
+  {
+    "id": "osm-way-141326957",
+    "name": "Βασιλική",
+    "lat": 38.6301914,
+    "lon": 20.6009045,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/141326957",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "38_20",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/141326957"
+      }
+    ],
+    "altNames": [
+      "Vassiliki"
+    ],
+    "shortName": "Βασιλική"
+  },
+  {
+    "id": "osm-way-263844492",
+    "name": "Κέρος",
+    "lat": 39.9080359,
+    "lon": 25.3572881,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/263844492",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "39_25",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/263844492"
+      }
+    ],
+    "shortName": "Κέρος"
+  },
+  {
+    "id": "osm-way-190098223",
+    "name": "Παραλία Παλαιόπολη",
+    "lat": 36.2244436,
+    "lon": 23.0649056,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/190098223",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "36_23",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/190098223"
+      }
+    ],
+    "altNames": [
+      "Piatsa Beach",
+      "Paleopoli Beach"
+    ],
+    "shortName": "Παραλία Παλαιόπολη"
+  },
+  {
+    "id": "osm-way-1554698110",
+    "name": "кайтспот \"Белые камни\"",
+    "lat": 54.2920716,
+    "lon": 54.6226341,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1554698110",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "54_54",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1554698110"
+      }
+    ],
+    "shortName": "кайтспот \"Белые"
+  },
+  {
+    "id": "osm-way-1554698115",
+    "name": "кайтспот \"Глория\"",
+    "lat": 54.3147623,
+    "lon": 54.6164979,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1554698115",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "54_54",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1554698115"
+      }
+    ],
+    "shortName": "кайтспот \"Глория\""
+  },
+  {
+    "id": "osm-way-1554698112",
+    "name": "кайтспот \"Мыс\"",
+    "lat": 54.3090517,
+    "lon": 54.6106083,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1554698112",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "54_54",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1554698112"
+      }
+    ],
+    "shortName": "кайтспот \"Мыс\""
+  },
+  {
+    "id": "osm-way-1554698111",
+    "name": "кайтспот \"Янги-Турмуш\"",
+    "lat": 54.2963213,
+    "lon": 54.593637,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1554698111",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "54_54",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1554698111"
+      }
+    ],
+    "shortName": "кайтспот"
+  },
+  {
+    "id": "osm-relation-15651240",
+    "name": "Кайтстанция «Унесённые ветром»",
+    "lat": 44.6034927,
+    "lon": 42.2504126,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/relation/15651240",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "44_42",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/relation/15651240"
+      }
+    ],
+    "shortName": "Кайтстанция"
+  }
+]

@@ -11,6 +11,7 @@ interface OpenMeteoForecastApi {
         @Query("hourly") hourly: String =
             "temperature_2m,wind_speed_10m,wind_gusts_10m,wind_direction_10m,precipitation,precipitation_probability",
         @Query("wind_speed_unit") windSpeedUnit: String = "ms",
+        @Query("models") models: String? = null,
         @Query("forecast_days") forecastDays: Int = 7,
         @Query("timezone") timezone: String = "auto"
     ): OpenMeteoForecastDto

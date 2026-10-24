@@ -6,6 +6,14 @@ plugins {
     id("androidx.room")
 }
 
+val spotCatalogAssets = layout.buildDirectory.dir("generated/spotCatalogAssets")
+val copySpotCatalog = tasks.register<Sync>("copySpotCatalog") {
+    from(layout.projectDirectory.dir("../spots")) {
+        include("*.json")
+    }
+    into(spotCatalogAssets.map { it.dir("spots") })
+}
+
 android {
     namespace = "com.kompaktwind"
     compileSdk = 36
@@ -36,14 +44,37 @@ android {
         buildConfig = true
     }
 
+    sourceSets {
+        getByName("main").assets.srcDir(spotCatalogAssets.get().asFile)
+    }
+
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+        }
+    }
+
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
+        jniLibs {
+            // These are already stripped by their upstream projects; keep them
+            // as-is so AGP does not warn about a missing NDK strip tool.
+            keepDebugSymbols += setOf("**/*.so")
         }
     }
 }
 
 room { schemaDirectory("$projectDir/schemas") }
+
+tasks.named("preBuild") {
+    dependsOn(copySpotCatalog)
+}
+
+tasks.matching { it.name == "mergeDebugAssets" || it.name == "mergeReleaseAssets" }.configureEach {
+    dependsOn(copySpotCatalog)
+}
 
 tasks.withType<Test> {
     maxHeapSize = "2g"
@@ -78,7 +109,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.1")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2")
 
-    implementation("com.mudita:MMD:1.0.0")
+    implementation("com.mudita:MMD:1.0.2")
 
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.10.2")

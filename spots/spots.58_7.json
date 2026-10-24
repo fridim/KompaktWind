@@ -1,0 +1,48 @@
+[
+  {
+    "id": "osm-node-7123847712",
+    "name": "Høllen",
+    "lat": 58.0741971,
+    "lon": 7.8189396,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7123847712",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "58_7",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7123847712"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Høllen"
+  },
+  {
+    "id": "osm-node-7123847711",
+    "name": "Kvavik",
+    "lat": 58.1385064,
+    "lon": 7.0310354,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7123847711",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "58_7",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7123847711"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Kvavik"
+  }
+]

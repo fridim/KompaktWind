@@ -1,0 +1,186 @@
+[
+  {
+    "id": "osm-way-491657989",
+    "name": "Baarland",
+    "lat": 51.391968,
+    "lon": 3.897793,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/491657989",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "51_3",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/491657989"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Baarland"
+  },
+  {
+    "id": "osm-way-491657990",
+    "name": "Breskens oost",
+    "lat": 51.4018246,
+    "lon": 3.5602069,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/491657990",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "51_3",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/491657990"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Breskens oost"
+  },
+  {
+    "id": "osm-way-491657992",
+    "name": "Cadzand-Bad Vlamingpolder",
+    "lat": 51.3873449,
+    "lon": 3.4100322,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/491657992",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "51_3",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/491657992"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Cadzand-Bad"
+  },
+  {
+    "id": "osm-way-548694875",
+    "name": "Cadzand-bad west",
+    "lat": 51.372416,
+    "lon": 3.366409,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/548694875",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "51_3",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/548694875"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Cadzand-bad west"
+  },
+  {
+    "id": "osm-way-702126930",
+    "name": "Kaloot",
+    "lat": 51.4349634,
+    "lon": 3.7044565,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/702126930",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "51_3",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/702126930"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Kaloot"
+  },
+  {
+    "id": "osm-way-491657962",
+    "name": "Paulinapolder",
+    "lat": 51.3506075,
+    "lon": 3.7393775,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/491657962",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "51_3",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/491657962"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Paulinapolder"
+  },
+  {
+    "id": "osm-way-702126929",
+    "name": "Put van Terneuzen",
+    "lat": 51.3372364,
+    "lon": 3.8462752,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/702126929",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "51_3",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/702126929"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Put van Terneuzen"
+  },
+  {
+    "id": "osm-way-822498441",
+    "name": "Roompot",
+    "lat": 51.5946477,
+    "lon": 3.7299605,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/822498441",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "51_3",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/822498441"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Roompot"
+  }
+]

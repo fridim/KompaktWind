@@ -1,0 +1,25 @@
+[
+  {
+    "id": "osm-way-248430612",
+    "name": "Praia de São Pedro",
+    "lat": 16.8257884,
+    "lon": -25.0668662,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/248430612",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "16_-26",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/248430612"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Praia de São Pedro"
+  }
+]

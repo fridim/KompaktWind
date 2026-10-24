@@ -1,0 +1,117 @@
+[
+  {
+    "id": "osm-node-6351517800",
+    "name": "Frosta-Tautra",
+    "lat": 63.5836951,
+    "lon": 10.6147782,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6351517800",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "63_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6351517800"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Frosta-Tautra"
+  },
+  {
+    "id": "osm-node-6351517791",
+    "name": "Storsand",
+    "lat": 63.4334514,
+    "lon": 10.7242656,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6351517791",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "63_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6351517791"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Storsand"
+  },
+  {
+    "id": "osm-node-6351517793",
+    "name": "Velvang Camping",
+    "lat": 63.4743616,
+    "lon": 10.8066523,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6351517793",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "63_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6351517793"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Velvang Camping"
+  },
+  {
+    "id": "osm-node-6351517792",
+    "name": "Vinnesanda",
+    "lat": 63.4917781,
+    "lon": 10.7767081,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6351517792",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "63_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6351517792"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Vinnesanda"
+  },
+  {
+    "id": "osm-node-6158105982",
+    "name": "Øysand",
+    "lat": 63.3299088,
+    "lon": 10.214281,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6158105982",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "63_10",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6158105982"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Øysand"
+  }
+]

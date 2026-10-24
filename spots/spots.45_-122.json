@@ -1,0 +1,121 @@
+[
+  {
+    "id": "osm-node-9792902644",
+    "name": "Kitesurf launch",
+    "lat": 45.7172928,
+    "lon": -121.5109741,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/9792902644",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "45_-122",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/9792902644"
+      }
+    ],
+    "altNames": [],
+    "shortName": "launch"
+  },
+  {
+    "id": "osm-node-2804972206",
+    "name": "Windsurf launch",
+    "lat": 45.7158861,
+    "lon": -121.516976,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/2804972206",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "45_-122",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/2804972206"
+      }
+    ],
+    "altNames": [],
+    "shortName": "launch"
+  },
+  {
+    "id": "osm-node-5257252795",
+    "name": "Windsurf launch",
+    "lat": 45.7168209,
+    "lon": -121.526436,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/5257252795",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "45_-122",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/5257252795"
+      },
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/9812655823"
+      }
+    ],
+    "altNames": [],
+    "shortName": "launch"
+  },
+  {
+    "id": "osm-node-9812655827",
+    "name": "Windsurf launch",
+    "lat": 45.716663,
+    "lon": -121.5253674,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/9812655827",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "45_-122",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/9812655827"
+      }
+    ],
+    "altNames": [],
+    "shortName": "launch"
+  },
+  {
+    "id": "osm-node-9812655831",
+    "name": "Windsurf launch",
+    "lat": 45.7160214,
+    "lon": -121.5269487,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/9812655831",
+    "activities": [
+      "windsurfing"
+    ],
+    "tile": "45_-122",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/9812655831"
+      }
+    ],
+    "altNames": [],
+    "shortName": "launch"
+  }
+]

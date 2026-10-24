@@ -1,0 +1,71 @@
+[
+  {
+    "id": "osm-node-4508458788",
+    "name": "IJmuiden",
+    "lat": 52.4576685,
+    "lon": 4.5547375,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/4508458788",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "52_4",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/4508458788"
+      }
+    ],
+    "altNames": [],
+    "shortName": "IJmuiden"
+  },
+  {
+    "id": "osm-node-4508453364",
+    "name": "Wijk aan Zee Bunker",
+    "lat": 52.4831488,
+    "lon": 4.5777761,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/4508453364",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "52_4",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/4508453364"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Wijk aan Zee"
+  },
+  {
+    "id": "osm-node-4508456414",
+    "name": "Wijk aan zee: Pier",
+    "lat": 52.4701579,
+    "lon": 4.5669325,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/4508456414",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "52_4",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/4508456414"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Wijk aan zee: Pier"
+  }
+]

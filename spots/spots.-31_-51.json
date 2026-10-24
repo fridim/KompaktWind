@@ -1,0 +1,48 @@
+[
+  {
+    "id": "osm-node-2615171825",
+    "name": "Kitesurf",
+    "lat": -30.322146,
+    "lon": -50.9060349,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/2615171825",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "-31_-51",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/2615171825"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Kitesurf"
+  },
+  {
+    "id": "osm-way-255820398",
+    "name": "Praia da Varzinha",
+    "lat": -30.3222888,
+    "lon": -50.9095682,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/255820398",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "-31_-51",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/255820398"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Praia da Varzinha"
+  }
+]

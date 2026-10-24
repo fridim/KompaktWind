@@ -52,6 +52,19 @@ class OpenMeteoMapperTest {
         assertThat(result.hours[0].timeEpochMs).isEqualTo(1779487200000L)
     }
 
+    @Test fun `mapper applies DST rules instead of a fixed offset`() {
+        val dstForecast = forecast.copy(
+            utcOffsetSeconds = 3600,
+            hourly = forecast.hourly.copy(
+                time = listOf("2026-03-29T01:00", "2026-03-29T03:00")
+            )
+        )
+        val result = OpenMeteoMapper.toForecast("spot1", dstForecast, marine = null, fetchedAt = 0L)
+        // 01:00 CET = 00:00Z, 03:00 CEST = 01:00Z. A fixed +01:00 would put the second hour at 02:00Z.
+        assertThat(result.hours[0].timeEpochMs).isEqualTo(1774742400000L)
+        assertThat(result.hours[1].timeEpochMs).isEqualTo(1774746000000L)
+    }
+
     @Test fun `mapper drops mismatched marine hours by aligning on count`() {
         val shortMarine = marine.copy(hourly = marine.hourly.copy(time = listOf("2026-05-23T00:00")))
         val result = OpenMeteoMapper.toForecast("spot1", forecast, shortMarine, fetchedAt = 0L)

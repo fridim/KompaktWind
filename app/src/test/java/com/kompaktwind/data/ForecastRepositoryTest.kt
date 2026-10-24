@@ -5,12 +5,16 @@ import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import com.google.common.truth.Truth.assertThat
 import com.kompaktwind.data.provider.FakeWeatherProvider
+import java.io.IOException
 import kotlinx.coroutines.runBlocking
+import okhttp3.ResponseBody.Companion.toResponseBody
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
+import retrofit2.HttpException
+import retrofit2.Response
 
 @RunWith(RobolectricTestRunner::class)
 class ForecastRepositoryTest {
@@ -92,6 +96,44 @@ class ForecastRepositoryTest {
         db.forecastCacheDao().upsert(cacheEntity(fetchedAt = 8_000L))
         provider.setNext(Result.success(forecast(fetchedAt = 10_000L)))
         repo.getForecast(spot, "fake", forceRefresh = true)
+        assertThat(provider.calls).isEqualTo(1)
+    }
+
+    @Test fun `http 429 is classified as rate limit`() = runBlocking {
+        provider.setNext(Result.failure(HttpException(Response.error<Any>(429, "".toResponseBody()))))
+        val state = repo.getForecast(spot, "fake") as ForecastUiState.Error
+        assertThat(state.kind).isEqualTo(ForecastUiState.ErrorKind.RATE_LIMIT)
+    }
+
+    @Test fun `http 503 is classified as provider 5xx`() = runBlocking {
+        provider.setNext(Result.failure(HttpException(Response.error<Any>(503, "".toResponseBody()))))
+        val state = repo.getForecast(spot, "fake") as ForecastUiState.Error
+        assertThat(state.kind).isEqualTo(ForecastUiState.ErrorKind.PROVIDER_5XX)
+    }
+
+    @Test fun `io failure is classified as network`() = runBlocking {
+        provider.setNext(Result.failure(IOException("offline")))
+        val state = repo.getForecast(spot, "fake") as ForecastUiState.Error
+        assertThat(state.kind).isEqualTo(ForecastUiState.ErrorKind.NETWORK)
+    }
+
+    @Test fun `cache ttl is read on every call`() = runBlocking {
+        var ttlMs = 5_000L
+        val ttlRepo = ForecastRepository(
+            spotDao = db.spotDao(),
+            cacheDao = db.forecastCacheDao(),
+            providers = com.kompaktwind.data.provider.ProviderRegistry(listOf(provider)),
+            now = { 10_000L },
+            cacheTtlMs = { ttlMs }
+        )
+        db.forecastCacheDao().upsert(cacheEntity(fetchedAt = 8_000L))
+
+        ttlRepo.getForecast(spot, "fake")
+        assertThat(provider.calls).isEqualTo(0)
+
+        ttlMs = 1_000L
+        provider.setNext(Result.success(forecast(fetchedAt = 10_000L)))
+        ttlRepo.getForecast(spot, "fake")
         assertThat(provider.calls).isEqualTo(1)
     }
 

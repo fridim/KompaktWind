@@ -1,0 +1,25 @@
+[
+  {
+    "id": "osm-way-154902421",
+    "name": "Playa Puerto Velero",
+    "lat": 10.9502345,
+    "lon": -75.0323925,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/154902421",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "10_-76",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/154902421"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Playa Puerto"
+  }
+]

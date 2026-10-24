@@ -1,0 +1,96 @@
+[
+  {
+    "id": "osm-node-7961025285",
+    "name": "Gjerdsvika",
+    "lat": 62.2538604,
+    "lon": 5.575819,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7961025285",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "62_5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7961025285"
+      }
+    ],
+    "altNames": [
+      "Sandangersanden"
+    ],
+    "shortName": "Gjerdsvika"
+  },
+  {
+    "id": "osm-node-7961025286",
+    "name": "Osnessanden",
+    "lat": 62.3443709,
+    "lon": 5.8261871,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7961025286",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "62_5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7961025286"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Osnessanden"
+  },
+  {
+    "id": "osm-node-7961015084",
+    "name": "Remøyholmen",
+    "lat": 62.3627659,
+    "lon": 5.6746637,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/7961015084",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "62_5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/7961015084"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Remøyholmen"
+  },
+  {
+    "id": "osm-node-6777922413",
+    "name": "Sandvika",
+    "lat": 62.4865466,
+    "lon": 5.9666061,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/6777922413",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "62_5",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/6777922413"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Sandvika"
+  }
+]

@@ -1,0 +1,25 @@
+[
+  {
+    "id": "osm-node-10241815448",
+    "name": "Spot Mama Prada",
+    "lat": 40.7450188,
+    "lon": -8.6780933,
+    "country": null,
+    "region": null,
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/node/10241815448",
+    "activities": [
+      "kitesurfing"
+    ],
+    "tile": "40_-9",
+    "updated": "2026-10-23",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/node/10241815448"
+      }
+    ],
+    "altNames": [],
+    "shortName": "Spot Mama Prada"
+  }
+]
