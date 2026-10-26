@@ -10,6 +10,7 @@ import kotlinx.serialization.json.decodeFromJsonElement
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.InputStream
+import java.net.URI
 import java.util.UUID
 import kotlin.math.floor
 
@@ -173,9 +174,12 @@ class LocalSpotStore(
             windDirections = windDirections,
             avoidWindDirections = avoidWindDirections,
             activities = activities,
-            source = source.ifBlank { LOCAL_SOURCE },
-            sourceUrl = sourceUrl,
-            sources = sources,
+            source = sanitizeSourceName(source.ifBlank { LOCAL_SOURCE }, sourceUrl.safeHttpsUrl()),
+            sourceUrl = sourceUrl.safeHttpsUrl(),
+            sources = sources.map { source ->
+                val url = source.url.safeHttpsUrl()
+                source.copy(name = sanitizeSourceName(source.name, url), url = url)
+            },
             tile = "${floor(latitude).toInt()}_${floor(longitude).toInt()}",
             updated = updated,
             local = true
@@ -197,7 +201,8 @@ class LocalSpotStore(
     }
 
     private fun readMeta(file: File): LocalImportInfo? = try {
-        json.decodeFromString(ImportMetadata.serializer(), file.readText()).toInfo()
+        val info = json.decodeFromString(ImportMetadata.serializer(), file.readText()).toInfo()
+        info.takeIf { validId(it.id) }
     } catch (_: Exception) {
         null
     }
@@ -208,9 +213,42 @@ class LocalSpotStore(
         if (!dir.exists()) dir.mkdirs()
     }
 
-    private fun dataFile(id: String) = File(dir, "$id$DATA_SUFFIX")
+    private fun dataFile(id: String): File {
+        require(validId(id)) { "Invalid import id" }
+        val file = File(dir, "$id$DATA_SUFFIX").canonicalFile
+        check(file.parentFile == dir.canonicalFile) { "Invalid import path" }
+        return file
+    }
 
-    private fun metaFile(id: String) = File(dir, "$id$META_SUFFIX")
+    private fun metaFile(id: String): File {
+        require(validId(id)) { "Invalid import id" }
+        val file = File(dir, "$id$META_SUFFIX").canonicalFile
+        check(file.parentFile == dir.canonicalFile) { "Invalid import path" }
+        return file
+    }
+
+    private fun validId(id: String): Boolean = ID_PATTERN.matches(id)
+
+    private fun String.safeHttpsUrl(): String {
+        val value = trim()
+        if (value.isEmpty()) return ""
+        return try {
+            val uri = URI(value)
+            if (uri.scheme.equals("https", ignoreCase = true) && !uri.host.isNullOrBlank()) value else ""
+        } catch (_: Exception) {
+            ""
+        }
+    }
+
+    private fun String.isOpenStreetMapUrl(): Boolean {
+        val uri = runCatching { URI(this) }.getOrNull() ?: return false
+        return uri.scheme.equals("https", ignoreCase = true) &&
+            (uri.host.equals("openstreetmap.org", ignoreCase = true) ||
+                uri.host.equals("www.openstreetmap.org", ignoreCase = true))
+    }
+
+    private fun sanitizeSourceName(name: String, url: String): String =
+        if (name.equals("openstreetmap.org", ignoreCase = true) && !url.isOpenStreetMapUrl()) LOCAL_SOURCE else name
 
     private sealed interface ParseResult {
         data class Success(val spots: List<CatalogSpot>, val skipped: Int) : ParseResult
@@ -221,6 +259,7 @@ class LocalSpotStore(
         const val LOCAL_SOURCE = "local"
         const val DATA_SUFFIX = ".json"
         const val META_SUFFIX = ".meta.json"
+        val ID_PATTERN = Regex("^[A-Za-z0-9-]{1,64}$")
         val ImportSpotSerializer = ImportedSpotJson.serializer()
     }
 }

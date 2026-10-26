@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     kotlin("plugin.serialization")
@@ -14,6 +16,24 @@ val copySpotCatalog = tasks.register<Sync>("copySpotCatalog") {
     into(spotCatalogAssets.map { it.dir("spots") })
 }
 
+val keystoreProperties = Properties().apply {
+    val keystorePropertiesFile = rootProject.file("keystore.properties")
+    if (keystorePropertiesFile.exists()) {
+        keystorePropertiesFile.inputStream().use { load(it) }
+    }
+}
+
+fun signingValue(envName: String, propertyName: String): String? =
+    System.getenv(envName) ?: keystoreProperties.getProperty(propertyName)
+
+val releaseStoreFile = signingValue("ANDROID_KEYSTORE_PATH", "storeFile")
+val releaseStorePassword = signingValue("ANDROID_KEYSTORE_PASSWORD", "storePassword")
+val releaseKeyAlias = signingValue("ANDROID_KEY_ALIAS", "keyAlias")
+val releaseKeyPassword = signingValue("ANDROID_KEY_PASSWORD", "keyPassword")
+
+val appVersionName = providers.gradleProperty("versionName").orElse("0.1.2").get()
+val appVersionCode = providers.gradleProperty("versionCode").orElse("1002").get().toInt()
+
 android {
     namespace = "com.kompaktwind"
     compileSdk = 36
@@ -22,15 +42,37 @@ android {
         applicationId = "com.kompaktwind"
         minSdk = 28
         targetSdk = 35
-        versionCode = 1
-        versionName = "0.1.0"
+        versionCode = appVersionCode
+        versionName = appVersionName
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        if (releaseStoreFile != null) {
+            val storeFilePath = releaseStoreFile
+            require(!releaseStorePassword.isNullOrEmpty()) {
+                "ANDROID_KEYSTORE_PASSWORD or keystore.properties storePassword is required"
+            }
+            require(!releaseKeyAlias.isNullOrEmpty()) {
+                "ANDROID_KEY_ALIAS or keystore.properties keyAlias is required"
+            }
+            require(!releaseKeyPassword.isNullOrEmpty()) {
+                "ANDROID_KEY_PASSWORD or keystore.properties keyPassword is required"
+            }
+            create("release") {
+                storeFile = rootProject.file(storeFilePath)
+                storePassword = releaseStorePassword
+                keyAlias = releaseKeyAlias
+                keyPassword = releaseKeyPassword
+            }
+        }
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            signingConfig = signingConfigs.findByName("release")
         }
     }
 

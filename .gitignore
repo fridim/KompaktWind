@@ -19,12 +19,15 @@ Thumbs.db
 *.apk
 *.aab
 captures/
+dist/
 
 # Reports
 app/schemas/
 
 # Keystore files
 *.jks
+*.keystore
+keystore.properties
 
 # Python
 __pycache__/

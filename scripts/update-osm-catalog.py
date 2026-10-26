@@ -414,6 +414,13 @@ def load_overrides() -> dict[str, str]:
     return overrides
 
 
+def csv_safe(value: object) -> str:
+    text = str(value)
+    if text and text[0] in ("=", "+", "-", "@"):
+        return "'" + text
+    return text
+
+
 def write_hints_csv(records: list[dict], overrides: dict[str, str]) -> None:
     rows = []
     for record in records:
@@ -421,14 +428,14 @@ def write_hints_csv(records: list[dict], overrides: dict[str, str]) -> None:
             continue
         rows.append({
             "osm_id": record["id"],
-            "name": record.get("name", ""),
+            "name": csv_safe(record.get("name", "")),
             "lat": record["lat"],
             "lon": record["lon"],
             "sport": ";".join(record.get("activities", [])),
-            "hint_name": record.get("hintName", ""),
-            "hint_kind": record.get("hintKind", ""),
-            "hint_osm": record.get("hintOsm", ""),
-            "override": overrides.get(record["id"], ""),
+            "hint_name": csv_safe(record.get("hintName", "")),
+            "hint_kind": csv_safe(record.get("hintKind", "")),
+            "hint_osm": csv_safe(record.get("hintOsm", "")),
+            "override": csv_safe(overrides.get(record["id"], "")),
         })
     rows.sort(key=lambda row: (row["hint_name"], row["osm_id"]))
     with HINTS_CSV.open("w", newline="", encoding="utf-8") as handle:
@@ -527,8 +534,6 @@ def main() -> int:
             record["hintName"] = overrides[record["id"]]
             record["hintKind"] = "override"
             record["hintOsm"] = ""
-    write_hints_csv(candidates, overrides)
-
     print(f"OSM elements: {len(elements)}; usable: {len(candidates)}")
     print(f"replacing {removed} rows inside the bbox")
     for record in sorted(candidates, key=lambda item: (item.get("name") or item.get("hintName") or "").casefold()):
@@ -537,6 +542,7 @@ def main() -> int:
     if args.dry_run:
         return 0
 
+    write_hints_csv(candidates, overrides)
     merged = dict(outside)
     for record in candidates:
         merged[record["id"]] = record

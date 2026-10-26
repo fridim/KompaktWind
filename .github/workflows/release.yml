@@ -1,0 +1,276 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Existing tag to release (for example v0.1.2)"
+        required: true
+        type: string
+      draft:
+        description: "Create a draft GitHub Release"
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  metadata:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      tag: ${{ steps.version.outputs.tag }}
+      version: ${{ steps.version.outputs.version }}
+      version_code: ${{ steps.version.outputs.version_code }}
+    steps:
+      - name: Set version
+        id: version
+        shell: bash
+        env:
+          INPUT_TAG: ${{ inputs.tag }}
+        run: |
+          set -euo pipefail
+          TAG="${INPUT_TAG:-${GITHUB_REF_NAME}}"
+          if [[ ! "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::Expected a tag like v0.1.2, got '$TAG'"
+            exit 1
+          fi
+          VERSION="${TAG#v}"
+          IFS=. read -r MAJOR MINOR PATCH <<< "$VERSION"
+          if (( 10#$MAJOR > 2100 || 10#$MINOR >= 1000 || 10#$PATCH >= 1000 )); then
+            echo "::error::Version components are too large for the versionCode scheme"
+            exit 1
+          fi
+          VERSION_CODE=$((10#$MAJOR * 1000000 + 10#$MINOR * 1000 + 10#$PATCH))
+          {
+            echo "tag=$TAG"
+            echo "version=$VERSION"
+            echo "version_code=$VERSION_CODE"
+          } >> "$GITHUB_OUTPUT"
+          echo "Building KompaktWind $VERSION ($VERSION_CODE)"
+
+  build:
+    needs: metadata
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    steps:
+      - name: Check out the release tag
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: refs/tags/${{ needs.metadata.outputs.tag }}
+          persist-credentials: false
+
+      - name: Verify the checked-out ref is the tag
+        shell: bash
+        env:
+          TAG: ${{ needs.metadata.outputs.tag }}
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$(git rev-parse "refs/tags/${TAG}^{commit}")"
+
+      - name: Set up Java
+        uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3 # v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: gradle
+
+      - name: Test, lint, and build unsigned release
+        shell: bash
+        env:
+          VERSION: ${{ needs.metadata.outputs.version }}
+          VERSION_CODE: ${{ needs.metadata.outputs.version_code }}
+        run: |
+          set -euo pipefail
+          chmod +x gradlew
+          ./gradlew --stacktrace \
+            -PversionName="$VERSION" \
+            -PversionCode="$VERSION_CODE" \
+            :app:testDebugUnitTest :app:lintDebug :app:assembleRelease :app:bundleRelease
+
+      - name: Prepare unsigned artifacts and release notes
+        shell: bash
+        env:
+          VERSION: ${{ needs.metadata.outputs.version }}
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          cp app/build/outputs/apk/release/app-release-unsigned.apk dist/unsigned.apk
+          cp app/build/outputs/bundle/release/app-release.aab dist/unsigned.aab
+          awk -v header="## v${VERSION}" '
+            index($0, header) == 1 { found = 1; next }
+            found && /^## / { exit }
+            found { print }
+          ' CHANGELOG.md > dist/release-notes.md
+          if [ ! -s dist/release-notes.md ]; then
+            printf 'KompaktWind %s\n' "$VERSION" > dist/release-notes.md
+          fi
+
+      - name: Upload unsigned release artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: KompaktWind-unsigned
+          path: dist/*
+          if-no-files-found: error
+          retention-days: 1
+
+  release:
+    needs: [metadata, build]
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment: release
+    permissions:
+      contents: write
+    env:
+      TAG: ${{ needs.metadata.outputs.tag }}
+      VERSION: ${{ needs.metadata.outputs.version }}
+      VERSION_CODE: ${{ needs.metadata.outputs.version_code }}
+    steps:
+      - name: Download unsigned artifact
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: KompaktWind-unsigned
+          path: dist
+
+      - name: Decode keystore
+        shell: bash
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+        run: |
+          set -euo pipefail
+          if [ -z "${ANDROID_KEYSTORE_BASE64:-}" ]; then
+            echo "::error::Missing signing secret: ANDROID_KEYSTORE_BASE64"
+            exit 1
+          fi
+          umask 077
+          echo "$ANDROID_KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/release.keystore"
+          echo "ANDROID_KEYSTORE_PATH=$RUNNER_TEMP/release.keystore" >> "$GITHUB_ENV"
+
+      - name: Sign and verify APK and AAB
+        shell: bash
+        env:
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+          EXPECTED_SIGNER: ${{ vars.ANDROID_SIGNER_SHA256 }}
+        run: |
+          set -euo pipefail
+          for name in ANDROID_KEYSTORE_PASSWORD ANDROID_KEY_ALIAS ANDROID_KEY_PASSWORD; do
+            if [ -z "${!name:-}" ]; then
+              echo "::error::Missing signing secret: $name"
+              exit 1
+            fi
+          done
+          if [ -z "${EXPECTED_SIGNER:-}" ]; then
+            echo "::error::Set the repository variable ANDROID_SIGNER_SHA256 to the release certificate fingerprint"
+            exit 1
+          fi
+
+          SDK_ROOT="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-}}"
+          if [ -z "$SDK_ROOT" ]; then
+            echo "::error::Android SDK path is not set"
+            exit 1
+          fi
+          APKSIGNER=$(find "$SDK_ROOT/build-tools" -type f -name apksigner | sort -V | tail -n 1)
+          AAPT=$(find "$SDK_ROOT/build-tools" -type f -name aapt | sort -V | tail -n 1)
+          if [ -z "$APKSIGNER" ] || [ -z "$AAPT" ]; then
+            echo "::error::Android build tools not found in $SDK_ROOT/build-tools"
+            exit 1
+          fi
+
+          APK="dist/KompaktWind-${VERSION}.apk"
+          AAB="dist/KompaktWind-${VERSION}.aab"
+
+          "$APKSIGNER" sign \
+            --ks "$ANDROID_KEYSTORE_PATH" \
+            --ks-key-alias "$ANDROID_KEY_ALIAS" \
+            --ks-pass env:ANDROID_KEYSTORE_PASSWORD \
+            --key-pass env:ANDROID_KEY_PASSWORD \
+            --in dist/unsigned.apk \
+            --out "$APK"
+
+          jarsigner \
+            -keystore "$ANDROID_KEYSTORE_PATH" \
+            -storepass:env ANDROID_KEYSTORE_PASSWORD \
+            -keypass:env ANDROID_KEY_PASSWORD \
+            -sigalg SHA256withRSA \
+            -digestalg SHA-256 \
+            dist/unsigned.aab "$ANDROID_KEY_ALIAS"
+          mv dist/unsigned.aab "$AAB"
+
+          EXPECTED=$(printf '%s' "$EXPECTED_SIGNER" | tr -d ':' | tr '[:upper:]' '[:lower:]' | tr -d '[:space:]')
+          ACTUAL=$("$APKSIGNER" verify --print-certs "$APK" \
+            | sed -n 's/^Signer #1 certificate SHA-256 digest: //p' \
+            | tr -d ':' | tr '[:upper:]' '[:lower:]' | tr -d '[:space:]')
+          if [ "$ACTUAL" != "$EXPECTED" ]; then
+            echo "::error::APK signer does not match ANDROID_SIGNER_SHA256"
+            exit 1
+          fi
+
+          AAB_SIGNER=$(keytool -printcert -jarfile "$AAB" \
+            | sed -n 's/^[[:space:]]*SHA256: //p' | head -n 1 \
+            | tr -d ':' | tr '[:upper:]' '[:lower:]' | tr -d '[:space:]')
+          if [ "$AAB_SIGNER" != "$EXPECTED" ]; then
+            echo "::error::AAB signer does not match ANDROID_SIGNER_SHA256"
+            exit 1
+          fi
+
+          jarsigner -verify "$AAB" > /tmp/aab-verify.txt 2>&1 || {
+            cat /tmp/aab-verify.txt
+            exit 1
+          }
+          if ! grep -q "jar verified" /tmp/aab-verify.txt; then
+            cat /tmp/aab-verify.txt
+            echo "::error::AAB is not signed"
+            exit 1
+          fi
+
+          BADGING=$("$AAPT" dump badging "$APK")
+          if ! grep -q "package: name='com.kompaktwind' versionCode='${VERSION_CODE}' versionName='${VERSION}'" <<< "$BADGING"; then
+            echo "::error::APK application id or version does not match the release tag"
+            exit 1
+          fi
+
+          (cd dist && sha256sum "KompaktWind-${VERSION}.apk" > "KompaktWind-${VERSION}.apk.sha256")
+
+      - name: Publish GitHub Release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DRAFT_INPUT: ${{ inputs.draft }}
+        run: |
+          set -euo pipefail
+          ASSETS=(
+            "dist/KompaktWind-${VERSION}.apk"
+            "dist/KompaktWind-${VERSION}.aab"
+            "dist/KompaktWind-${VERSION}.apk.sha256"
+          )
+          ARGS=(--title "KompaktWind ${VERSION}" --notes-file dist/release-notes.md --verify-tag)
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${DRAFT_INPUT:-false}" = "true" ]; then
+            ARGS+=(--draft)
+          fi
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            if gh release view "$TAG" --json isDraft -q .isDraft | grep -qx true; then
+              gh release upload "$TAG" "${ASSETS[@]}" --clobber
+            else
+              gh release upload "$TAG" "${ASSETS[@]}"
+            fi
+          else
+            gh release create "$TAG" "${ARGS[@]}" "${ASSETS[@]}"
+          fi
+
+      - name: Remove keystore
+        if: always()
+        shell: bash
+        run: rm -f "${RUNNER_TEMP}/release.keystore"

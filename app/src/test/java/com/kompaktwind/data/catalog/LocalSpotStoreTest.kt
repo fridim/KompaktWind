@@ -97,4 +97,40 @@ class LocalSpotStoreTest {
         assertThat(store().list()).hasSize(1)
         assertThat(store().spots()).hasSize(1)
     }
+
+    @Test fun `drops non-https source links`() = runBlocking {
+        importJson(
+            store(),
+            "urls.json",
+            """[
+                {
+                    "name": "A",
+                    "lat": 1.0,
+                    "lon": 2.0,
+                    "sourceUrl": "javascript:alert(1)",
+                    "sources": [
+                        {"name": "Unsafe", "url": "file:///etc/passwd"},
+                        {"name": "openstreetmap.org", "url": "https://evil.example/osm"},
+                        {"name": "Safe", "url": "https://example.com/ocean"}
+                    ]
+                }
+            ]"""
+        )
+
+        val spot = store().spots().single()
+        assertThat(spot.sourceUrl).isEmpty()
+        assertThat(spot.sources.first { it.name == "Unsafe" }.url).isEmpty()
+        assertThat(spot.sources.first { it.name == "local" }.url)
+            .isEqualTo("https://evil.example/osm")
+        assertThat(spot.sources.first { it.name == "Safe" }.url)
+            .isEqualTo("https://example.com/ocean")
+    }
+
+    @Test fun `ignores metadata with unsafe ids`() = runBlocking {
+        temp.newFile("bad.meta.json").writeText(
+            """{"id":"../escape","fileName":"x","spots":1,"skipped":0,"importedAt":0}"""
+        )
+
+        assertThat(store().list()).isEmpty()
+    }
 }

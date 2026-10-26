@@ -129,7 +129,7 @@
     <string name="coastline_attribution">Coastline: Natural Earth, GSHHG</string>
     <string name="import_private_json">Import soukromého JSONu</string>
     <string name="import_button">Importovat</string>
-    <string name="import_private_note">Uloženo pouze v tomto zařízení; nikdy se neodesílá ani nepřidává do aplikace.</string>
+    <string name="import_private_note">Importované soubory zůstávají v tomto zařízení a jsou vyloučeny ze záloh. Uložené údaje o místech se mohou dostat do zálohy Androidu.</string>
     <string name="importing_spots">Importuji…</string>
     <string name="import_result">Importováno %1$d spotů ze souboru %2$s</string>
     <string name="import_result_skipped">Importováno %1$d spotů ze souboru %2$s (%3$d přeskočeno)</string>

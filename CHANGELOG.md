@@ -24,6 +24,8 @@ Compared with v0.1.1, generated from `jj log -r v0.1.1..@` and
 - OSM catalog updater with clustered nearest-feature hints, point-in-polygon
   where geometry is available, compass qualifiers, a review CSV, and curated
   hint overrides.
+- CI and tag-driven signed APK/AAB release automation, with APK signature
+  verification and GitHub Release assets.
 
 ### Changed
 
@@ -47,8 +49,10 @@ Compared with v0.1.1, generated from `jj log -r v0.1.1..@` and
 - Recomputation cost in Near Me and Add Spot search.
 - Unnamed OSM spots now display a meaningful nearby-feature hint instead of a
   blank name.
+- Private-import source links are restricted to HTTPS, and release signing is
+  isolated from the build job and checked against the release certificate.
 
 ### Tests
 
-- 95 unit tests covering parsing, mapping, repositories, migrations, catalog
+- 97 unit tests covering parsing, mapping, repositories, migrations, catalog
   logic, forecast preview, and formatting.

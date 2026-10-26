@@ -129,7 +129,7 @@
     <string name="coastline_attribution">Coastline: Natural Earth, GSHHG</string>
     <string name="import_private_json">Importer un JSON privé</string>
     <string name="import_button">Importer</string>
-    <string name="import_private_note">Stocké uniquement sur cet appareil ; jamais envoyé ni inclus.</string>
+    <string name="import_private_note">Les fichiers importés restent sur cet appareil et sont exclus des sauvegardes. Les détails des spots enregistrés peuvent être inclus dans la sauvegarde Android.</string>
     <string name="importing_spots">Importation…</string>
     <string name="import_result">%1$d spots importés depuis %2$s</string>
     <string name="import_result_skipped">%1$d spots importés depuis %2$s (%3$d ignorés)</string>

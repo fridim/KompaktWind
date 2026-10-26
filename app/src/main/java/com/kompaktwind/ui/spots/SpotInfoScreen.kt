@@ -139,7 +139,8 @@ private fun SpotInfoContent(spot: CatalogSpot) {
                     listOf(com.kompaktwind.data.catalog.CatalogSource(spot.source, spot.sourceUrl))
                 }
                 links.filter { it.name.isNotBlank() }.forEach { source ->
-                    val modifier = if (source.url.isNotBlank()) {
+                    val canOpen = source.url.startsWith("https://", ignoreCase = true)
+                    val modifier = if (canOpen) {
                         Modifier.padding(top = 4.dp).clickable { uriHandler.openUri(source.url) }
                     } else {
                         Modifier.padding(top = 4.dp)
@@ -147,7 +148,7 @@ private fun SpotInfoContent(spot: CatalogSpot) {
                     TextMMD(
                         text = sourceName(source.name),
                         fontSize = 16.sp,
-                        textDecoration = if (source.url.isNotBlank()) TextDecoration.Underline else TextDecoration.None,
+                        textDecoration = if (canOpen) TextDecoration.Underline else TextDecoration.None,
                         modifier = modifier
                     )
                 }

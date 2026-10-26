@@ -49,6 +49,63 @@ adb install app/build/outputs/apk/debug/app-debug.apk
 
 Min SDK 28 (Android 9). Target SDK 35.
 
+## Release
+
+CI runs unit tests, lint, and a debug build on pull requests and pushes to
+`main`/`master` with no signing secrets. Pushing a tag such as `v0.1.2` runs
+`.github/workflows/release.yml`: a secret-free job checks the tag, tests, lints,
+and builds unsigned APK/AAB artifacts; after the `release` environment is
+approved, a separate job signs them, verifies the APK signer and AAB signature,
+checks the package/version, and creates a GitHub Release. The AAB is attached
+for Play; the workflow does not upload it to Play automatically.
+
+**Required:** configure the `release` environment with required reviewers and
+store these secrets there (not at repository scope):
+
+- `ANDROID_KEYSTORE_BASE64` — base64 of the release keystore
+- `ANDROID_KEYSTORE_PASSWORD`
+- `ANDROID_KEY_ALIAS`
+- `ANDROID_KEY_PASSWORD`
+
+Also set the public repository variable `ANDROID_SIGNER_SHA256` to the
+release certificate's SHA-256 fingerprint; the release is rejected if the
+signed APK does not match it. Get it with:
+
+```bash
+keytool -list -v -keystore release.keystore | grep 'SHA256:'
+gh variable set ANDROID_SIGNER_SHA256 --body "AA:BB:..."
+```
+
+Create the base64 value with `base64 -w0 release.keystore` on Linux
+(`base64 -i release.keystore` on macOS). Never commit the keystore or
+`keystore.properties`.
+
+The version name and code come from the tag: `v0.1.2` becomes `0.1.2` and
+`1002` (`major * 1,000,000 + minor * 1,000 + patch`). For a local signed build:
+
+```bash
+cp keystore.properties.example keystore.properties
+# fill in the path, alias, and passwords
+./gradlew :app:assembleRelease -PversionName=0.1.2 -PversionCode=1002
+```
+
+To publish from a tag:
+
+```bash
+git tag v0.1.2
+git push origin v0.1.2
+```
+
+The release workflow can also be started manually with an existing tag; the
+manual default is a draft Release:
+
+```bash
+gh workflow run release.yml -f tag=v0.1.2 -f draft=true
+```
+
+Tag pushes publish directly once the required-reviewer environment gate is
+approved.
+
 ## Data sources
 
 The top-right source button opens a full-screen list for the spot. Each row

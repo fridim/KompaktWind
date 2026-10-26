@@ -138,7 +138,7 @@
     <string name="settings_sources">Spot locations</string>
     <string name="import_private_json">Import private JSON</string>
     <string name="import_button">Import</string>
-    <string name="import_private_note">Stored only on this device; never uploaded or bundled.</string>
+    <string name="import_private_note">Imported files stay on this device and are excluded from backup. Saved spot details may be included in Android backup.</string>
     <string name="importing_spots">Importing…</string>
     <string name="import_result">Imported %1$d spots from %2$s</string>
     <string name="import_result_skipped">Imported %1$d spots from %2$s (%3$d skipped)</string>

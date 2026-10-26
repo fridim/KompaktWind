@@ -2,6 +2,7 @@ package com.kompaktwind.data.provider.openmeteo
 
 import android.util.Log
 
+import com.kompaktwind.BuildConfig
 import com.kompaktwind.data.Forecast
 import com.kompaktwind.data.ProviderIds
 import com.kompaktwind.data.provider.WeatherProvider
@@ -57,7 +58,7 @@ class OpenMeteoProvider(
             val forecastDto = forecastDeferred.await().getOrThrow()
             val marineDto = marineDeferred.await()
                 .onFailure {
-                    Log.w("OpenMeteoProvider", "Marine forecast unavailable for $lat,$lon", it)
+                    Log.w("OpenMeteoProvider", "Marine forecast unavailable", it)
                 }
                 .getOrNull()
             OpenMeteoMapper.toForecast(
@@ -90,7 +91,11 @@ class OpenMeteoProvider(
                 .connectTimeout(10, TimeUnit.SECONDS)
                 .readTimeout(10, TimeUnit.SECONDS)
                 .addInterceptor(HttpLoggingInterceptor().apply {
-                    level = HttpLoggingInterceptor.Level.BASIC
+                    level = if (BuildConfig.DEBUG) {
+                        HttpLoggingInterceptor.Level.BASIC
+                    } else {
+                        HttpLoggingInterceptor.Level.NONE
+                    }
                 })
                 .build()
 
