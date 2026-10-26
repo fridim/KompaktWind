@@ -31,8 +31,8 @@ val releaseStorePassword = signingValue("ANDROID_KEYSTORE_PASSWORD", "storePassw
 val releaseKeyAlias = signingValue("ANDROID_KEY_ALIAS", "keyAlias")
 val releaseKeyPassword = signingValue("ANDROID_KEY_PASSWORD", "keyPassword")
 
-val appVersionName = providers.gradleProperty("versionName").orElse("0.1.2").get()
-val appVersionCode = providers.gradleProperty("versionCode").orElse("1002").get().toInt()
+val appVersionName = providers.gradleProperty("versionName").orElse("0.2.0").get()
+val appVersionCode = providers.gradleProperty("versionCode").orElse("2000").get().toInt()
 
 android {
     namespace = "com.kompaktwind"
@@ -97,9 +97,6 @@ android {
     }
 
     packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
         jniLibs {
             // These are already stripped by their upstream projects; keep them
             // as-is so AGP does not warn about a missing NDK strip tool.

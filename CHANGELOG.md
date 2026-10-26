@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.1.2
+## v0.2.0
 
 Compared with v0.1.1, generated from `jj log -r v0.1.1..@` and
 `jj diff --from v0.1.1 --to @`.
@@ -42,6 +42,8 @@ Compared with v0.1.1, generated from `jj log -r v0.1.1..@` and
 - Settings “Sources” renamed to “Spot locations”; language, units, marine
   display, cache TTL, dark screen, and colour mode controls.
 - Bundled catalog is now OSM-only; 166 spots, manifest v16.
+- Added GSHHG (LGPL-3.0) and MMD (Apache-2.0) third-party notices and full
+  license texts; dependency license files are preserved in the APK.
 - Database schema v4 with sort-order migration.
 
 ### Fixed

@@ -65,7 +65,7 @@ Min SDK 28 (Android 9). Target SDK 35.
 ## Release
 
 CI runs unit tests, lint, and a debug build on pull requests and pushes to
-`main`/`master` with no signing secrets. Pushing a tag such as `v0.1.2` or
+`main`/`master` with no signing secrets. Pushing a tag such as `v0.2.0` or
 publishing a GitHub Release for a `v*` tag runs
 `.github/workflows/release.yml` (the workflow must be present on the default
 branch): a secret-free job checks the tag, tests, lints, and builds unsigned
@@ -97,27 +97,27 @@ Create the base64 value with `base64 -w0 release.keystore` on Linux
 (`base64 -i release.keystore` on macOS). Never commit the keystore or
 `keystore.properties`.
 
-The version name and code come from the tag: `v0.1.2` becomes `0.1.2` and
-`1002` (`major * 1,000,000 + minor * 1,000 + patch`). For a local signed build:
+The version name and code come from the tag: `v0.2.0` becomes `0.2.0` and
+`2000` (`major * 1,000,000 + minor * 1,000 + patch`). For a local signed build:
 
 ```bash
 cp keystore.properties.example keystore.properties
 # fill in the path, alias, and passwords
-./gradlew :app:assembleRelease -PversionName=0.1.2 -PversionCode=1002
+./gradlew :app:assembleRelease -PversionName=0.2.0 -PversionCode=2000
 ```
 
 To publish from a tag:
 
 ```bash
-git tag v0.1.2
-git push origin v0.1.2
+git tag v0.2.0
+git push origin v0.2.0
 ```
 
 The release workflow can also be started manually with an existing tag; the
 manual default is a draft Release:
 
 ```bash
-gh workflow run release.yml -f tag=v0.1.2 -f draft=true
+gh workflow run release.yml -f tag=v0.2.0 -f draft=true
 ```
 
 Tag pushes publish directly once the required-reviewer environment gate is
@@ -205,4 +205,7 @@ currently expose no downloadable resources and no specified licence.
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE). Third-party notices and full license texts
+are bundled at
+[THIRD_PARTY_NOTICES.md](app/src/main/assets/THIRD_PARTY_NOTICES.md) and
+[app/src/main/assets/LICENSES](app/src/main/assets/LICENSES).
