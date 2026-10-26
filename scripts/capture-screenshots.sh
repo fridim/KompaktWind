@@ -6,6 +6,11 @@ OUT="${OUT:-$ROOT/screenshots}"
 ADB="${ADB:-adb}"
 PKG="com.kompaktwind"
 ACTIVITY="$PKG/.MainActivity"
+FORECAST_SPOT="${FORECAST_SPOT:-Wellington}"
+MAP_CAMERA_LAT="${MAP_CAMERA_LAT:-42.9}"
+MAP_CAMERA_LON="${MAP_CAMERA_LON:-3.8}"
+MAP_SPOT_LAT="${MAP_SPOT_LAT:-43.4512055}"
+MAP_SPOT_LON="${MAP_SPOT_LON:-3.809512}"
 
 ADB_ARGS=("$ADB")
 if [[ -n "${ANDROID_SERIAL:-}" ]]; then
@@ -77,6 +82,65 @@ wait_for() {
     return 1
 }
 
+ui_dark_checked() {
+    dump_ui | python3 -c '
+import re
+import sys
+import xml.etree.ElementTree as ET
+
+root = ET.fromstring(sys.stdin.read())
+for node in root.iter("node"):
+    if node.get("checkable") == "true":
+        match = re.match(r"\[(\d+),(\d+)\]\[(\d+),(\d+)\]", node.get("bounds", ""))
+        if match and int(match.group(2)) < 350:
+            print("true" if node.get("checked") == "true" else "false")
+            break
+'
+}
+
+open_settings() {
+    tap desc "Settings"
+    wait_for text "Language" 10
+}
+
+set_wind_colors() {
+    local desired="$1" current
+    adb_ shell input swipe 240 300 240 700 400
+    sleep 1
+    wait_for text "Wind colors" 10
+    if [[ -n "$(ui_coords text "$desired")" ]]; then
+        return
+    fi
+    if [[ "$desired" == "Color" ]]; then
+        current="Monochrome"
+    else
+        current="Color"
+    fi
+    tap text "$current"
+    wait_for text "$desired" 5
+    tap text "$desired"
+    sleep 1
+}
+
+set_dark_mode() {
+    local desired="$1" checked
+    adb_ shell input swipe 240 300 240 700 400
+    sleep 1
+    adb_ shell input swipe 240 650 240 250 400
+    sleep 1
+    wait_for text "Dark screen (white on black)" 10
+    checked="$(ui_dark_checked)"
+    if [[ "$checked" != "$desired" ]]; then
+        adb_ shell input tap 424 256
+        sleep 1
+        checked="$(ui_dark_checked)"
+        if [[ "$checked" != "$desired" ]]; then
+            adb_ shell input tap 424 256
+            sleep 1
+        fi
+    fi
+}
+
 wait_no_text() {
     local value="$1" timeout="${2:-20}"
     local deadline=$((SECONDS + timeout))
@@ -110,6 +174,22 @@ for node in root.iter("node"):
 '
 }
 
+
+map_camera() {
+    dump_ui | python3 -c '
+import re
+import sys
+import xml.etree.ElementTree as ET
+
+root = ET.fromstring(sys.stdin.read())
+for node in root.iter("node"):
+    text = (node.get("text") or "").strip()
+    match = re.fullmatch(r"(-?\d+\.\d+),\s*(-?\d+\.\d+)", text)
+    if match:
+        print(match.group(1), match.group(2))
+        break
+'
+}
 
 first_station_text() {
     dump_ui | python3 -c '
@@ -172,15 +252,22 @@ adb_ shell settings put system screen_off_timeout 600000
 adb_ shell input keyevent KEYCODE_WAKEUP >/dev/null 2>&1 || true
 adb_ shell am force-stop "$PKG"
 adb_ shell am start -n "$ACTIVITY" >/dev/null
+sleep 2
 wait_for text "Favorites" 20
+sleep 1
+
+open_settings
+set_wind_colors Monochrome
+adb_ shell input keyevent KEYCODE_BACK
+wait_for text "Favorites" 10
 sleep 1
 
 echo "Capturing screenshots to $OUT"
 shot 01-spots.png
 
-spot="$(first_spot_text)"
-if [[ -z "$spot" ]]; then
-    echo "No saved spots found. Add at least one spot before capturing." >&2
+spot="$FORECAST_SPOT"
+if [[ -z "$(ui_coords text "$spot")" ]]; then
+    echo "Saved spot '$spot' not found. Set FORECAST_SPOT to an existing spot." >&2
     exit 1
 fi
 
@@ -192,6 +279,7 @@ shot 02-spot-actions.png
 tap text "$spot"
 wait_for desc "Back" 10
 wait_for text "H" 15
+wait_for text_contains "Live ·" 45
 sleep 1
 shot 03-forecast.png
 
@@ -219,13 +307,15 @@ else
     tap text_contains "Loading live"
 fi
 wait_for text "Live stations" 15
+wait_for text "Nearest stations" 45
 sleep 1
 shot 06-live.png
 
 station="$(first_station_text)"
 tap text "$station"
 wait_for desc "Back" 10
-sleep 2
+wait_for text_contains "Observed" 20
+sleep 1
 shot 09-station-detail.png
 
 adb_ shell input keyevent KEYCODE_BACK
@@ -240,6 +330,49 @@ tap desc "Add spot"
 wait_for text "Search" 10
 tap text "Map"
 sleep 2
+# Pan to the Golfe du Lion and select a known spot.
+for _ in 1 2 3 4 5; do
+    read -r cam_lat cam_lon < <(map_camera)
+    read -r cross_x cross_y < <(ui_coords text "+")
+    if [[ -z "${cam_lat:-}" || -z "${cross_x:-}" ]]; then
+        echo "Could not read the map camera position" >&2
+        exit 1
+    fi
+    if python3 -c "import sys; sys.exit(0 if abs($cam_lat-$MAP_CAMERA_LAT)<0.12 and abs($cam_lon-$MAP_CAMERA_LON)<0.12 else 1)"; then
+        break
+    fi
+    read -r dx dy < <(python3 - "$cam_lat" "$cam_lon" "$MAP_CAMERA_LAT" "$MAP_CAMERA_LON" <<'PY'
+import math
+import sys
+
+cam_lat, cam_lon, target_lat, target_lon = map(float, sys.argv[1:])
+ppd = 256.0 * 2.0 ** 6.5 / 360.0
+cos_lat = max(0.2, math.cos(math.radians(cam_lat)))
+dx = max(-250, min(250, (target_lon - cam_lon) * ppd * cos_lat))
+dy = max(-250, min(250, (cam_lat - target_lat) * ppd))
+print(round(dx), round(dy))
+PY
+)
+    adb_ shell input swipe "$cross_x" "$cross_y" "$((cross_x - dx))" "$((cross_y - dy))" 300
+    sleep 1
+done
+read -r cam_lat cam_lon < <(map_camera)
+read -r cross_x cross_y < <(ui_coords text "+")
+read -r tap_x tap_y < <(python3 - "$cam_lat" "$cam_lon" "$cross_x" "$cross_y" "$MAP_SPOT_LAT" "$MAP_SPOT_LON" <<'PY'
+import math
+import sys
+
+cam_lat, cam_lon, cross_x, cross_y, target_lat, target_lon = map(float, sys.argv[1:])
+ppd = 256.0 * 2.0 ** 6.5 / 360.0
+cos_lat = max(0.2, math.cos(math.radians(cam_lat)))
+x = cross_x + (target_lon - cam_lon) * ppd * cos_lat
+y = cross_y - (target_lat - cam_lat) * ppd
+print(round(x), round(y))
+PY
+)
+adb_ shell input tap "$tap_x" "$tap_y"
+wait_for text_contains "Known spots" 15
+sleep 1
 shot 07-add-spot-map.png
 adb_ shell input keyevent KEYCODE_BACK
 wait_for text "Favorites" 10
@@ -249,5 +382,23 @@ tap text "Settings"
 wait_for text "Language" 10
 sleep 1
 shot 08-settings.png
+
+set_wind_colors Color
+adb_ shell input keyevent KEYCODE_BACK
+wait_for text "Favorites" 10
+tap text "$FORECAST_SPOT"
+wait_for desc "Back" 10
+wait_for text "H" 15
+wait_for text_contains "Live ·" 45
+sleep 1
+shot 10-color.png
+
+# Restore the default light/monochrome display for future runs.
+adb_ shell input keyevent KEYCODE_BACK
+wait_for text "Favorites" 10
+open_settings
+set_wind_colors Monochrome
+adb_ shell input keyevent KEYCODE_BACK
+wait_for text "Favorites" 10
 
 echo "Done."

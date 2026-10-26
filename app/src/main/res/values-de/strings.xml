@@ -81,6 +81,7 @@
     <string name="unit_mi">mi</string>
     <string name="live">Live</string>
     <string name="next">Weiter</string>
+    <string name="previous">Zurück</string>
     <string name="screen_live_stations">Live-Stationen</string>
     <string name="loading_live_stations">Stationen werden geladen…</string>
     <string name="screen_station_detail">Live-Station</string>

@@ -11,6 +11,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.PlayArrow
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -20,6 +24,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -38,7 +43,6 @@ import com.kompaktwind.ui.KompaktWindViewModel
 import com.kompaktwind.ui.common.UnitFormatters
 import com.kompaktwind.ui.common.WindPair
 import com.mudita.mmd.components.buttons.ButtonMMD
-import com.mudita.mmd.components.buttons.OutlinedButtonMMD
 import com.mudita.mmd.components.divider.HorizontalDividerMMD
 import com.mudita.mmd.components.lazy.LazyColumnMMD
 import com.mudita.mmd.components.progress_indicator.CircularProgressIndicatorMMD
@@ -158,6 +162,11 @@ private fun ForecastTable(
                     distanceUnit = distanceUnit,
                     colorMode = windColorMode,
                     onOpenLive = onOpenLive,
+                    onPrev = {
+                        if (nearbyStations.size > 1) {
+                            selectedStation = (selectedStation - 1 + nearbyStations.size) % nearbyStations.size
+                        }
+                    },
                     onNext = {
                         if (nearbyStations.size > 1) {
                             selectedStation = (selectedStation + 1) % nearbyStations.size
@@ -192,8 +201,10 @@ private fun NearestStationStrip(
     distanceUnit: DistanceUnit,
     colorMode: WindColorMode,
     onOpenLive: () -> Unit,
+    onPrev: () -> Unit,
     onNext: () -> Unit
 ) {
+    val stationCount = (state as? NearbyStationsState.Data)?.stations?.size ?: 0
     if (station == null) {
         Row(
             modifier = Modifier
@@ -229,16 +240,26 @@ private fun NearestStationStrip(
                 overflow = TextOverflow.Ellipsis,
                 modifier = Modifier.weight(1f)
             )
-            OutlinedButtonMMD(
-                onClick = onNext,
-                enabled = (state as? NearbyStationsState.Data)?.stations?.size?.let { it > 1 } == true
+            IconButton(
+                onClick = onPrev,
+                enabled = stationCount > 1,
+                modifier = Modifier.size(36.dp)
             ) {
-                TextMMD(
-                    text = stringResource(R.string.next),
-                    fontSize = 14.sp,
-                    lineHeight = 14.sp,
-                    maxLines = 1,
-                    softWrap = false
+                Icon(
+                    imageVector = Icons.Filled.PlayArrow,
+                    contentDescription = stringResource(R.string.previous),
+                    modifier = Modifier.size(18.dp).rotate(180f)
+                )
+            }
+            IconButton(
+                onClick = onNext,
+                enabled = stationCount > 1,
+                modifier = Modifier.size(36.dp)
+            ) {
+                Icon(
+                    imageVector = Icons.Filled.PlayArrow,
+                    contentDescription = stringResource(R.string.next),
+                    modifier = Modifier.size(18.dp)
                 )
             }
         }

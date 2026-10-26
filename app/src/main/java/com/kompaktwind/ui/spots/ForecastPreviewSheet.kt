@@ -45,7 +45,7 @@ fun ForecastPreviewSheet(
                 stringResource(R.string.forecast_tomorrow) to 1440L,
                 stringResource(R.string.forecast_offset_days, 2) to 2880L
             )
-            presets.chunked(3).forEach { presetRow ->
+            presets.chunked(2).forEach { presetRow ->
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -57,7 +57,8 @@ fun ForecastPreviewSheet(
                         ) {
                             TextMMD(
                                 text = label,
-                                fontSize = 16.sp,
+                                fontSize = 24.sp,
+                                lineHeight = 24.sp,
                                 maxLines = 1,
                                 softWrap = false
                             )

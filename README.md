@@ -9,15 +9,28 @@ the default free data source, with an optional AROME FR switch.
 <table>
 <tr>
     <td><img width="480" height="800" alt="Saved spots" src="screenshots/01-spots.png" /></td>
-    <td><img width="480" height="800" alt="Spot forecast with wind and gust" src="screenshots/03-forecast.png" /></td>
-    <td><img width="480" height="800" alt="Forecast presets" src="screenshots/04-forecast-picker.png" /></td>
+    <td><img width="480" height="800" alt="Spot actions" src="screenshots/02-spot-actions.png" /></td>
+    <td><img width="480" height="800" alt="Spot forecast with live wind" src="screenshots/03-forecast.png" /></td>
 </tr>
 <tr>
+    <td><img width="480" height="800" alt="Forecast presets" src="screenshots/04-forecast-picker.png" /></td>
     <td><img width="480" height="800" alt="Spots with predicted wind" src="screenshots/05-spots-forecast.png" /></td>
     <td><img width="480" height="800" alt="Live stations" src="screenshots/06-live.png" /></td>
+</tr>
+<tr>
+    <td><img width="480" height="800" alt="Add spot map with a selected spot" src="screenshots/07-add-spot-map.png" /></td>
     <td><img width="480" height="800" alt="Settings" src="screenshots/08-settings.png" /></td>
+    <td><img width="480" height="800" alt="Live station detail" src="screenshots/09-station-detail.png" /></td>
 </tr>
 </table>
+
+### Optional: color mode
+
+<img width="220" alt="Optional color wind values" src="screenshots/10-color.png" />
+
+The Kompakt's e-ink screen is monochrome. This optional color palette is for
+Android phones and tablets with color displays; the Kompakt shows the same
+forecast in shades of gray.
 
 Regenerate them on a connected device with `./scripts/capture-screenshots.sh`;
 see [`screenshots/README.md`](screenshots/README.md).
