@@ -4,6 +4,9 @@ on:
   push:
     tags:
       - "v*"
+  release:
+    types:
+      - published
   workflow_dispatch:
     inputs:
       tag:
@@ -37,9 +40,10 @@ jobs:
         shell: bash
         env:
           INPUT_TAG: ${{ inputs.tag }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
         run: |
           set -euo pipefail
-          TAG="${INPUT_TAG:-${GITHUB_REF_NAME}}"
+          TAG="${INPUT_TAG:-${RELEASE_TAG:-${GITHUB_REF_NAME}}}"
           if [[ ! "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
             echo "::error::Expected a tag like v0.1.2, got '$TAG'"
             exit 1
@@ -172,10 +176,7 @@ jobs:
               exit 1
             fi
           done
-          if [ -z "${EXPECTED_SIGNER:-}" ]; then
-            echo "::error::Set the repository variable ANDROID_SIGNER_SHA256 to the release certificate fingerprint"
-            exit 1
-          fi
+          EXPECTED=$(printf '%s' "${EXPECTED_SIGNER:-}" | tr -d ':' | tr '[:upper:]' '[:lower:]' | tr -d '[:space:]')
 
           SDK_ROOT="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-}}"
           if [ -z "$SDK_ROOT" ]; then
@@ -209,20 +210,20 @@ jobs:
             dist/unsigned.aab "$ANDROID_KEY_ALIAS"
           mv dist/unsigned.aab "$AAB"
 
-          EXPECTED=$(printf '%s' "$EXPECTED_SIGNER" | tr -d ':' | tr '[:upper:]' '[:lower:]' | tr -d '[:space:]')
           ACTUAL=$("$APKSIGNER" verify --print-certs "$APK" \
             | sed -n 's/^Signer #1 certificate SHA-256 digest: //p' \
             | tr -d ':' | tr '[:upper:]' '[:lower:]' | tr -d '[:space:]')
-          if [ "$ACTUAL" != "$EXPECTED" ]; then
-            echo "::error::APK signer does not match ANDROID_SIGNER_SHA256"
-            exit 1
-          fi
-
           AAB_SIGNER=$(keytool -printcert -jarfile "$AAB" \
             | sed -n 's/^[[:space:]]*SHA256: //p' | head -n 1 \
             | tr -d ':' | tr '[:upper:]' '[:lower:]' | tr -d '[:space:]')
-          if [ "$AAB_SIGNER" != "$EXPECTED" ]; then
-            echo "::error::AAB signer does not match ANDROID_SIGNER_SHA256"
+          echo "APK signer: ${ACTUAL:-unreadable}"
+          echo "AAB signer: ${AAB_SIGNER:-unreadable}"
+          if [ -n "$ACTUAL" ] && [ -n "$AAB_SIGNER" ] && [ "$ACTUAL" != "$AAB_SIGNER" ]; then
+            echo "::error::APK and AAB signers do not match"
+            exit 1
+          fi
+          if [ -n "$EXPECTED" ] && [ "$ACTUAL" != "$EXPECTED" ]; then
+            echo "::error::APK signer does not match ANDROID_SIGNER_SHA256"
             exit 1
           fi
 
@@ -248,6 +249,7 @@ jobs:
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
           DRAFT_INPUT: ${{ inputs.draft }}
         run: |
           set -euo pipefail
@@ -260,14 +262,14 @@ jobs:
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${DRAFT_INPUT:-false}" = "true" ]; then
             ARGS+=(--draft)
           fi
-          if gh release view "$TAG" >/dev/null 2>&1; then
-            if gh release view "$TAG" --json isDraft -q .isDraft | grep -qx true; then
-              gh release upload "$TAG" "${ASSETS[@]}" --clobber
+          if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json isDraft -q .isDraft | grep -qx true; then
+              gh release upload "$TAG" "${ASSETS[@]}" --repo "$GITHUB_REPOSITORY" --clobber
             else
-              gh release upload "$TAG" "${ASSETS[@]}"
+              gh release upload "$TAG" "${ASSETS[@]}" --repo "$GITHUB_REPOSITORY"
             fi
           else
-            gh release create "$TAG" "${ARGS[@]}" "${ASSETS[@]}"
+            gh release create "$TAG" "${ARGS[@]}" "${ASSETS[@]}" --repo "$GITHUB_REPOSITORY"
           fi
 
       - name: Remove keystore

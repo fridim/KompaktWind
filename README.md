@@ -65,11 +65,14 @@ Min SDK 28 (Android 9). Target SDK 35.
 ## Release
 
 CI runs unit tests, lint, and a debug build on pull requests and pushes to
-`main`/`master` with no signing secrets. Pushing a tag such as `v0.1.2` runs
-`.github/workflows/release.yml`: a secret-free job checks the tag, tests, lints,
-and builds unsigned APK/AAB artifacts; after the `release` environment is
+`main`/`master` with no signing secrets. Pushing a tag such as `v0.1.2` or
+publishing a GitHub Release for a `v*` tag runs
+`.github/workflows/release.yml` (the workflow must be present on the default
+branch): a secret-free job checks the tag, tests, lints, and builds unsigned
+APK/AAB artifacts; after the `release` environment is
 approved, a separate job signs them, verifies the APK signer and AAB signature,
-checks the package/version, and creates a GitHub Release. The AAB is attached
+checks the package/version, and creates or updates the GitHub Release. The
+signed APK, AAB, and SHA-256 are attached to that Release. The AAB is attached
 for Play; the workflow does not upload it to Play automatically.
 
 **Required:** configure the `release` environment with required reviewers and
@@ -80,9 +83,10 @@ store these secrets there (not at repository scope):
 - `ANDROID_KEY_ALIAS`
 - `ANDROID_KEY_PASSWORD`
 
-Also set the public repository variable `ANDROID_SIGNER_SHA256` to the
-release certificate's SHA-256 fingerprint; the release is rejected if the
-signed APK does not match it. Get it with:
+Optionally set the public repository variable `ANDROID_SIGNER_SHA256` to the
+release certificate's SHA-256 fingerprint. If it is set, the signed APK must
+match it; if it is unset, the workflow still verifies both signatures and
+compares the fingerprints when they are readable. Get it with:
 
 ```bash
 keytool -list -v -keystore release.keystore | grep 'SHA256:'
@@ -117,7 +121,12 @@ gh workflow run release.yml -f tag=v0.1.2 -f draft=true
 ```
 
 Tag pushes publish directly once the required-reviewer environment gate is
-approved.
+approved. A published GitHub Release is already visible when the approval
+starts; its APK/AAB assets are attached after approval. Draft releases do not
+trigger the workflow until published, so publish the draft first or run the
+workflow manually with the tag. Use either the tag push or the GitHub Release
+UI, not both, to avoid duplicate runs; assets on an already-published release
+are not overwritten.
 
 ## Data sources
 
