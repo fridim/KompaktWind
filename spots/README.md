@@ -16,11 +16,15 @@ Sources:
 - `spots.<floor(lat)>_<floor(lon)>.json`: full records for 1° tiles.
 - `tile` in the index tells the app which shard to fetch for details.
 
-OSM-sourced rows can be refreshed (upserted, without touching other bundled
-rows) with `python3 scripts/update-osm-catalog.py`; pass `--dry-run` first.
-Unnamed spots keep `name` empty and get a `hintName` from the nearest named
-sport facility/building (kite/windsurf), then beach/water/place feature in OSM;
-the app displays that hint.
+OSM rows inside the query bbox are replaced by
+`python3 scripts/update-osm-catalog.py`; rows outside are preserved. Pass
+`--dry-run` first. The default bbox is the Golfe du Lion / eastern Occitanie;
+use `--bbox=south,west,north,east` (e.g. a world bbox) for a different scope.
+Unnamed spots keep `name` empty and get a `hintName` from OSM name tags or the
+nearest named sport facility/building (kite/windsurf), then beach/water/place
+feature in OSM; the app displays that hint. Suggestions are generated in
+`spots/unnamed-hints.csv`; fill its `override` column (or
+`spots/hint-overrides.json`) with curated names and rerun the updater.
 The Gradle `copySpotCatalog` task copies these JSON files into the app assets at
 build time. Catalog updates ship with app releases; there is no runtime
 network refresh. After editing any catalog file, bump `manifest.json`.

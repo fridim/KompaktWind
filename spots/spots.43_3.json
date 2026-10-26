@@ -82,9 +82,9 @@
     ],
     "tile": "43_3",
     "updated": "2026-10-24",
-    "hintName": "Le Barrou",
-    "hintKind": "place=locality",
-    "hintOsm": ""
+    "hintName": "Plage des Mouettes",
+    "hintKind": "natural=beach",
+    "hintOsm": "way/1571450807"
   },
   {
     "id": "osm-way-1571323239",

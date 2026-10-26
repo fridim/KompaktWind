@@ -1,0 +1,6 @@
+osm_id,name,lat,lon,sport,hint_name,hint_kind,hint_osm,override
+osm-way-1571321477,,43.5415725,3.9731235,windsurfing,Carnon-Plage,natural=beach,way/422436001,
+osm-way-777288236,,43.4443133,3.6870546,windsurfing,Cente Nautique Manuréva,leisure=sports_centre,way/777195323,
+osm-way-1382821398,,42.7792654,3.0368716,kitesurfing,Plage de l'embouchure,natural=beach,relation/12362767,
+osm-way-1571340635,,43.4195683,3.6696503,windsurfing,Plage des Mouettes,natural=water,way/1571450807,Plage des Mouettes
+osm-way-483660367,,43.5660212,4.1212066,windsurfing,Étang du Ponant,natural=water,relation/5291094,

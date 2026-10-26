@@ -1432,27 +1432,6 @@
     "shortName": "Langnes"
   },
   {
-    "id": "osm-way-1571340635",
-    "lat": 43.419577,
-    "lon": 3.669664,
-    "activities": [
-      "windsurfing"
-    ],
-    "source": "openstreetmap.org",
-    "sourceUrl": "https://www.openstreetmap.org/way/1571340635",
-    "sources": [
-      {
-        "name": "openstreetmap.org",
-        "url": "https://www.openstreetmap.org/way/1571340635"
-      }
-    ],
-    "tile": "43_3",
-    "updated": "2026-10-24",
-    "hintName": "Le Barrou",
-    "hintKind": "place=locality",
-    "name": ""
-  },
-  {
     "id": "osm-node-7869138330",
     "name": "Lilleskagen",
     "lat": 59.0918426,
@@ -1862,6 +1841,28 @@
     "updated": "2026-10-24",
     "hintName": "Plage de l'embouchure",
     "hintKind": "natural=beach",
+    "name": ""
+  },
+  {
+    "id": "osm-way-1571340635",
+    "lat": 43.419577,
+    "lon": 3.669664,
+    "activities": [
+      "windsurfing"
+    ],
+    "source": "openstreetmap.org",
+    "sourceUrl": "https://www.openstreetmap.org/way/1571340635",
+    "sources": [
+      {
+        "name": "openstreetmap.org",
+        "url": "https://www.openstreetmap.org/way/1571340635"
+      }
+    ],
+    "tile": "43_3",
+    "updated": "2026-10-24",
+    "hintName": "Plage des Mouettes",
+    "hintKind": "natural=beach",
+    "hintOsm": "way/1571450807",
     "name": ""
   },
   {
