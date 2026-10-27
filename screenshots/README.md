@@ -37,4 +37,4 @@ Files:
 | `08-settings.png` | Settings |
 | `09-station-detail.png` | Live station detail (wind/gust) |
 | `10-color.png` | Optional color wind values (color-display preview) |
-| `11-tides.png` | Forecast with the Tides column enabled |
+| `11-tides.png` | La Baule forecast with the Tides column enabled (large tidal range) |

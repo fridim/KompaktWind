@@ -41,6 +41,12 @@ forecast in shades of gray.
 Regenerate them on a connected device with `./scripts/capture-screenshots.sh`;
 see [`screenshots/README.md`](screenshots/README.md).
 
+### Tides
+
+<img width="480" alt="La Baule forecast with the Tides column enabled" src="screenshots/11-tides.png" />
+
+*La Baule, France — large tidal range, from `+1.8▲` down to `-2.9▼`.*
+
 
 ## Features
 
