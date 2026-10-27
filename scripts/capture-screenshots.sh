@@ -66,7 +66,7 @@ tap() {
         echo "Not found on screen: $1 '$2'" >&2
         exit 1
     fi
-    adb_ shell input tap $coords
+    adb_ shell input tap "$coords"
 }
 
 wait_for() {
@@ -241,9 +241,23 @@ require_unlocked
 mkdir -p "$OUT"
 
 original_timeout="$(adb_ shell settings get system screen_off_timeout | tr -d '\r')"
+TIDES_WAS_ON=0
+TIDES_TOUCHED=0
 restore() {
     if [[ -n "$original_timeout" && "$original_timeout" != "null" ]]; then
         adb_ shell settings put system screen_off_timeout "$original_timeout" >/dev/null 2>&1 || true
+    fi
+    if [[ "$TIDES_TOUCHED" == "1" ]]; then
+        local tide_visible=0 coords
+        if [[ -n "$(ui_coords text "Tide" 2>/dev/null || true)" ]]; then
+            tide_visible=1
+        fi
+        if [[ "$tide_visible" != "$TIDES_WAS_ON" ]]; then
+            coords="$(ui_coords text "Tides" 2>/dev/null || true)"
+            if [[ -n "$coords" ]]; then
+                adb_ shell input tap "$coords" >/dev/null 2>&1 || true
+            fi
+        fi
     fi
 }
 trap restore EXIT
@@ -272,7 +286,7 @@ if [[ -z "$(ui_coords text "$spot")" ]]; then
 fi
 
 spot_coords="$(ui_coords text "$spot")"
-adb_ shell input swipe $spot_coords $spot_coords 900
+adb_ shell input swipe "$spot_coords" "$spot_coords" 900
 wait_for desc "Up" 5
 shot 02-spot-actions.png
 
@@ -280,8 +294,26 @@ tap text "$spot"
 wait_for desc "Back" 10
 wait_for text "H" 15
 wait_for text_contains "Live ·" 45
+wait_for text "Tides" 15
+if [[ -n "$(ui_coords text "Tide")" ]]; then
+    TIDES_WAS_ON=1
+    TIDES_TOUCHED=1
+    tap text "Tides"
+    wait_for text "Sea" 10
+fi
 sleep 1
 shot 03-forecast.png
+
+TIDES_TOUCHED=1
+tap text "Tides"
+wait_for text "Tide" 10
+sleep 1
+shot 11-tides.png
+# Leave tides off for the remaining screenshots; the initial state is restored
+# after the color-mode forecast capture.
+tap text "Tides"
+wait_for text "Sea" 10
+sleep 1
 
 adb_ shell input keyevent KEYCODE_BACK
 wait_for text "Favorites" 10
@@ -392,6 +424,11 @@ wait_for text "H" 15
 wait_for text_contains "Live ·" 45
 sleep 1
 shot 10-color.png
+if [[ "$TIDES_WAS_ON" == "1" ]]; then
+    tap text "Tides"
+    wait_for text "Tide" 10
+fi
+TIDES_TOUCHED=0
 
 # Restore the default light/monochrome display for future runs.
 adb_ shell input keyevent KEYCODE_BACK

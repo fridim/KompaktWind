@@ -41,6 +41,10 @@ private const val WAVE_LIGHT_M = 0.5
 private const val WAVE_BOLD_M = 1.0
 private const val WAVE_STRONG_M = 1.5
 private const val WAVE_DANGER_M = 2.5
+private const val WAVE_COL_WEIGHT = 1.5f
+private const val TEMP_COL_WEIGHT = 0.9f
+private const val SEA_COL_WEIGHT = 0.8f
+private const val TIDE_COL_WEIGHT = 1.7f
 
 private fun waveWeightTier(heightM: Double?): Int = when {
     heightM == null -> 1
@@ -56,6 +60,9 @@ fun HourRow(
     windUnit: WindUnit,
     tempUnit: TempUnit,
     showMarineCols: Boolean,
+    showTideCol: Boolean = false,
+    tide: TideInfo? = null,
+    onToggleTides: (() -> Unit)? = null,
     timezone: String = ZoneId.systemDefault().id,
     colorMode: WindColorMode = WindColorMode.MONO
 ) {
@@ -132,10 +139,23 @@ fun HourRow(
     val waterStr = if (showMarineCols && hour.waterTempC != null) {
         "%.0f°".format(hour.waterTempC)
     } else " "
+    val tideStr = if (showTideCol) {
+        TidePresentation.label(tide?.heightM, tide?.trend ?: TideTrend.UNKNOWN)
+    } else {
+        " "
+    }
+    val tideWeight = WindEmphasis.weight(tide?.weightTier ?: 1)
 
     Row(
         modifier = Modifier
             .fillMaxWidth()
+            .then(
+                if (onToggleTides != null) {
+                    Modifier.clickable(onClick = onToggleTides)
+                } else {
+                    Modifier
+                }
+            )
             .padding(horizontal = 8.dp, vertical = 2.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -188,11 +208,10 @@ fun HourRow(
                 )
             }
         }
-        TextMMD(text = tStr, fontSize = ROW_FONT, modifier = Modifier.weight(0.9f))
         TextMMD(text = pStr, fontSize = ROW_FONT, modifier = Modifier.weight(0.8f))
         if (showMarineCols) {
             Row(
-                modifier = Modifier.weight(1.5f),
+                modifier = Modifier.weight(WAVE_COL_WEIGHT),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 TextMMD(
@@ -217,13 +236,35 @@ fun HourRow(
                     )
                 }
             }
-            TextMMD(text = waterStr, fontSize = ROW_FONT, modifier = Modifier.weight(0.8f))
+            if (!showTideCol) {
+                TextMMD(text = tStr, fontSize = ROW_FONT, modifier = Modifier.weight(TEMP_COL_WEIGHT))
+            }
+            if (showTideCol) {
+                TextMMD(
+                    text = tideStr,
+                    fontSize = ROW_FONT,
+                    lineHeight = ROW_FONT,
+                    fontWeight = tideWeight,
+                    maxLines = 1,
+                    softWrap = false,
+                    modifier = Modifier.weight(TIDE_COL_WEIGHT)
+                )
+            } else {
+                TextMMD(text = waterStr, fontSize = ROW_FONT, modifier = Modifier.weight(SEA_COL_WEIGHT))
+            }
+        } else {
+            TextMMD(text = tStr, fontSize = ROW_FONT, modifier = Modifier.weight(TEMP_COL_WEIGHT))
         }
     }
 }
 
 @Composable
-fun ColumnHeader(windUnit: WindUnit, showMarineCols: Boolean, onOpenHelp: () -> Unit = {}) {
+fun ColumnHeader(
+    windUnit: WindUnit,
+    showMarineCols: Boolean,
+    showTideCol: Boolean = false,
+    onOpenHelp: () -> Unit = {}
+) {
     val wLabel = UnitFormatters.windUnitLabel(windUnit)
     Row(
         modifier = Modifier
@@ -236,11 +277,35 @@ fun ColumnHeader(windUnit: WindUnit, showMarineCols: Boolean, onOpenHelp: () -> 
         Icon(imageVector = Icons.Filled.ArrowUpward, contentDescription = stringResource(R.string.wind_direction), modifier = Modifier.weight(0.5f).size(16.dp))
         TextMMD(text = "", fontSize = 14.sp, modifier = Modifier.weight(0.5f))
         TextMMD(text = wLabel, fontSize = 14.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1.6f))
-        TextMMD(text = stringResource(R.string.header_temp), fontSize = 14.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(0.9f))
         TextMMD(text = stringResource(R.string.header_precip), fontSize = 14.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(0.8f))
         if (showMarineCols) {
-            TextMMD(text = stringResource(R.string.header_wave), fontSize = 14.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1.5f))
-            TextMMD(text = stringResource(R.string.header_sea), fontSize = 14.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(0.8f))
+            TextMMD(
+                text = stringResource(R.string.header_wave),
+                fontSize = 14.sp,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.weight(WAVE_COL_WEIGHT)
+            )
+            if (!showTideCol) {
+                TextMMD(
+                    text = stringResource(R.string.header_temp),
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.weight(TEMP_COL_WEIGHT)
+                )
+            }
+            TextMMD(
+                text = stringResource(if (showTideCol) R.string.header_tide else R.string.header_sea),
+                fontSize = 14.sp,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.weight(if (showTideCol) TIDE_COL_WEIGHT else SEA_COL_WEIGHT)
+            )
+        } else {
+            TextMMD(
+                text = stringResource(R.string.header_temp),
+                fontSize = 14.sp,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.weight(TEMP_COL_WEIGHT)
+            )
         }
     }
 }

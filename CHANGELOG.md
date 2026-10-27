@@ -1,5 +1,22 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- Optional tide column for coastal forecasts. It replaces the air- and
+  sea-temperature columns when enabled and shows Open-Meteo model sea level
+  above MSL with high/low markers and emphasis based on the hourly rate of tidal
+  movement. Tapping any forecast row toggles the display, and air temperature
+  sits next to sea temperature so other columns do not move.
+- Tide labels, help text, and attribution translations for all 10 supported
+  languages, plus fixes for existing English-only attribution strings. Tide
+  decimals follow the system locale.
+- Unit tests for tide presentation, sea-level mapping/cache round-tripping, and
+  the persisted tide display setting.
+- Column explanations now page by screen with MMD's discrete scrolling instead
+  of smooth scrolling, avoiding E Ink ghosting.
+
 ## v0.2.0
 
 Compared with v0.1.1, generated from `jj log -r v0.1.1..@` and

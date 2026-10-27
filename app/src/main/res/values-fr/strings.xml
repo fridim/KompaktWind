@@ -35,6 +35,9 @@
     <string name="header_precip">mm</string>
     <string name="header_wave">Vagues</string>
     <string name="header_sea">Mer</string>
+    <string name="header_tide">Marée</string>
+    <string name="show_tides">Marées</string>
+    <string name="help_tide">Marée — niveau au-dessus du niveau moyen de la mer (MSL), en mètres. ▲ pleine mer, ▼ basse mer. Gras = montée/descente plus rapide. Remplace la température de l’air et de l’eau. Données de modèle, pas pour la navigation.</string>
     <string name="wind_direction">Direction du vent</string>
     <string name="settings_language">Langue</string>
     <string name="settings_wind_units">Unités de vent</string>
@@ -52,7 +55,7 @@
     <string name="marine_auto">Auto</string>
     <string name="marine_always">Toujours</string>
     <string name="marine_never">Jamais</string>
-    <string name="age_now">maintenant</string>
+    <string name="age_now">0m</string>
     <string name="age_minutes">%1$d min</string>
     <string name="age_hours">%1$d h</string>
     <string name="attribution_open_meteo">Open-Meteo</string>
@@ -92,7 +95,7 @@
     <string name="wind_avg">Vent</string>
     <string name="wind_gust">Rafale</string>
     <string name="observed_at">Observé</string>
-    <string name="live_attribution">Wind data © OpenWindMap contributors</string>
+    <string name="live_attribution">Données de vent © contributeurs OpenWindMap</string>
     <string name="no_history">Aucun historique disponible</string>
     <string name="station">Station</string>
     <string name="distance">Distance</string>
@@ -126,8 +129,8 @@
     <string name="coordinates_hint">ex. 48.123, -4.567</string>
     <string name="coordinates_invalid">Coordonnées non reconnues</string>
     <string name="help_title">Colonnes de prévision</string>
-    <string name="help_text">H — heure locale.\n\nDirection du vent — la flèche indique où souffle le vent ; les lettres cardinales indiquent d’où il vient.\n\nVent / rafales — moyenne puis rafale en %1$s. Gras, soulignement et couleur suivent l’échelle du vent.\n\nTemp — température de l’air en %2$s.\n\nmm — précipitations prévues pendant l’heure.\n\nVague — hauteur significative en mètres, puis période en secondes.\n\nMer — température de surface de la mer en %2$s.</string>
-    <string name="coastline_attribution">Coastline: Natural Earth, GSHHG</string>
+    <string name="help_text">H — heure locale.\n\nDirection du vent — la flèche indique où souffle le vent ; les lettres cardinales indiquent d’où il vient.\n\nVent / rafales — moyenne puis rafale en %1$s. Gras, soulignement et couleur suivent l’échelle du vent.\n\nmm — précipitations prévues pendant l’heure.\n\nVague — hauteur significative en mètres, puis période en secondes.\n\nTemp — température de l’air en %2$s.\n\nMer — température de surface de la mer en %2$s.</string>
+    <string name="coastline_attribution">Littoral : Natural Earth, GSHHG</string>
     <string name="import_private_json">Importer un JSON privé</string>
     <string name="import_button">Importer</string>
     <string name="import_private_note">Les fichiers importés restent sur cet appareil et sont exclus des sauvegardes. Les détails des spots enregistrés peuvent être inclus dans la sauvegarde Android.</string>
@@ -160,7 +163,7 @@
     <string name="forecast_preview_title">Prévisions dans</string>
     <string name="forecast_preview_header">Prévisions · %1$s</string>
     <string name="forecast_close">Fermer les prévisions</string>
-    <string name="forecast_now">Maintenant</string>
+    <string name="forecast_now">Actuel</string>
     <string name="forecast_tomorrow">Demain</string>
     <string name="forecast_offset_hours">+%1$d h</string>
     <string name="forecast_offset_days">+%1$d j</string>

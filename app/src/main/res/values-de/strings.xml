@@ -35,6 +35,9 @@
     <string name="header_precip">mm</string>
     <string name="header_wave">Wellen</string>
     <string name="header_sea">Wasser</string>
+    <string name="header_tide">Gezeit</string>
+    <string name="show_tides">Gezeiten</string>
+    <string name="help_tide">Gezeit — Wasserstand über dem mittleren Meeresspiegel (MSL) in Metern. ▲ Hochwasser, ▼ Niedrigwasser. Fett = schnellere Tidebewegung. Ersetzt Luft- und Wassertemperatur. Modelldaten, nicht zur Navigation.</string>
     <string name="wind_direction">Windrichtung</string>
     <string name="settings_language">Sprache</string>
     <string name="settings_wind_units">Windeinheiten</string>
@@ -92,7 +95,7 @@
     <string name="wind_avg">Wind</string>
     <string name="wind_gust">Böe</string>
     <string name="observed_at">Beobachtet</string>
-    <string name="live_attribution">Wind data © OpenWindMap contributors</string>
+    <string name="live_attribution">Winddaten © OpenWindMap-Mitwirkende</string>
     <string name="no_history">Keine Historie verfügbar</string>
     <string name="station">Station</string>
     <string name="distance">Entfernung</string>
@@ -102,7 +105,7 @@
     <string name="search_spots">Spots suchen</string>
     <string name="no_catalog_spots">Keine Spots gefunden</string>
     <string name="catalog_error">Spot-Katalog konnte nicht geladen werden</string>
-    <string name="catalog_attribution">Spots: © OpenStreetMap contributors (ODbL) · openstreetmap.org/copyright</string>
+    <string name="catalog_attribution">Orte: © OpenStreetMap-Mitwirkende (ODbL) · openstreetmap.org/copyright</string>
     <string name="coastal">Küste</string>
     <string name="metar_attribution">METAR: NOAA Aviation Weather Center · IEM</string>
     <string name="screen_spot_info">Spot-Info</string>
@@ -126,8 +129,8 @@
     <string name="coordinates_hint">z. B. 48.123, -4.567</string>
     <string name="coordinates_invalid">Koordinaten nicht erkannt</string>
     <string name="help_title">Vorhersagespalten</string>
-    <string name="help_text">H — lokale Stunde.\n\nWindrichtung — der Pfeil zeigt, wohin der Wind weht; die Himmelsrichtungen zeigen, woher er kommt.\n\nWind / Böen — Mittelwert, dann Böe in %1$s. Fett, Unterstreichung und Farbe folgen der Windskala.\n\nTemp — Lufttemperatur in %2$s.\n\nmm — erwarteter Niederschlag in der Stunde.\n\nWelle — signifikante Wellenhöhe in Metern, dann Periode in Sekunden.\n\nMeer — Meeresoberflächentemperatur in %2$s.</string>
-    <string name="coastline_attribution">Coastline: Natural Earth, GSHHG</string>
+    <string name="help_text">H — lokale Stunde.\n\nWindrichtung — der Pfeil zeigt, wohin der Wind weht; die Himmelsrichtungen zeigen, woher er kommt.\n\nWind / Böen — Mittelwert, dann Böe in %1$s. Fett, Unterstreichung und Farbe folgen der Windskala.\n\nmm — erwarteter Niederschlag in der Stunde.\n\nWelle — signifikante Wellenhöhe in Metern, dann Periode in Sekunden.\n\nTemp — Lufttemperatur in %2$s.\n\nMeer — Meeresoberflächentemperatur in %2$s.</string>
+    <string name="coastline_attribution">Küste: Natural Earth, GSHHG</string>
     <string name="import_private_json">Privates JSON importieren</string>
     <string name="import_button">Importieren</string>
     <string name="import_private_note">Importierte Dateien bleiben auf diesem Gerät und sind von Backups ausgeschlossen. Gespeicherte Spot-Details können im Android-Backup enthalten sein.</string>
@@ -141,7 +144,7 @@
     <string name="import_reason_no_valid">keine gültigen Spots</string>
     <string name="import_reason_io">Datei konnte nicht gelesen werden</string>
     <string name="import_delete">Importierte Datei entfernen</string>
-    <string name="import_file_summary">%1$s · %2$d Spots</string>
+    <string name="import_file_summary">%1$s · %2$d Orte</string>
     <string name="imported_source">Lokaler Import</string>
     <string name="settings_sources">Spot-Orte</string>
     <string name="spot_summary">Bekannter Windsport-Spot in %1$s. Aktivitäten: %2$s.</string>

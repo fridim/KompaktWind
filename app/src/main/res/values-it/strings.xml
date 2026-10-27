@@ -35,6 +35,9 @@
     <string name="header_precip">mm</string>
     <string name="header_wave">Onde</string>
     <string name="header_sea">Mare</string>
+    <string name="header_tide">Marea</string>
+    <string name="show_tides">Maree</string>
+    <string name="help_tide">Marea — livello del mare sopra il livello medio del mare (MSL) in metri. ▲ alta marea, ▼ bassa marea. Grassetto = movimento più rapido. Sostituisce la temperatura dell’aria e del mare. Dati modello, non per navigazione.</string>
     <string name="wind_direction">Direzione del vento</string>
     <string name="settings_language">Lingua</string>
     <string name="settings_wind_units">Unità del vento</string>
@@ -92,7 +95,7 @@
     <string name="wind_avg">Vento</string>
     <string name="wind_gust">Raffica</string>
     <string name="observed_at">Osservato</string>
-    <string name="live_attribution">Wind data © OpenWindMap contributors</string>
+    <string name="live_attribution">Dati del vento © contributori OpenWindMap</string>
     <string name="no_history">Nessuno storico disponibile</string>
     <string name="station">Stazione</string>
     <string name="distance">Distanza</string>
@@ -102,7 +105,7 @@
     <string name="search_spots">Cerca spot</string>
     <string name="no_catalog_spots">Nessuno spot trovato</string>
     <string name="catalog_error">Impossibile caricare il catalogo spot</string>
-    <string name="catalog_attribution">Spots: © OpenStreetMap contributors (ODbL) · openstreetmap.org/copyright</string>
+    <string name="catalog_attribution">Spot: © contributori OpenStreetMap (ODbL) · openstreetmap.org/copyright</string>
     <string name="coastal">Costa</string>
     <string name="metar_attribution">METAR: NOAA Aviation Weather Center · IEM</string>
     <string name="screen_spot_info">Info spot</string>
@@ -126,8 +129,8 @@
     <string name="coordinates_hint">es. 48.123, -4.567</string>
     <string name="coordinates_invalid">Coordinate non riconosciute</string>
     <string name="help_title">Colonne delle previsioni</string>
-    <string name="help_text">H — ora locale.\n\nDirezione del vento — la freccia mostra dove soffia il vento; le lettere cardinali mostrano da dove arriva.\n\nVento / raffica — media poi raffica in %1$s. Grassetto, sottolineatura e colore seguono la scala del vento.\n\nTemp — temperatura dell’aria in %2$s.\n\nmm — precipitazioni previste nell’ora.\n\nOnda — altezza significativa in metri, poi periodo in secondi.\n\nMare — temperatura della superficie del mare in %2$s.</string>
-    <string name="coastline_attribution">Coastline: Natural Earth, GSHHG</string>
+    <string name="help_text">H — ora locale.\n\nDirezione del vento — la freccia mostra dove soffia il vento; le lettere cardinali mostrano da dove arriva.\n\nVento / raffica — media poi raffica in %1$s. Grassetto, sottolineatura e colore seguono la scala del vento.\n\nmm — precipitazioni previste nell’ora.\n\nOnda — altezza significativa in metri, poi periodo in secondi.\n\nTemp — temperatura dell’aria in %2$s.\n\nMare — temperatura della superficie del mare in %2$s.</string>
+    <string name="coastline_attribution">Costa: Natural Earth, GSHHG</string>
     <string name="import_private_json">Importa JSON privato</string>
     <string name="import_button">Importa</string>
     <string name="import_private_note">I file importati restano su questo dispositivo e sono esclusi dai backup. I dettagli dei posti salvati possono essere inclusi nel backup Android.</string>

@@ -35,6 +35,9 @@
     <string name="header_precip">mm</string>
     <string name="header_wave">Wave</string>
     <string name="header_sea">Sea</string>
+    <string name="header_tide">Tide</string>
+    <string name="show_tides">Tides</string>
+    <string name="help_tide">Tide — sea level above mean sea level (MSL) in metres. ▲ high, ▼ low. Bold = faster rise/fall. Replaces air and sea temperature. Model data, not for navigation.</string>
     <string name="wind_direction">Wind direction</string>
     <string name="settings_language">Language</string>
     <string name="settings_wind_units">Wind units</string>
@@ -126,7 +129,7 @@
     <string name="coordinates_hint">e.g. 48.123, -4.567</string>
     <string name="coordinates_invalid">Unrecognized coordinates</string>
     <string name="help_title">Forecast columns</string>
-    <string name="help_text">H — local hour.\n\nWind direction — the arrow shows where the wind blows; the cardinal letters show where it comes from.\n\nWind / gust — average then gust in %1$s. Bold, underline and colour follow the wind scale.\n\nTemp — air temperature in %2$s.\n\nmm — precipitation expected during the hour.\n\nWave — significant wave height in metres, then period in seconds.\n\nSea — sea-surface temperature in %2$s.</string>
+    <string name="help_text">H — local hour.\n\nWind direction — the arrow shows where the wind blows; the cardinal letters show where it comes from.\n\nWind / gust — average then gust in %1$s. Bold, underline and colour follow the wind scale.\n\nmm — precipitation expected during the hour.\n\nWave — significant wave height in metres, then period in seconds.\n\nTemp — air temperature in %2$s.\n\nSea — sea-surface temperature in %2$s.</string>
     <string name="coastline_attribution">Coastline: Natural Earth, GSHHG</string>
     <string name="forecast_preview">Forecast</string>
     <string name="forecast_preview_title">Forecast in</string>

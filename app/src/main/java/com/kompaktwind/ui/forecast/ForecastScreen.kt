@@ -43,6 +43,7 @@ import com.kompaktwind.ui.KompaktWindViewModel
 import com.kompaktwind.ui.common.UnitFormatters
 import com.kompaktwind.ui.common.WindPair
 import com.mudita.mmd.components.buttons.ButtonMMD
+import com.mudita.mmd.components.checkbox.CheckboxMMD
 import com.mudita.mmd.components.divider.HorizontalDividerMMD
 import com.mudita.mmd.components.lazy.LazyColumnMMD
 import com.mudita.mmd.components.progress_indicator.CircularProgressIndicatorMMD
@@ -88,6 +89,8 @@ fun ForecastScreen(
                 nearby = nearby,
                 distanceUnit = settings.distanceUnit,
                 windColorMode = settings.windColorMode,
+                showTides = settings.showTides,
+                onToggleTides = viewModel::setShowTides,
                 onOpenLive = { spot?.let { onOpenLive(it.id) } },
                 onOpenHelp = onOpenHelp,
                 modifier = Modifier.weight(1f)
@@ -108,6 +111,8 @@ fun ForecastScreen(
                             nearby = nearby,
                             distanceUnit = settings.distanceUnit,
                             windColorMode = settings.windColorMode,
+                            showTides = settings.showTides,
+                            onToggleTides = viewModel::setShowTides,
                             onOpenLive = { spot?.let { onOpenLive(it.id) } },
                             onOpenHelp = onOpenHelp
                         )
@@ -133,6 +138,8 @@ private fun ForecastTable(
     nearby: NearbyStationsState,
     distanceUnit: DistanceUnit,
     windColorMode: WindColorMode,
+    showTides: Boolean,
+    onToggleTides: (Boolean) -> Unit,
     onOpenLive: () -> Unit,
     onOpenHelp: () -> Unit,
     modifier: Modifier = Modifier
@@ -143,6 +150,18 @@ private fun ForecastTable(
     val currentHourMs = nowMs - (nowMs % 3_600_000)
     val hours = state.forecast.hours.filter { it.timeEpochMs >= currentHourMs }
     val grouped = hours.groupBy { dayKey(it.timeEpochMs, state.forecast.timezone) }
+    val tideAvailable = remember(state.forecast.hours) {
+        TidePresentation.available(state.forecast.hours)
+    }
+    val showTideToggle = showMarine && tideAvailable
+    val showTideCol = showTideToggle && showTides
+    val tideByTime = remember(state.forecast.hours, showTideCol) {
+        if (showTideCol) {
+            TidePresentation.from(state.forecast.hours)
+        } else {
+            emptyMap()
+        }
+    }
 
     Column(modifier = modifier.fillMaxSize()) {
         if (state.isStale) {
@@ -151,6 +170,27 @@ private fun ForecastTable(
                 fontSize = 14.sp,
                 modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp)
             )
+        }
+        if (showTideToggle) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable { onToggleTides(!showTides) }
+                    .padding(horizontal = 12.dp, vertical = 2.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                CheckboxMMD(
+                    checked = showTides,
+                    onCheckedChange = onToggleTides,
+                    modifier = Modifier.size(28.dp)
+                )
+                TextMMD(
+                    text = stringResource(R.string.show_tides),
+                    fontSize = 18.sp,
+                    lineHeight = 18.sp,
+                    modifier = Modifier.padding(start = 4.dp)
+                )
+            }
         }
         val tz = state.forecast.timezone
         LazyColumnMMD(modifier = Modifier.weight(1f)) {
@@ -176,7 +216,14 @@ private fun ForecastTable(
             }
             grouped.forEach { (_, dayHours) ->
                 item { DayHeader(epochMs = dayHours.first().timeEpochMs, timezone = tz) }
-                item { ColumnHeader(windUnit = windUnit, showMarineCols = showMarine, onOpenHelp = onOpenHelp) }
+                item {
+                    ColumnHeader(
+                        windUnit = windUnit,
+                        showMarineCols = showMarine,
+                        showTideCol = showTideCol,
+                        onOpenHelp = onOpenHelp
+                    )
+                }
                 item { HorizontalDividerMMD() }
                 items(items = dayHours, key = { it.timeEpochMs }) { hour ->
                     HourRow(
@@ -184,6 +231,13 @@ private fun ForecastTable(
                         windUnit = windUnit,
                         tempUnit = tempUnit,
                         showMarineCols = showMarine,
+                        showTideCol = showTideCol,
+                        tide = tideByTime[hour.timeEpochMs],
+                        onToggleTides = if (showTideToggle) {
+                            { onToggleTides(!showTides) }
+                        } else {
+                            null
+                        },
                         timezone = tz,
                         colorMode = windColorMode
                     )

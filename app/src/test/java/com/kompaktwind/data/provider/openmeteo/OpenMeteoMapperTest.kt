@@ -29,7 +29,8 @@ class OpenMeteoMapperTest {
             time = listOf("2026-05-23T00:00", "2026-05-23T01:00"),
             waveHeight = listOf(1.2, 1.3),
             wavePeriod = listOf(8.0, 8.1),
-            seaSurfaceTemperature = listOf(16.0, 16.0)
+            seaSurfaceTemperature = listOf(16.0, 16.0),
+            seaLevelHeight = listOf(0.8, 0.9)
         )
     )
 
@@ -38,12 +39,14 @@ class OpenMeteoMapperTest {
         assertThat(result.hours).hasSize(2)
         assertThat(result.hours[0].tempC).isEqualTo(14.0)
         assertThat(result.hours[0].waveHeightM).isEqualTo(1.2)
+        assertThat(result.hours[0].seaLevelM).isEqualTo(0.8)
     }
 
     @Test fun `mapper without marine leaves wave fields null`() {
         val result = OpenMeteoMapper.toForecast("spot1", forecast, marine = null, fetchedAt = 1000L)
         assertThat(result.hours[0].waveHeightM).isNull()
         assertThat(result.hours[0].waterTempC).isNull()
+        assertThat(result.hours[0].seaLevelM).isNull()
     }
 
     @Test fun `mapper parses ISO time to epoch ms using utc offset`() {

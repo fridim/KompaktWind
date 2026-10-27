@@ -30,7 +30,8 @@ data class HourPoint(
     val precipProbability: Int? = null,
     val waveHeightM: Double? = null,
     val wavePeriodS: Double? = null,
-    val waterTempC: Double? = null
+    val waterTempC: Double? = null,
+    val seaLevelM: Double? = null
 )
 
 enum class WindUnit { MS, KMH, KN, MPH }

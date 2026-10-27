@@ -1,8 +1,14 @@
 # KompaktWind
 
-KompaktWind is a focused weather forecast app for outdoor sports: wingfoil,
-kitesurf, windsurf, sailing, … targeting the Mudita Kompakt e-ink. Open-Meteo is
-the default free data source, with an optional AROME FR switch.
+KompaktWind is a focused weather forecast app for wind sports: wingfoil,
+kitesurf, windsurf, sailing, and similar. It targets the Mudita Kompakt e-ink
+and is built to make the spot decision easier: compare forecast and live wind
+across saved spots, then decide where to go.
+
+Forecasts use Open-Meteo's free API. The source selector offers Open-Meteo
+Best Match plus regional and global models from Météo-France, KNMI, DMI, the
+Met Office, DWD, MeteoSwiss, ECMWF, NOAA, and ECCC, all delivered through
+Open-Meteo.
 
 ## Screenshots
 
@@ -39,15 +45,20 @@ see [`screenshots/README.md`](screenshots/README.md).
 ## Features
 
 - Saved spots (search, coordinates, or pick on an OpenStreetMap map)
-- Choose from the available Open-Meteo models per spot via the top-right source
-  button; each spot remembers its own selection
+- Choose the forecast source per spot via the top-right source button:
+  Open-Meteo Best Match or a regional/global model from Météo-France, KNMI,
+  DMI, Met Office, DWD, MeteoSwiss, ECMWF, NOAA, or ECCC; each spot remembers
+  its own selection
 - Live wind stations: nearest OpenWindMap community stations and airport METAR
   (NOAA AWC, IEM fallback), with distance, live wind/gust, and 24 h history
 - Discover spots from a sharded community catalog, no manual coordinate entry
 - Distance units (km or mi)
 - 7-day hourly forecast in a single dense table with sticky day headers
 - Wind speed + gust, direction, air temperature, precipitation
-- For coastal spots: wave height/period and water temperature
+- For coastal spots: wave height/period and water temperature; optional tide
+  column that replaces air and sea temperature (model data above mean sea
+  level, with high/low markers). Air temperature sits next to sea temperature,
+  so enabling tides does not shift the precipitation or wave columns
 - Offline-friendly: cached forecasts shown with a clear age stamp
 - Optional dark screen: all white on black, for fun
 - 10 languages, using the system language by default or forced in Settings
@@ -130,9 +141,11 @@ are not overwritten.
 
 ## Data sources
 
-The top-right source button opens a full-screen list for the spot. Each row
-shows the agency, origin country, resolution, and horizon. The list is filtered
-to models that cover the spot and ordered by relevance.
+Forecast models are delivered through Open-Meteo's API. The top-right source
+button opens a full-screen list for the spot. Each row shows the agency, origin
+country, resolution, and horizon. The list is filtered to models that cover the
+spot and ordered by relevance. "Best" is Open-Meteo Best Match; the other rows
+select a specific model from its national or regional agency.
 
 | Model | Model ID | Agency | Origin | Resolution | Horizon |
 |---|---|---|---|---|---|
@@ -158,6 +171,17 @@ Each spot stores its own source. Global models are always listed; regional
 models appear only when the spot is inside their domain. A saved choice falls
 back to Best if the spot is outside that model's coverage.
 
+### Live wind sources
+
+Live wind comes from two source types:
+
+- OpenWindMap/PiouPiou community stations, including nearby station and
+  24-hour history views
+- Airport METAR reports from NOAA's Aviation Weather Center, with IEM as a
+  fallback for French stations
+
+Both show observed wind and gust, not a forecast. No API key is required.
+
 ## Languages
 
 English, French, German, Spanish, Italian, Portuguese, Dutch, Polish, Czech,
@@ -167,19 +191,24 @@ force a language. Adding another locale is a matter of adding a
 
 ## Architecture
 
-- Multiple weather providers behind `ProviderRegistry` (Open-Meteo Best Match,
-  AROME FR via Open-Meteo)
+- `ProviderRegistry` and `DataSource` entries for Open-Meteo Best Match and
+  regional/global models from Météo-France, KNMI, DMI, Met Office, DWD,
+  MeteoSwiss, ECMWF, NOAA, and ECCC, all fetched through Open-Meteo
 - Single-module Android app
-- Kotlin + Jetpack Compose + Mudita Mindful Design (MMD) 1.0.0
+- Kotlin + Jetpack Compose + Mudita Mindful Design (MMD) 1.0.2
 - MVVM + StateFlow
 - Retrofit + OkHttp + kotlinx-serialization
 - Room for spots + forecast cache, DataStore for preferences
 
 ## Attribution
 
-Weather data: [Open-Meteo](https://open-meteo.com) (default) or
-Météo-France AROME via Open-Meteo. Open-Meteo's free tier is non-commercial.
-Place-name search uses Open-Meteo's geocoding API. The map picker is
+Weather data is delivered by [Open-Meteo](https://open-meteo.com), whose free
+tier is non-commercial. The source selector exposes Open-Meteo Best Match plus
+models from Météo-France, KNMI, DMI, the Met Office, DWD, MeteoSwiss, ECMWF,
+NOAA, and ECCC. Marine forecasts, including model tide heights, come from
+Open-Meteo's Marine API. Tide heights are model values above global mean sea level, not chart datum;
+they are not suitable for navigation. Place-name search uses Open-Meteo's
+geocoding API. The map picker is
 offline: coastlines and land polygons come from Natural Earth (public domain)
 and, at high zoom in Europe, from
 [GSHHG](https://github.com/GenericMappingTools/gshhg-gmt) (LGPL-3.0) by

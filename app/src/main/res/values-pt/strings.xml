@@ -35,6 +35,9 @@
     <string name="header_precip">mm</string>
     <string name="header_wave">Ondas</string>
     <string name="header_sea">Mar</string>
+    <string name="header_tide">Maré</string>
+    <string name="show_tides">Marés</string>
+    <string name="help_tide">Maré — nível do mar acima do nível médio do mar (MSL) em metros. ▲ preia-mar, ▼ baixa-mar. Negrito = movimento mais rápido. Substitui a temperatura do ar e da água. Dados de modelo, não para navegação.</string>
     <string name="wind_direction">Direção do vento</string>
     <string name="settings_language">Idioma</string>
     <string name="settings_wind_units">Unidades de vento</string>
@@ -92,7 +95,7 @@
     <string name="wind_avg">Vento</string>
     <string name="wind_gust">Rajada</string>
     <string name="observed_at">Observado</string>
-    <string name="live_attribution">Wind data © OpenWindMap contributors</string>
+    <string name="live_attribution">Dados de vento © colaboradores do OpenWindMap</string>
     <string name="no_history">Sem histórico disponível</string>
     <string name="station">Estação</string>
     <string name="distance">Distância</string>
@@ -102,7 +105,7 @@
     <string name="search_spots">Pesquisar spots</string>
     <string name="no_catalog_spots">Nenhum spot encontrado</string>
     <string name="catalog_error">Não foi possível carregar o catálogo de spots</string>
-    <string name="catalog_attribution">Spots: © OpenStreetMap contributors (ODbL) · openstreetmap.org/copyright</string>
+    <string name="catalog_attribution">Locais: © colaboradores do OpenStreetMap (ODbL) · openstreetmap.org/copyright</string>
     <string name="coastal">Costa</string>
     <string name="metar_attribution">METAR: NOAA Aviation Weather Center · IEM</string>
     <string name="screen_spot_info">Info do spot</string>
@@ -126,8 +129,8 @@
     <string name="coordinates_hint">ex. 48.123, -4.567</string>
     <string name="coordinates_invalid">Coordenadas não reconhecidas</string>
     <string name="help_title">Colunas da previsão</string>
-    <string name="help_text">H — hora local.\n\nDireção do vento — a seta mostra para onde sopra o vento; as letras cardinais mostram de onde vem.\n\nVento / rajada — média e depois rajada em %1$s. Negrito, sublinhado e cor seguem a escala do vento.\n\nTemp — temperatura do ar em %2$s.\n\nmm — precipitação prevista durante a hora.\n\nOnda — altura significativa em metros e período em segundos.\n\nMar — temperatura da superfície do mar em %2$s.</string>
-    <string name="coastline_attribution">Coastline: Natural Earth, GSHHG</string>
+    <string name="help_text">H — hora local.\n\nDireção do vento — a seta mostra para onde sopra o vento; as letras cardinais mostram de onde vem.\n\nVento / rajada — média e depois rajada em %1$s. Negrito, sublinhado e cor seguem a escala do vento.\n\nmm — precipitação prevista durante a hora.\n\nOnda — altura significativa em metros e período em segundos.\n\nTemp — temperatura do ar em %2$s.\n\nMar — temperatura da superfície do mar em %2$s.</string>
+    <string name="coastline_attribution">Costa: Natural Earth, GSHHG</string>
     <string name="import_private_json">Importar JSON privado</string>
     <string name="import_button">Importar</string>
     <string name="import_private_note">Os ficheiros importados permanecem neste dispositivo e são excluídos das cópias de segurança. Os detalhes dos spots guardados podem ser incluídos na cópia de segurança do Android.</string>
@@ -141,7 +144,7 @@
     <string name="import_reason_no_valid">nenhum spot válido</string>
     <string name="import_reason_io">não foi possível ler o ficheiro</string>
     <string name="import_delete">Remover ficheiro importado</string>
-    <string name="import_file_summary">%1$s · %2$d spots</string>
+    <string name="import_file_summary">%1$s · %2$d locais</string>
     <string name="imported_source">Importação local</string>
     <string name="settings_sources">Localizações dos spots</string>
     <string name="spot_summary">Spot conhecido de desportos de vento em %1$s. Atividades: %2$s.</string>

@@ -36,5 +36,6 @@ data class MarineHourlyDto(
     val time: List<String>,
     @SerialName("wave_height") val waveHeight: List<Double?> = emptyList(),
     @SerialName("wave_period") val wavePeriod: List<Double?> = emptyList(),
-    @SerialName("sea_surface_temperature") val seaSurfaceTemperature: List<Double?> = emptyList()
+    @SerialName("sea_surface_temperature") val seaSurfaceTemperature: List<Double?> = emptyList(),
+    @SerialName("sea_level_height_msl") val seaLevelHeight: List<Double?> = emptyList()
 )

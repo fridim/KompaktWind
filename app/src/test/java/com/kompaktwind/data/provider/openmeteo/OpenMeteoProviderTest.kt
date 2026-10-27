@@ -67,18 +67,39 @@ class OpenMeteoProviderTest {
         }
     }
 
+    @Test fun `marine request includes tide height`() = runBlocking {
+        val marineApi = FakeMarineApi()
+        val provider = OpenMeteoProvider(
+            id = OpenMeteoProvider.ID,
+            displayName = "Open-Meteo",
+            attributionText = "Data provided by Open-Meteo",
+            forecastApi = FakeForecastApi(),
+            marineApi = marineApi
+        )
+
+        val result = provider.fetchForecast(0.0, 0.0, wantMarine = true, days = 7)
+
+        assertThat(result.isSuccess).isTrue()
+        assertThat(marineApi.hourly).contains("sea_level_height_msl")
+    }
+
     private class FakeMarineApi : OpenMeteoMarineApi {
+        var hourly: String? = null
+
         override suspend fun marine(
             lat: Double,
             lon: Double,
             hourly: String,
             forecastDays: Int,
             timezone: String
-        ): OpenMeteoMarineDto = OpenMeteoMarineDto(
-            latitude = lat,
-            longitude = lon,
-            timezone = timezone,
-            hourly = MarineHourlyDto(time = emptyList())
-        )
+        ): OpenMeteoMarineDto {
+            this.hourly = hourly
+            return OpenMeteoMarineDto(
+                latitude = lat,
+                longitude = lon,
+                timezone = timezone,
+                hourly = MarineHourlyDto(time = emptyList())
+            )
+        }
     }
 }

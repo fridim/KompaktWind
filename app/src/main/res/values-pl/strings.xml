@@ -35,6 +35,9 @@
     <string name="header_precip">mm</string>
     <string name="header_wave">Fale</string>
     <string name="header_sea">Morze</string>
+    <string name="header_tide">Pływy</string>
+    <string name="show_tides">Pływy</string>
+    <string name="help_tide">Pływy — poziom morza nad średnim poziomem morza (MSL) w metrach. ▲ wysoka woda, ▼ niska woda. Pogrubienie = szybszy ruch pływów. Zastępuje temperaturę powietrza i wody. Dane modelowe, nie do nawigacji.</string>
     <string name="wind_direction">Kierunek wiatru</string>
     <string name="settings_language">Język</string>
     <string name="settings_wind_units">Jednostki wiatru</string>
@@ -92,7 +95,7 @@
     <string name="wind_avg">Wiatr</string>
     <string name="wind_gust">Poryw</string>
     <string name="observed_at">Zarejestrowano</string>
-    <string name="live_attribution">Wind data © OpenWindMap contributors</string>
+    <string name="live_attribution">Dane wiatru © współtwórcy OpenWindMap</string>
     <string name="no_history">Brak historii</string>
     <string name="station">Stacja</string>
     <string name="distance">Odległość</string>
@@ -102,7 +105,7 @@
     <string name="search_spots">Szukaj spotów</string>
     <string name="no_catalog_spots">Nie znaleziono spotów</string>
     <string name="catalog_error">Nie udało się wczytać katalogu spotów</string>
-    <string name="catalog_attribution">Spots: © OpenStreetMap contributors (ODbL) · openstreetmap.org/copyright</string>
+    <string name="catalog_attribution">Miejsca: © współtwórcy OpenStreetMap (ODbL) · openstreetmap.org/copyright</string>
     <string name="coastal">Wybrzeże</string>
     <string name="metar_attribution">METAR: NOAA Aviation Weather Center · IEM</string>
     <string name="screen_spot_info">Informacje o spocie</string>
@@ -126,8 +129,8 @@
     <string name="coordinates_hint">np. 48.123, -4.567</string>
     <string name="coordinates_invalid">Nierozpoznane współrzędne</string>
     <string name="help_title">Kolumny prognozy</string>
-    <string name="help_text">H — godzina lokalna.\n\nKierunek wiatru — strzałka pokazuje, w którą stronę wieje wiatr; litery oznaczają, skąd przychodzi.\n\nWiatr / poryw — średnia, potem poryw w %1$s. Pogrubienie, podkreślenie i kolor podążają za skalą wiatru.\n\nTemp — temperatura powietrza w %2$s.\n\nmm — opady przewidziane w ciągu godziny.\n\nFala — wysokość znaczna w metrach, potem okres w sekundach.\n\nMorze — temperatura powierzchni morza w %2$s.</string>
-    <string name="coastline_attribution">Coastline: Natural Earth, GSHHG</string>
+    <string name="help_text">H — godzina lokalna.\n\nKierunek wiatru — strzałka pokazuje, w którą stronę wieje wiatr; litery oznaczają, skąd przychodzi.\n\nWiatr / poryw — średnia, potem poryw w %1$s. Pogrubienie, podkreślenie i kolor podążają za skalą wiatru.\n\nmm — opady przewidziane w ciągu godziny.\n\nFala — wysokość znaczna w metrach, potem okres w sekundach.\n\nTemp — temperatura powietrza w %2$s.\n\nMorze — temperatura powierzchni morza w %2$s.</string>
+    <string name="coastline_attribution">Linia brzegowa: Natural Earth, GSHHG</string>
     <string name="import_private_json">Importuj prywatny JSON</string>
     <string name="import_button">Importuj</string>
     <string name="import_private_note">Zaimportowane pliki pozostają na tym urządzeniu i są wyłączone z kopii zapasowych. Zapisane szczegóły miejsc mogą trafić do kopii zapasowej Androida.</string>

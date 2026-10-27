@@ -256,6 +256,7 @@ class KompaktWindViewModel(
     fun setWindUnit(u: WindUnit) = viewModelScope.launch { settings.setWindUnit(u) }
     fun setTempUnit(u: TempUnit) = viewModelScope.launch { settings.setTempUnit(u) }
     fun setMarineDisplay(m: MarineDisplay) = viewModelScope.launch { settings.setMarineDisplay(m) }
+    fun setShowTides(enabled: Boolean) = viewModelScope.launch { settings.setShowTides(enabled) }
     fun setSpotProvider(id: String, providerId: String) = viewModelScope.launch { spotDao.updateProvider(id, providerId) }
     fun setCacheTtl(min: Int) = viewModelScope.launch { settings.setCacheTtlMinutes(min) }
     fun setDarkScreen(enabled: Boolean) = viewModelScope.launch { settings.setDarkScreen(enabled) }

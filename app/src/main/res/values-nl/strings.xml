@@ -35,6 +35,9 @@
     <string name="header_precip">mm</string>
     <string name="header_wave">Golven</string>
     <string name="header_sea">Zee</string>
+    <string name="header_tide">Getij</string>
+    <string name="show_tides">Getijden</string>
+    <string name="help_tide">Getij — zeeniveau boven gemiddeld zeeniveau (MSL) in meter. ▲ hoogwater, ▼ laagwater. Vet = snellere getijbeweging. Vervangt luchttemperatuur en zeewatertemperatuur. Modeldata, niet voor navigatie.</string>
     <string name="wind_direction">Windrichting</string>
     <string name="settings_language">Taal</string>
     <string name="settings_wind_units">Windeenheden</string>
@@ -92,7 +95,7 @@
     <string name="wind_avg">Wind</string>
     <string name="wind_gust">Vlaag</string>
     <string name="observed_at">Waargenomen</string>
-    <string name="live_attribution">Wind data © OpenWindMap contributors</string>
+    <string name="live_attribution">Winddata © OpenWindMap-bijdragers</string>
     <string name="no_history">Geen geschiedenis beschikbaar</string>
     <string name="station">Station</string>
     <string name="distance">Afstand</string>
@@ -102,7 +105,7 @@
     <string name="search_spots">Spots zoeken</string>
     <string name="no_catalog_spots">Geen spots gevonden</string>
     <string name="catalog_error">Kon de spotcatalogus niet laden</string>
-    <string name="catalog_attribution">Spots: © OpenStreetMap contributors (ODbL) · openstreetmap.org/copyright</string>
+    <string name="catalog_attribution">Spots: © OpenStreetMap-bijdragers (ODbL) · openstreetmap.org/copyright</string>
     <string name="coastal">Kust</string>
     <string name="metar_attribution">METAR: NOAA Aviation Weather Center · IEM</string>
     <string name="screen_spot_info">Spotinfo</string>
@@ -126,8 +129,8 @@
     <string name="coordinates_hint">bijv. 48.123, -4.567</string>
     <string name="coordinates_invalid">Coördinaten niet herkend</string>
     <string name="help_title">Voorspellingskolommen</string>
-    <string name="help_text">H — lokale uur.\n\nWindrichting — de pijl toont waar de wind naartoe waait; de windstreken tonen waar hij vandaan komt.\n\nWind / vlaag — gemiddelde en dan vlaag in %1$s. Vet, onderstreping en kleur volgen de windschaal.\n\nTemp — luchttemperatuur in %2$s.\n\nmm — verwachte neerslag in het uur.\n\nGolf — significante golfhoogte in meter en periode in seconden.\n\nZee — zeewatertemperatuur in %2$s.</string>
-    <string name="coastline_attribution">Coastline: Natural Earth, GSHHG</string>
+    <string name="help_text">H — lokale uur.\n\nWindrichting — de pijl toont waar de wind naartoe waait; de windstreken tonen waar hij vandaan komt.\n\nWind / vlaag — gemiddelde en dan vlaag in %1$s. Vet, onderstreping en kleur volgen de windschaal.\n\nmm — verwachte neerslag in het uur.\n\nGolf — significante golfhoogte in meter en periode in seconden.\n\nTemp — luchttemperatuur in %2$s.\n\nZee — zeewatertemperatuur in %2$s.</string>
+    <string name="coastline_attribution">Kustlijn: Natural Earth, GSHHG</string>
     <string name="import_private_json">Privé-JSON importeren</string>
     <string name="import_button">Importeren</string>
     <string name="import_private_note">Geïmporteerde bestanden blijven op dit apparaat en worden uitgesloten van back-ups. Opgeslagen spotgegevens kunnen in de Android-back-up terechtkomen.</string>
@@ -141,7 +144,7 @@
     <string name="import_reason_no_valid">geen geldige spots</string>
     <string name="import_reason_io">bestand kon niet worden gelezen</string>
     <string name="import_delete">Geïmporteerd bestand verwijderen</string>
-    <string name="import_file_summary">%1$s · %2$d spots</string>
+    <string name="import_file_summary">%1$s · %2$d plekken</string>
     <string name="imported_source">Lokale import</string>
     <string name="settings_sources">Spotlocaties</string>
     <string name="spot_summary">Bekende windsportspot in %1$s. Activiteiten: %2$s.</string>

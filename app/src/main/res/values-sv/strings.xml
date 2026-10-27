@@ -35,6 +35,9 @@
     <string name="header_precip">mm</string>
     <string name="header_wave">Vågor</string>
     <string name="header_sea">Hav</string>
+    <string name="header_tide">Tid.</string>
+    <string name="show_tides">Tidvatten</string>
+    <string name="help_tide">Tidvatten — havsnivå över medelhavsnivån (MSL) i meter. ▲ högvatten, ▼ lågvatten. Fetstil = snabbare tidvattenrörelse. Ersätter luft- och vattentemperatur. Modelldata, ej för navigering.</string>
     <string name="wind_direction">Vindriktning</string>
     <string name="settings_language">Språk</string>
     <string name="settings_wind_units">Vindenheter</string>
@@ -92,7 +95,7 @@
     <string name="wind_avg">Vind</string>
     <string name="wind_gust">By</string>
     <string name="observed_at">Observerad</string>
-    <string name="live_attribution">Wind data © OpenWindMap contributors</string>
+    <string name="live_attribution">Vinddata © OpenWindMap-bidragsgivare</string>
     <string name="no_history">Ingen historik tillgänglig</string>
     <string name="station">Station</string>
     <string name="distance">Avstånd</string>
@@ -102,7 +105,7 @@
     <string name="search_spots">Sök spots</string>
     <string name="no_catalog_spots">Inga spots hittades</string>
     <string name="catalog_error">Kunde inte ladda spotkatalogen</string>
-    <string name="catalog_attribution">Spots: © OpenStreetMap contributors (ODbL) · openstreetmap.org/copyright</string>
+    <string name="catalog_attribution">Platser: © OpenStreetMap-bidragsgivare (ODbL) · openstreetmap.org/copyright</string>
     <string name="coastal">Kust</string>
     <string name="metar_attribution">METAR: NOAA Aviation Weather Center · IEM</string>
     <string name="screen_spot_info">Spotinfo</string>
@@ -126,8 +129,8 @@
     <string name="coordinates_hint">t.ex. 48.123, -4.567</string>
     <string name="coordinates_invalid">Koordinaterna känns inte igen</string>
     <string name="help_title">Prognoskolumner</string>
-    <string name="help_text">H — lokal timme.\n\nVindriktning — pilen visar vart vinden blåser; väderstrecken visar varifrån den kommer.\n\nVind / by — medel och sedan by i %1$s. Fetstil, understrykning och färg följer vindskalan.\n\nTemp — lufttemperatur i %2$s.\n\nmm — förväntad nederbörd under timmen.\n\nVåg — signifikant våghöjd i meter, sedan period i sekunder.\n\nHav — havsytans temperatur i %2$s.</string>
-    <string name="coastline_attribution">Coastline: Natural Earth, GSHHG</string>
+    <string name="help_text">H — lokal timme.\n\nVindriktning — pilen visar vart vinden blåser; väderstrecken visar varifrån den kommer.\n\nVind / by — medel och sedan by i %1$s. Fetstil, understrykning och färg följer vindskalan.\n\nmm — förväntad nederbörd under timmen.\n\nVåg — signifikant våghöjd i meter, sedan period i sekunder.\n\nTemp — lufttemperatur i %2$s.\n\nHav — havsytans temperatur i %2$s.</string>
+    <string name="coastline_attribution">Kustlinje: Natural Earth, GSHHG</string>
     <string name="import_private_json">Importera privat JSON</string>
     <string name="import_button">Importera</string>
     <string name="import_private_note">Importerade filer stannar på den här enheten och undantas från säkerhetskopior. Sparade platsuppgifter kan ingå i Androids säkerhetskopia.</string>
@@ -141,7 +144,7 @@
     <string name="import_reason_no_valid">inga giltiga spots</string>
     <string name="import_reason_io">kunde inte läsa filen</string>
     <string name="import_delete">Ta bort importerad fil</string>
-    <string name="import_file_summary">%1$s · %2$d spots</string>
+    <string name="import_file_summary">%1$s · %2$d platser</string>
     <string name="imported_source">Lokal import</string>
     <string name="settings_sources">Spotplatser</string>
     <string name="spot_summary">Känd vindsportspot i %1$s. Aktiviteter: %2$s.</string>

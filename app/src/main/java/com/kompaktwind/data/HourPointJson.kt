@@ -16,13 +16,15 @@ private data class HourPointSerializable(
     @SerialName("pP") val pP: Int? = null,
     @SerialName("waveH") val waveH: Double? = null,
     @SerialName("waveT") val waveT: Double? = null,
-    @SerialName("waterC") val waterC: Double? = null
+    @SerialName("waterC") val waterC: Double? = null,
+    @SerialName("seaL") val seaL: Double? = null
 ) {
-    fun toDomain() = HourPoint(t, tC, wMs, gMs, wD, pMm, pP, waveH, waveT, waterC)
+    fun toDomain() = HourPoint(t, tC, wMs, gMs, wD, pMm, pP, waveH, waveT, waterC, seaL)
     companion object {
         fun from(h: HourPoint) = HourPointSerializable(
             h.timeEpochMs, h.tempC, h.windSpeedMs, h.windGustMs, h.windDirDeg,
-            h.precipMm, h.precipProbability, h.waveHeightM, h.wavePeriodS, h.waterTempC
+            h.precipMm, h.precipProbability, h.waveHeightM, h.wavePeriodS, h.waterTempC,
+            h.seaLevelM
         )
     }
 }

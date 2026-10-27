@@ -35,6 +35,9 @@
     <string name="header_precip">mm</string>
     <string name="header_wave">Olas</string>
     <string name="header_sea">Mar</string>
+    <string name="header_tide">Marea</string>
+    <string name="show_tides">Mareas</string>
+    <string name="help_tide">Marea — nivel del mar sobre el nivel medio del mar (MSL) en metros. ▲ pleamar, ▼ bajamar. Negrita = subida/bajada más rápida. Sustituye la temperatura del aire y del mar. Datos de modelo, no para navegación.</string>
     <string name="wind_direction">Dirección del viento</string>
     <string name="settings_language">Idioma</string>
     <string name="settings_wind_units">Unidades de viento</string>
@@ -92,7 +95,7 @@
     <string name="wind_avg">Viento</string>
     <string name="wind_gust">Racha</string>
     <string name="observed_at">Observado</string>
-    <string name="live_attribution">Wind data © OpenWindMap contributors</string>
+    <string name="live_attribution">Datos de viento © colaboradores de OpenWindMap</string>
     <string name="no_history">No hay historial disponible</string>
     <string name="station">Estación</string>
     <string name="distance">Distancia</string>
@@ -102,7 +105,7 @@
     <string name="search_spots">Buscar spots</string>
     <string name="no_catalog_spots">No se encontraron spots</string>
     <string name="catalog_error">No se pudo cargar el catálogo de spots</string>
-    <string name="catalog_attribution">Spots: © OpenStreetMap contributors (ODbL) · openstreetmap.org/copyright</string>
+    <string name="catalog_attribution">Lugares: © colaboradores de OpenStreetMap (ODbL) · openstreetmap.org/copyright</string>
     <string name="coastal">Costa</string>
     <string name="metar_attribution">METAR: NOAA Aviation Weather Center · IEM</string>
     <string name="screen_spot_info">Info del spot</string>
@@ -126,8 +129,8 @@
     <string name="coordinates_hint">p. ej. 48.123, -4.567</string>
     <string name="coordinates_invalid">Coordenadas no reconocidas</string>
     <string name="help_title">Columnas de previsión</string>
-    <string name="help_text">H — hora local.\n\nDirección del viento — la flecha muestra hacia dónde sopla el viento; las letras cardinales muestran de dónde viene.\n\nViento / racha — media y luego racha en %1$s. Negrita, subrayado y color siguen la escala del viento.\n\nTemp — temperatura del aire en %2$s.\n\nmm — precipitación prevista durante la hora.\n\nOla — altura significativa en metros y periodo en segundos.\n\nMar — temperatura de la superficie del mar en %2$s.</string>
-    <string name="coastline_attribution">Coastline: Natural Earth, GSHHG</string>
+    <string name="help_text">H — hora local.\n\nDirección del viento — la flecha muestra hacia dónde sopla el viento; las letras cardinales muestran de dónde viene.\n\nViento / racha — media y luego racha en %1$s. Negrita, subrayado y color siguen la escala del viento.\n\nmm — precipitación prevista durante la hora.\n\nOla — altura significativa en metros y periodo en segundos.\n\nTemp — temperatura del aire en %2$s.\n\nMar — temperatura de la superficie del mar en %2$s.</string>
+    <string name="coastline_attribution">Costa: Natural Earth, GSHHG</string>
     <string name="import_private_json">Importar JSON privado</string>
     <string name="import_button">Importar</string>
     <string name="import_private_note">Los archivos importados permanecen en este dispositivo y se excluyen de las copias de seguridad. Los detalles de los spots guardados pueden incluirse en la copia de seguridad de Android.</string>
@@ -141,7 +144,7 @@
     <string name="import_reason_no_valid">no hay spots válidos</string>
     <string name="import_reason_io">no se pudo leer el archivo</string>
     <string name="import_delete">Eliminar archivo importado</string>
-    <string name="import_file_summary">%1$s · %2$d spots</string>
+    <string name="import_file_summary">%1$s · %2$d sitios</string>
     <string name="imported_source">Importación local</string>
     <string name="settings_sources">Ubicaciones de spots</string>
     <string name="spot_summary">Spot conocido de deportes de viento en %1$s. Actividades: %2$s.</string>

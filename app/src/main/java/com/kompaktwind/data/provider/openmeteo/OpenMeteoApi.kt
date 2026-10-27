@@ -22,7 +22,7 @@ interface OpenMeteoMarineApi {
     suspend fun marine(
         @Query("latitude") lat: Double,
         @Query("longitude") lon: Double,
-        @Query("hourly") hourly: String = "wave_height,wave_period,sea_surface_temperature",
+        @Query("hourly") hourly: String = "wave_height,wave_period,sea_surface_temperature,sea_level_height_msl",
         @Query("forecast_days") forecastDays: Int = 7,
         @Query("timezone") timezone: String = "auto"
     ): OpenMeteoMarineDto

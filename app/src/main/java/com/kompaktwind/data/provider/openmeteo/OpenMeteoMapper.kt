@@ -15,19 +15,20 @@ object OpenMeteoMapper {
     ): Forecast {
         val zone = runCatching { ZoneId.of(forecast.timezone) }
             .getOrElse { ZoneOffset.ofTotalSeconds(forecast.utcOffsetSeconds) }
-        val marineByTime: Map<String, Triple<Double?, Double?, Double?>> = marine?.let { m ->
+        val marineByTime: Map<String, MarineValues> = marine?.let { m ->
             m.hourly.time.mapIndexed { i, t ->
-                t to Triple(
-                    m.hourly.waveHeight.getOrNull(i),
-                    m.hourly.wavePeriod.getOrNull(i),
-                    m.hourly.seaSurfaceTemperature.getOrNull(i)
+                t to MarineValues(
+                    waveHeightM = m.hourly.waveHeight.getOrNull(i),
+                    wavePeriodS = m.hourly.wavePeriod.getOrNull(i),
+                    waterTempC = m.hourly.seaSurfaceTemperature.getOrNull(i),
+                    seaLevelM = m.hourly.seaLevelHeight.getOrNull(i)
                 )
             }.toMap()
         } ?: emptyMap()
 
         val hours = forecast.hourly.time.mapIndexed { i, isoLocal ->
             val instant = LocalDateTime.parse(isoLocal).atZone(zone).toInstant()
-            val triple = marineByTime[isoLocal]
+            val marineValues = marineByTime[isoLocal]
             HourPoint(
                 timeEpochMs = instant.toEpochMilli(),
                 tempC = forecast.hourly.temperature2m.getOrNull(i),
@@ -36,9 +37,10 @@ object OpenMeteoMapper {
                 windDirDeg = forecast.hourly.windDirection10m.getOrNull(i),
                 precipMm = forecast.hourly.precipitation.getOrNull(i),
                 precipProbability = forecast.hourly.precipitationProbability.getOrNull(i),
-                waveHeightM = triple?.first,
-                wavePeriodS = triple?.second,
-                waterTempC = triple?.third
+                waveHeightM = marineValues?.waveHeightM,
+                wavePeriodS = marineValues?.wavePeriodS,
+                waterTempC = marineValues?.waterTempC,
+                seaLevelM = marineValues?.seaLevelM
             )
         }
 
@@ -51,3 +53,10 @@ object OpenMeteoMapper {
         )
     }
 }
+
+private data class MarineValues(
+    val waveHeightM: Double?,
+    val wavePeriodS: Double?,
+    val waterTempC: Double?,
+    val seaLevelM: Double?
+)
